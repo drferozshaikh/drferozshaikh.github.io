@@ -9,24 +9,28 @@
 <link rel="icon" href="data:,">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.7;color:#1a1a1a;background:#f4f7fb}
-header{background:linear-gradient(135deg,#0a3d62,#0f5c8a);color:white;padding:70px 20px;text-align:center}
+body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.7;color:#1a1a1a;background:#f7f8fa}
+header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:70px 20px;text-align:center}
 .logo{max-width:260px;margin-bottom:20px}
-h1{margin:0;font-weight:700;letter-spacing:0.3px}
-p{font-weight:400}
+h1{margin:0;font-weight:700}
 nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600}
-section{padding:60px 20px;max-width:1000px;margin:auto}
+section{padding:60px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(30px);transition:all .7s ease}
+section.visible{opacity:1;transform:translateY(0)}
 h2{color:#0a3d62;margin-top:0;font-weight:700}
-.card{background:white;padding:24px;border-radius:12px;margin:18px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.card{background:white;padding:24px;border-radius:12px;margin:18px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
 .btn{display:inline-block;background:#0a3d62;color:white;padding:13px 22px;margin:10px 6px;text-decoration:none;border-radius:8px;font-weight:600}
 .btn:hover{background:#08314d}
-.highlight{background:#eaf3ff;padding:18px;border-left:5px solid #0a3d62;border-radius:10px;margin:18px 0}
-.center{text-align:center}
-img.services{max-width:100%;border-radius:14px;margin-top:20px;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+.highlight{background:#fff7e6;padding:18px;border-left:5px solid #c79a2b;border-radius:10px;margin:18px 0}
+details{background:white;border-radius:10px;margin:12px 0;padding:14px 18px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+summary{font-weight:600;cursor:pointer;color:#0a3d62}
 form input, form textarea{width:100%;padding:12px;border:1px solid #cfd8e3;border-radius:8px;font-family:inherit}
 footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:40px;font-size:14px}
 </style>
+<script>
+window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEach(sec=>{const rect=sec.getBoundingClientRect();if(rect.top<window.innerHeight-100){sec.classList.add('visible')}})})
+</script>
 </head>
 <body>
 <header>
@@ -63,6 +67,19 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <h2>Professional Services</h2>
 <img src="services.png" alt="Maritime medical services" class="services">
 </section>
+<section id="evaluation">
+<h2>How Medical Fitness Decisions Are Interpreted</h2>
+<div class="highlight">Fitness for sea duty is not based on diagnosis alone. Operational role, watchkeeping duties, medication stability, voyage duration and repatriation risk are assessed together.</div>
+<div class="highlight">Two doctors may legally reach different decisions depending on operational interpretation — this service explains the reasoning behind such outcomes.</div>
+</section>
+
+<section id="faq">
+<h2>Common Questions</h2>
+<details><summary>Declared UNFIT — what does it actually mean?</summary><p>It does not always end a career. Often it reflects risk prediction for specific vessel conditions rather than permanent inability to work.</p></details>
+<details><summary>Different clinics giving different results?</summary><p>Guidelines allow interpretation. Vessel type, flag rules and job role influence decision thresholds.</p></details>
+<details><summary>Can I join after surgery?</summary><p>Return depends on recovery stability, recurrence risk and emergency management feasibility at sea.</p></details>
+</section>
+
 <section id="process">
 <h2>How Online Consultation Works</h2>
 <div class="card">1. Share reports via WhatsApp or Email</div>
