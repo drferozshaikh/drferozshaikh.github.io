@@ -41,6 +41,17 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 {"@type":"Question","name":"Should I do PEME before checking eligibility?","acceptedAnswer":{"@type":"Answer","text":"Pre‑assessment helps avoid travel and cost if significant risk factors exist."}}
 ]
 }</script>
+<script type="application/ld+json">{
+"@context":"https://schema.org",
+"@type":"Person",
+"name":"Dr Feroz Zuber Shaikh",
+"jobTitle":"Maritime Medical Decision Consultant",
+"worksFor":{"@type":"Organization","name":"Independent Professional Service"},
+"address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},
+"email":"drferozshaikh@gmail.com",
+"knowsAbout":["Seafarer medical fitness","PEME interpretation","Maritime medical guidelines","Return to sea assessment"],
+"hasCredential":"DG Shipping Approved Medical Examiner MAH/NM/13/2015"
+}</script>
 </head>
 <body>
 <header>
@@ -140,12 +151,12 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 <h2>Submit Eligibility Assessment Request</h2>
 <p>Please submit details for a single individual only. Review begins after payment confirmation.<br><br><strong>Standard Fee: ₹1500 per individual assessment</strong></p>
 <form action="mailto:drferozshaikh@gmail.com" method="post" enctype="text/plain">
-<label>Age</label><br>
-<input type="text" name="Age" required><br><br>
+<label>Date of Birth (preferred) or Age</label><br>
+<input type="text" name="Age or DOB" placeholder="DD/MM/YYYY or Age" required><br><br>
 <label>Applying For</label><br>
 <input type="text" name="Rank/Role" placeholder="Deck Cadet / Engine / Cruise Staff" required><br><br>
-<label>Experience</label><br>
-<input type="text" name="Experience" placeholder="New candidate / Experienced"><br><br>
+<label>Experience Level</label><br>
+<input type="text" name="Experience" placeholder="Student / Trainee / New candidate / Experienced"><br><br>
 <label>Sector</label><br>
 <input type="text" name="Sector" placeholder="Cargo / Cruise / Offshore"><br><br>
 
@@ -185,7 +196,7 @@ You may optionally include a payment screenshot or reference number in your repl
 </section>
 
 <div style="border-top:2px solid #e0e6ed;margin-top:40px"></div>
-<footer>
+<div class="highlight">Information submitted is used only for professional assessment and is not shared with third parties. Do not include identification numbers unless necessary.</di
 <p><strong>Professional Disclaimer:</strong> This service provides independent medical fitness guidance and interpretation for maritime employment contexts. It does not replace examination by statutory medical examiners or emergency medical care.</p>
 <p>© 2026 Dr Feroz Zuber Shaikh | Maritime Medical Decision Consultancy</p>
 </footer>
