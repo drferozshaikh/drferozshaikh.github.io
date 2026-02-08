@@ -5,35 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Seafarer Medical Advice | DG Shipping Maritime Medical Consultant Mumbai</title>
 <meta name="description" content="Failed or borderline seafarer medical? Online maritime medical advice, PEME/REME guidance and DG Shipping fitness decision support by Dr Feroz Zuber Shaikh.">
+<meta name="keywords" content="failed seafarer medical, DG Shipping unfit, PEME borderline case, seaman medical fitness advice, maritime medical consultation online, can I pass seafarer medical, pre peme eligibility check, return to sea after surgery, colour vision seafarer rules, diabetes at sea fitness">
 <link rel="icon" href="data:,">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.65;color:#1a1a1a;background:#f7f8fa}
-header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:60px 20px 55px;text-align:center}
-.logo{max-width:160px;margin:0 auto 10px auto;display:block;opacity:.95}
-h1{margin:6px 0 6px;font-weight:700;font-size:32px}
-.sub{opacity:.9;font-size:16px}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.7;color:#1a1a1a;background:#f7f8fa}
+header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:70px 20px;text-align:center}
+.logo{max-width:260px;margin-bottom:20px}
+h1{margin:0;font-weight:700}
 nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600}
-section{padding:40px 20px;max-width:1000px;margin:auto}
+section{padding:60px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(30px);transition:all .7s ease}
+section.visible{opacity:1;transform:translateY(0)}
 h2{color:#0a3d62;margin-top:0;font-weight:700}
-.card{background:white;padding:18px 20px;border-radius:12px;margin:12px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-.highlight{background:#eef4f8;padding:16px;border-left:5px solid #6b8aa6;border-radius:10px;margin:16px 0}
+.card{background:white;padding:18px 20px;border-radius:12px;margin:12px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.btn{display:inline-block;background:#0a3d62;color:white;padding:13px 22px;margin:10px 6px;text-decoration:none;border-radius:8px;font-weight:600}
+.btn:hover{background:#08314d}
+.highlight{background:#eef4f8;padding:18px;border-left:5px solid #6b8aa6;border-radius:10px;margin:18px 0}
 details{background:white;border-radius:10px;margin:12px 0;padding:14px 18px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
 summary{font-weight:600;cursor:pointer;color:#0a3d62}
 form input[type="text"], form textarea{width:100%;padding:12px;border:1px solid #cfd8e3;border-radius:8px;font-family:inherit}
 form input[type="checkbox"]{width:auto;margin-right:10px}
-.btn{display:inline-block;background:#0a3d62;color:white;padding:13px 22px;margin:10px 6px;text-decoration:none;border-radius:8px;font-weight:600}
 footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:40px;font-size:14px}
-.small{font-size:13px;opacity:.9}
 </style>
+<script>
+window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEach(sec=>{const rect=sec.getBoundingClientRect();if(rect.top<window.innerHeight-100){sec.classList.add('visible')}})})
+</script>
+<script type="application/ld+json">{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{"@type":"Question","name":"What if I fail my seafarer medical?","acceptedAnswer":{"@type":"Answer","text":"Failure often reflects risk assessment for a specific role rather than permanent inability to sail."}},
+{"@type":"Question","name":"Can diabetes or BP prevent joining ship?","acceptedAnswer":{"@type":"Answer","text":"Fitness depends on stability, medication safety and operational duty risk rather than diagnosis alone."}},
+{"@type":"Question","name":"Should I do PEME before checking eligibility?","acceptedAnswer":{"@type":"Answer","text":"Pre‑assessment helps avoid travel and cost if significant risk factors exist."}}
+]
+}</script>
+<script type="application/ld+json">{
+"@context":"https://schema.org",
+"@type":"Person",
+"name":"Dr Feroz Zuber Shaikh",
+"jobTitle":"Maritime Medical Decision Consultant",
+"worksFor":{"@type":"Organization","name":"Independent Professional Service"},
+"address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},
+"email":"drferozshaikh@gmail.com",
+"knowsAbout":["Seafarer medical fitness","PEME interpretation","Maritime medical guidelines","Return to sea assessment"],
+"hasCredential":"DG Shipping Approved Medical Examiner MAH/NM/13/2015"
+}</script>
 </head>
 <body>
 <header>
 <img src="logo.png" alt="Dr Feroz Zuber Shaikh Logo" class="logo">
-<h1>Dr Feroz Zuber Shaikh</h1>
-<div class="sub">Maritime Medical Advice & Fitness Decision Support</div>
-<div class="sub">For Seafarers, Manning Agencies & Shipping Companies</div>
+<h1>Maritime Medical Advice & Fitness Decision Support</h1>
+<p>For Seafarers, Manning Agencies & Shipping Companies</p>
+<a class="btn" href="mailto:drferozshaikh@gmail.com?subject=Maritime Medical Case Review Request">Submit Case by Email</a>
 </header>
 <nav>
 <a href="#about">About</a>
@@ -41,66 +66,100 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <a href="#problems">Common Problems</a>
 <a href="#services">Services</a>
 <a href="#process">Process</a>
-<a href="#contact">Submit Case</a>
+<a href="#contact">Contact</a>
 </nav>
 <section id="about">
 <h2>Professional Background</h2>
 <div class="card">DG Shipping Approved Seafarer Medical Examiner</div>
-<div class="card">Maritime fitness decision exposure across routine and complex cases</div>
-<div class="card">Experience coordinating borderline and employer review situations</div>
+<div class="card">15+ years maritime medical decision exposure</div>
+<div class="card">Experience with employer coordination & complex fitness cases</div>
 </section>
+
 <section id="who">
-<h2>Who Should Contact</h2>
+<h2>Who Should Contact Me</h2>
 <div class="card">Seafarers declared UNFIT or TEMPORARILY UNFIT</div>
 <div class="card">Borderline medical findings during PEME / REME</div>
-<div class="card">Conflicting medical opinions</div>
-<div class="card">Pre‑joining eligibility clarification</div>
-<div class="card">Shipping companies requiring decision interpretation</div>
+<div class="card">Shipping companies needing medical decision support</div>
+<div class="card">Manning agencies requiring documentation review</div>
+<div class="card">Post‑repatriation medical case clarification</div>
 </section>
 <section id="problems">
-<h2>Common Cases</h2>
-<div class="highlight">Declared unfit for colour vision — what next?</div>
-<div class="highlight">BMI 32 — will I fail PEME?</div>
-<div class="highlight">Diabetes on medication — allowed at sea?</div>
-<div class="highlight">After LASIK — when can I join?</div>
-<div class="highlight">Different clinics gave different results — why?</div>
+<h2>Common Cases I Handle</h2>
+<div class="highlight">Failed seafarer medical – what to do next</div>
+<div class="highlight">DG Shipping unfit opinion clarification</div>
+<div class="highlight">Eye sight / colour vision borderline cases</div>
+<div class="highlight">Cardiac, diabetes & hypertension evaluation for sea fitness</div>
+<div class="highlight">Fitness certificate disagreement between doctors</div>
+<div class="highlight">Return to sea medical clearance advice</div>
 </section>
 <section id="services">
 <h2>Professional Services</h2>
-<div class="card">Independent medical fitness interpretation</div>
-<div class="card">Pre‑PEME risk assessment guidance</div>
-<div class="card">Return‑to‑sea readiness advisory</div>
-<div class="card">Documentation reasoning explanation</div>
-<div class="card">Second opinion understanding (not certificate replacement)</div>
+<div class="card">Independent medical fitness case review for seafarers</div>
+<div class="card">Pre‑PEME fitness risk assessment guidance</div>
+<div class="card">Borderline medical interpretation before joining vessel</div>
+<div class="card">Return‑to‑sea medical readiness advisory</div>
+<div class="card">Documentation & compliance clarification (ILO / IMO / employer expectations)</div>
+<div class="card">Guidance for new candidates considering maritime careers with medical concerns</div>
 </section>
-<section id="authority">
-<h2>What This Assessment Provides</h2>
-<div class="card">Clear interpretation of your medical findings under maritime fitness standards</div>
-<div class="card">Realistic probability of passing or failing next medical examination</div>
-<div class="card">What to correct before repeating PEME/REME</div>
-<div class="card">Whether re‑testing immediately or waiting is advisable</div>
-<div class="card">Explanation of why different clinics gave different outcomes</div>
-<div class="card">Guidance for discussion with employer or examining doctor</div>
+<section id="prepeme">
+<h2>Before You Book Your Seafarer Medical (PEME)</h2>
+<div class="card">Many candidates travel long distances and spend significant money before knowing their realistic fitness outcome.</div>
+<div class="card">This service provides a pre‑examination eligibility interpretation based on your medical history and reports.</div>
+<div class="card">You receive a probability‑based opinion to help decide whether to proceed, defer, or clarify specific parameters before attending a clinic.</div>
+<div class="highlight">Each submission is reviewed as a single individual case. Multiple persons require separate submissions.</div>
 </section>
+
+<section id="evaluation">
+<h2>How Medical Fitness Decisions Are Interpreted</h2>
+<div class="highlight">Fitness for sea duty is not based on diagnosis alone. Operational role, watchkeeping duties, medication stability, voyage duration and repatriation risk are assessed together.</div>
+<div class="highlight">Two doctors may legally reach different decisions depending on operational interpretation — this service explains the reasoning behind such outcomes.</div>
+</section>
+
+<section id="faq">
+<h2>Common Questions</h2>
+<details><summary>Declared UNFIT — what does it actually mean?</summary><p>It does not always end a career. Often it reflects risk prediction for specific vessel conditions rather than permanent inability to work.</p></details>
+<details><summary>Different clinics giving different results?</summary><p>Guidelines allow interpretation. Vessel type, flag rules and job role influence decision thresholds.</p></details>
+<details><summary>Can I join after surgery?</summary><p>Return depends on recovery stability, recurrence risk and emergency management feasibility at sea.</p></details>
+</section>
+
 <section id="process">
-<h2>How Online Review Works</h2>
-<div class="card">Submit structured case details</div>
-<div class="card">Professional evaluation</div>
-<div class="card">Guidance and next‑step explanation</div>
-<div class="card">One submission = one individual</div>
+<h2>How Online Consultation Works</h2>
+<div class="card">1. Share reports via structured email submission</div>
+<div class="card">2. Medical assessment and guideline review</div>
+<div class="card">3. Fitness decision guidance & next steps</div>
+<div class="card">4. Structured advisory report if required</div>
 </section>
+<section id="advisory">
+<h2>Professional Case Review & Advisory</h2>
+<div class="card">Independent medical fitness decision support for complex and borderline seafarer cases</div>
+<div class="card">Second opinion for UNFIT / TEMPORARY UNFIT assessments</div>
+<div class="card">Structured written advisory reports for employers and agencies</div>
+<div class="card">Medical coordination guidance before joining vessel</div>
+<p><strong>Note:</strong> This is a professional paid case review service. Fees depend on complexity and documentation involved.</p>
+</section>
+
+<section id="companies">
+<h2>For Manning Agencies & Shipping Companies</h2>
+<div class="card">Batch medical report review and risk flagging</div>
+<div class="card">Fitness decision support aligned with ILO/IMO & flag requirements</div>
+<div class="card">Post‑repatriation case evaluation</div>
+<div class="card">Operational medical advisory & documentation clarification</div>
+<p>For institutional advisory engagement, please contact via email with company details.</p>
+</section>
+
 <section id="contact">
-<h2>Submit Eligibility Assessment</h2>
-<p><strong>Standard Professional Fee:</strong> USD 20 (or local equivalent in INR). Review begins after payment confirmation.</p>
+<h2>Submit Eligibility Assessment Request</h2>
+<p>Please submit details for a single individual only. Review begins after payment confirmation.<br><br><strong>Standard Fee: ₹1500 per individual assessment</strong></p>
 <form action="mailto:drferozshaikh@gmail.com" method="post" enctype="text/plain">
 <label>Date of Birth (preferred) or Age</label><br>
-<input type="text" name="Age or DOB" required><br><br>
+<input type="text" name="Age or DOB" placeholder="DD/MM/YYYY or Age" required><br><br>
 <label>Applying For</label><br>
 <input type="text" name="Rank/Role" placeholder="Deck Cadet / Engine / Cruise Staff" required><br><br>
 <label>Experience Level</label><br>
 <input type="text" name="Experience" placeholder="Student / Trainee / New candidate / Experienced"><br><br>
 <label>Sector</label><br>
 <input type="text" name="Sector" placeholder="Cargo / Cruise / Offshore"><br><br>
+
 <h3>Medical Factors</h3>
 <input type="checkbox" name="Condition" value="Vision"> Vision/Refractive Error<br>
 <input type="checkbox" name="Condition" value="Colour Vision"> Colour Vision<br>
@@ -112,21 +171,34 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <input type="checkbox" name="Condition" value="Surgery"> Surgery History<br>
 <input type="checkbox" name="Condition" value="Abnormal Tests"> Abnormal Investigations<br>
 <label><input type="checkbox" name="Condition" value="Declared Unfit"> Previously Declared Unfit</label><br><br>
-<label>Brief Notes (required – describe findings)</label><br>
+
+<label>Brief Notes (required – describe findings for the selected conditions)</label><br>
 <textarea name="Notes" rows="4" required></textarea><br><br>
+
 <input type="submit" value="Submit Request" class="btn">
 </form>
-<div class="card small">
-After submission you will receive payment instructions. One submission covers one individual only.
+
+<div class="card">
+<strong>Payment Policy:</strong><br>
+After submission you will receive a reply email confirming acceptance.<br>
+Make payment of ₹1500 using the details provided and reply with payment confirmation.<br>
+Review starts only after payment confirmation.<br><br>
+One submission = One individual assessment<br>
+Additional individuals require separate submission and payment.<br><br>
+You may optionally include a payment screenshot or reference number in your reply email to speed processing.
 </div>
 </section>
-<div class="card small" style="max-width:1000px;margin:30px auto">
-<strong>Professional Identity</strong><br>
-DG Shipping Government of India Approved Medical Examiner<br>
-Approval Number: MAH/NM/13/2015
-</div>
+<section id="rules">
+<h2>Case Definition Rules</h2>
+<div class="highlight">Multiple medical conditions in one person count as one case.</div>
+<div class="highlight">Different individuals require separate submissions.</div>
+<div class="highlight">One clarification reply included after report.</div>
+</section>
+
+<div style="border-top:2px solid #e0e6ed;margin-top:40px"></div>
+<div class="highlight">Information submitted is used only for professional assessment and is not shared with third parties. Do not include identification numbers unless necessary.</div>
 <footer>
-<p><strong>Professional Disclaimer:</strong> This service provides independent maritime medical fitness guidance and does not replace statutory medical examination.</p>
+<p><strong>Professional Disclaimer:</strong><br> This service provides independent medical fitness guidance and interpretation for maritime employment contexts. It does not replace examination by statutory medical examiners or emergency medical care.</p>
 <p>© 2026 Dr Feroz Zuber Shaikh | Maritime Medical Decision Consultancy</p>
 </footer>
 </body>
