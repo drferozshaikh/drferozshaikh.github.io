@@ -13,7 +13,7 @@
 body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.7;color:#1a1a1a;background:#f7f8fa}
 header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:70px 20px;text-align:center}
 .logo{max-width:360px;margin-bottom:14px}
-h1{margin:0;font-weight:700}
+h1{margin:0;font-weight:700} body{letter-spacing:.2px}
 nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600}
 section{padding:40px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(30px);transition:all .7s ease}
@@ -56,10 +56,13 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 </head>
 <body>
 <header>
-<img src="logo.png" alt="Dr Feroz Zuber Shaikh Logo" class="logo">
-<h1>Maritime Medical Advice & Fitness Decision Support</h1>
-<p>For Seafarers, Manning Agencies & Shipping Companies</p>
-<a class="btn" href="mailto:drferozshaikh@gmail.com?subject=Maritime Medical Case Review Request">Submit Case by Email</a>
+<div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+<img src="logo.png" alt="Dr Feroz Zuber Shaikh Logo" style="max-width:90px">
+<h1 style="font-size:34px;letter-spacing:1px;margin:6px 0">Dr Feroz Zuber Shaikh</h1>
+<div style="font-size:18px;font-weight:600;opacity:.95">Maritime Medical Decision Consultant</div>
+<div style="font-size:15px;opacity:.85">Fitness Eligibility Interpretation for Seafarers & Shipping Organisations</div>
+<a class="btn" href="#contact">Request Eligibility Assessment</a>
+</div>
 </header>
 <nav>
 <a href="#about">About</a>
