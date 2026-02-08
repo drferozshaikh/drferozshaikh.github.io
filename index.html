@@ -158,10 +158,10 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 <input type="checkbox" name="Condition" value="Asthma"> Respiratory/Asthma<br>
 <input type="checkbox" name="Condition" value="Surgery"> Surgery History<br>
 <input type="checkbox" name="Condition" value="Abnormal Tests"> Abnormal Investigations<br>
-<input type="checkbox" name="Condition" value="Declared Unfit"> Previously Declared Unfit<br><br>
+<label><input type="checkbox" name="Condition" value="Declared Unfit"> Previously Declared Unfit</label><br><br>
 
-<label>Brief Notes (optional)</label><br>
-<textarea name="Notes" rows="4"></textarea><br><br>
+<label>Brief Notes (required – describe findings for the selected conditions)</label><br>
+<textarea name="Notes" rows="4" required></textarea><br><br>
 
 <input type="submit" value="Submit Request" class="btn">
 </form>
@@ -182,6 +182,9 @@ You may optionally include a payment screenshot or reference number in your repl
 <div class="highlight">Different individuals require separate submissions.</div>
 <div class="highlight">One clarification reply included after report.</div>
 </section>
+
+<div style="border-top:2px solid #e0e6ed;margin-top:40px"></div>
+<footer>
 <p><strong>Professional Disclaimer:</strong> This service provides independent medical fitness guidance and interpretation for maritime employment contexts. It does not replace examination by statutory medical examiners or emergency medical care.</p>
 <p>© 2026 Dr Feroz Zuber Shaikh | Maritime Medical Decision Consultancy</p>
 </footer>
