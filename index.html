@@ -12,12 +12,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.55;color:#1a1a1a;background:#f7f8fa}
 header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:80px 20px;text-align:center;position:relative;overflow:hidden}
-header::before{content:"";position:absolute;inset:0;background:url('logo.png') center/320px no-repeat;opacity:0.08;pointer-events:none}
+header::before{content:"";position:absolute;right:8%;top:50%;transform:translateY(-50%);width:420px;height:420px;background:url('logo.png') center/contain no-repeat;opacity:0.15;pointer-events:none}
 .logo{max-width:360px;margin-bottom:14px}
 h1{margin:0;font-weight:700} body{letter-spacing:.2px} h2{font-size:26px}
 nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 nav a{color:#0a3d62;margin:0 12px;text-decoration:none;font-weight:600;letter-spacing:.4px}
-section{padding:40px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(30px);transition:all .7s ease}
+section{padding:40px 20px;max-width:1000px;margin:auto;opacity:1;transform:none}
 section.visible{opacity:1;transform:translateY(0)}
 h2{color:#0a3d62;margin-top:0;font-weight:700}
 .card{background:white;padding:18px 20px;border-radius:12px;margin:12px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .2s}
