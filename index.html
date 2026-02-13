@@ -13,7 +13,7 @@
 body{font-family:'Inter',Arial,Helvetica,sans-serif;margin:0;line-height:1.7;color:#1a1a1a;background:#f7f8fa}
 header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:70px 20px;text-align:center}
 .logo{max-width:360px;margin-bottom:14px}
-h1{margin:0;font-weight:700}
+h1{margin:0;font-weight:700} body{letter-spacing:.2px} h2{font-size:26px}
 nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600}
 section{padding:40px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(30px);transition:all .7s ease}
@@ -49,17 +49,20 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 "jobTitle":"Maritime Medical Decision Consultant",
 "worksFor":{"@type":"Organization","name":"Independent Professional Service"},
 "address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},
-"email":"drferozshaikh@gmail.com",
+"email":"maritimemedicalreview@gmail.com",
 "knowsAbout":["Seafarer medical fitness","PEME interpretation","Maritime medical guidelines","Return to sea assessment"],
 "hasCredential":"DG Shipping Approved Medical Examiner MAH/NM/13/2015"
 }</script>
 </head>
 <body>
 <header>
-<img src="logo.png" alt="Dr Feroz Zuber Shaikh Logo" class="logo">
-<h1>Maritime Medical Advice & Fitness Decision Support</h1>
-<p>For Seafarers, Manning Agencies & Shipping Companies</p>
-<a class="btn" href="mailto:drferozshaikh@gmail.com?subject=Maritime Medical Case Review Request">Submit Case by Email</a>
+<div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+<img src="A_professional_logo_for_Maritime_Medical_Review_is.png" alt="Maritime Medical Review Logo" style="max-width:140px;margin-bottom:10px">
+<h1 style="font-size:34px;letter-spacing:1px;margin:6px 0">Dr Feroz Zuber Shaikh</h1>
+<div style="font-size:18px;font-weight:600;opacity:.95">Maritime Medical Decision Consultant</div>
+<div style="font-size:15px;opacity:.85">Fitness Eligibility Interpretation for Seafarers & Shipping Organisations</div>
+<a class="btn" href="#contact">Request Eligibility Assessment</a>
+</div>
 </header>
 <nav>
 <a href="#about">About</a>
@@ -151,10 +154,10 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 <section id="contact">
 <h2>Submit Eligibility Assessment Request</h2>
 <p>Please submit details for a single individual only. Review begins after payment confirmation.<br><br><strong></strong></p>
-<form action="mailto:drferozshaikh@gmail.com" method="post" enctype="text/plain">
+<form action="mailto:maritimemedicalreview@gmail.com" method="post" enctype="text/plain">
 <label>Date of Birth (preferred) or Age</label><br>
 <input type="text" name="Age or DOB" placeholder="DD/MM/YYYY or Age" required><br><br>
-<label>Applying For</label><br>
+<label>Rank / Position / Aspiring For</label><br>
 <input type="text" name="Rank/Role" placeholder="Deck Cadet / Engine / Cruise Staff" required><br><br>
 <label>Experience Level</label><br>
 <input type="text" name="Experience" placeholder="Student / Trainee / New candidate / Experienced"><br><br>
@@ -175,6 +178,8 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 
 <label>Brief Notes (required – describe findings for the selected conditions)</label><br>
 <textarea name="Notes" rows="4" required></textarea><br><br>
+<label>Upload Supporting Reports (PDF/JPG/JPEG/PNG — Max total 10MB, up to 5 files)</label><br>
+<input type="file" name="Reports" accept=".pdf,.jpg,.jpeg,.png" multiple><br><small>Please upload only relevant summary reports to avoid delay.</small><br><br>
 
 <input type="submit" value="Submit Request" class="btn">
 </form>
@@ -182,13 +187,22 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 <div class="card">
 <strong>Payment Policy:</strong><br>
 After submission you will receive a reply email confirming acceptance.<br>
-Make payment of approx USD 20 (or local equivalent) using the details provided and reply with payment confirmation.<br>
+Make payment of approx USD 20 (or local equivalent) using the details provided and reply with payment confirmation.
+This is a professional opinion service fee and not a medical certificate charge.<br>
 Review starts only after payment confirmation.<br><br>
 One submission = One individual assessment<br>
 Additional individuals require separate submission and payment.<br><br>
 You may optionally include a payment screenshot or reference number in your reply email to speed processing.
 </div>
 </section>
+<section id="notuse">
+<h2>When You Should NOT Use This Service</h2>
+<div class="highlight">Emergency symptoms or urgent medical problems — contact a hospital or emergency service.</div>
+<div class="highlight">Fitness certificate issuance requests — statutory examiners must perform physical examination.</div>
+<div class="highlight">Medication prescription or treatment changes — requires direct clinical consultation.</div>
+<div class="highlight">Legal disputes or compensation claims — this is an advisory opinion service only.</div>
+</section>
+
 <section id="rules">
 <h2>Case Definition Rules</h2>
 <div class="highlight">Multiple medical conditions in one person count as one case.</div>
@@ -199,8 +213,10 @@ You may optionally include a payment screenshot or reference number in your repl
 <div style="border-top:2px solid #e0e6ed;margin-top:40px"></div>
 <div class="highlight">Information submitted is used only for professional assessment and is not shared with third parties. Do not include identification numbers unless necessary.</div>
 <footer>
-<p><strong>Professional Disclaimer:</strong><br> This service provides independent medical fitness guidance and interpretation for maritime employment contexts. It does not replace examination by statutory medical examiners or emergency medical care.</p>
-<p>© 2026 Dr Feroz Zuber Shaikh | Maritime Medical Decision Consultancy</p>
+<p><strong>Professional Disclaimer:</strong><br> This is an independent educational opinion based on documents provided. It does not constitute a medical diagnosis, treatment, prescription, or statutory fitness certificate and cannot substitute examination by an approved maritime medical examiner.</p>
+<p><strong>Legal Notice:</strong> Advisory interpretation is probabilistic guidance only and not a guarantee of employment fitness outcome. Final decisions remain with examining authorities and flag/state regulations.</p>
+<p><strong>Confidentiality:</strong> Information is used only for assessment communication and not shared externally unless required by law.</p>
+<p>© 2026 Dr Feroz Zuber Shaikh. All content, structure and wording of this website are protected intellectual property and may not be reproduced or redistributed without permission.</p>
 </footer>
 </body>
 </html>
