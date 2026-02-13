@@ -16,8 +16,8 @@ header{background:linear-gradient(135deg,#0a3d62,#134e7a);color:white;padding:70
 h1{margin:0;font-weight:700} body{letter-spacing:.2px} h2{font-size:26px}
 nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600}
-section{padding:40px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(30px);transition:all .7s ease}
-section.visible{opacity:1;transform:translateY(0)}
+section{padding:40px 20px;max-width:1000px;margin:auto}
+
 h2{color:#0a3d62;margin-top:0;font-weight:700}
 .card{background:white;padding:18px 20px;border-radius:12px;margin:12px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .2s}
 .card:hover{transform:translateY(-4px)}
@@ -32,8 +32,7 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 </style>
 <script>
 function revealSections(){document.querySelectorAll('section').forEach(sec=>{const rect=sec.getBoundingClientRect();if(rect.top<window.innerHeight-80){sec.classList.add('visible')}})}
-window.addEventListener('scroll',revealSections);
-window.addEventListener('load',revealSections);
+
 </script>
 <script type="application/ld+json">{
 "@context":"https://schema.org",
@@ -58,12 +57,14 @@ window.addEventListener('load',revealSections);
 </head>
 <body>
 <header>
-<div style="display:flex;flex-direction:column;align-items:center;gap:10px">
-<img src="logo.png" alt="Maritime Medical Review Logo" style="max-width:140px;margin-bottom:10px">
-<h1 style="font-size:34px;letter-spacing:1px;margin:6px 0">Dr Feroz Zuber Shaikh</h1>
+<div style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;text-align:left">
+<img src="logo.png" alt="Maritime Medical Review Logo" style="width:170px;height:auto">
+<div style="max-width:620px">
+<h1 style="font-size:36px;letter-spacing:1px;margin:6px 0">Dr Feroz Zuber Shaikh</h1>
 <div style="font-size:18px;font-weight:600;opacity:.95">Maritime Medical Decision Consultant</div>
-<div style="font-size:15px;opacity:.85">Fitness Eligibility Interpretation for Seafarers & Shipping Organisations</div>
-<a class="btn" href="#contact">Request Eligibility Assessment</a>
+<div style="font-size:15px;opacity:.9;margin-top:4px">Fitness Eligibility Interpretation for Seafarers & Shipping Organisations</div>
+<a class="btn" href="#contact" style="margin-top:14px;display:inline-block">Request Eligibility Assessment</a>
+</div>
 </div>
 </header>
 <nav>
