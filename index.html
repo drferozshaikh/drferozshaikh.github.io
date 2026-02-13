@@ -31,7 +31,9 @@ form input[type="checkbox"]{width:auto;margin-right:10px}
 footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:40px;font-size:14px}
 </style>
 <script>
-window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEach(sec=>{const rect=sec.getBoundingClientRect();if(rect.top<window.innerHeight-100){sec.classList.add('visible')}})})
+function revealSections(){document.querySelectorAll('section').forEach(sec=>{const rect=sec.getBoundingClientRect();if(rect.top<window.innerHeight-80){sec.classList.add('visible')}})}
+window.addEventListener('scroll',revealSections);
+window.addEventListener('load',revealSections);
 </script>
 <script type="application/ld+json">{
 "@context":"https://schema.org",
@@ -57,7 +59,7 @@ window.addEventListener('scroll',()=>{document.querySelectorAll('section').forEa
 <body>
 <header>
 <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
-<img src="/A_professional_logo_for_Maritime_Medical_Review_is.png" alt="Maritime Medical Review Logo" style="max-width:140px;margin-bottom:10px" onerror="this.style.display='none'">
+<img src="logo.png" alt="Maritime Medical Review Logo" style="max-width:140px;margin-bottom:10px">
 <h1 style="font-size:34px;letter-spacing:1px;margin:6px 0">Dr Feroz Zuber Shaikh</h1>
 <div style="font-size:18px;font-weight:600;opacity:.95">Maritime Medical Decision Consultant</div>
 <div style="font-size:15px;opacity:.85">Fitness Eligibility Interpretation for Seafarers & Shipping Organisations</div>
