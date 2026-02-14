@@ -154,34 +154,17 @@ function revealSections(){document.querySelectorAll('section').forEach(sec=>{con
 <p>For institutional advisory engagement, please contact via email with company details.</p>
 </section>
 
-<section id="prep-support">
-<h2>Choose Your Support Level</h2>
-
-<div class="card">
-<strong>Quick Eligibility Check — ₹499</strong><br>
-For candidates unsure whether to attempt medical now.<br>
-You receive short 3-point guidance focused on main concern.
-</div>
-
-<div class="card">
-<strong>Detailed Case Review — ₹1500</strong><br>
-Structured written interpretation of findings and likely decision factors.
-</div>
-
-<div class="card">
-<strong>Medical Preparation Plan — ₹3500</strong><br>
-Guidance on what to correct, repeat tests and timing before attending PEME.
-</div>
-
-<div class="highlight">
-Goal: Reduce rejection risk and unnecessary travel before medical examination.
-</div>
-</section>
-
 <section id="contact">
 <h2>Submit Eligibility Assessment Request</h2>
 <p>Please submit details for a single individual only. Review begins after payment confirmation.<br><br><strong></strong></p>
 <form action="mailto:maritimemedicalreview@gmail.com" method="post" enctype="text/plain">
+<label>Select Support Level</label><br>
+<select name="Support Level" required>
+<option value="">-- Choose --</option>
+<option>Quick Eligibility Check — ₹499</option>
+<option>Detailed Case Review — ₹1500</option>
+<option>Medical Preparation Plan — ₹3500</option>
+</select><br><br>
 <label>Date of Birth (preferred) or Age</label><br>
 <input type="text" name="Age or DOB" placeholder="DD/MM/YYYY or Age" required><br><br>
 <label>Rank / Position / Aspiring For</label><br>
@@ -214,7 +197,10 @@ Goal: Reduce rejection risk and unnecessary travel before medical examination.
 <div class="card">
 <strong>Professional Engagement Process:</strong><br>
 After submission you will receive an acceptance email confirming suitability for review.<br>
-Professional review fee (approx USD 20 equivalent) is payable only after acceptance.<br>
+After acceptance, choose support level and pay as per below:
+₹499 — Quick Eligibility Check (single concern)
+₹1500 — Detailed Case Review
+₹3500 — Medical Preparation Plan<br>
 This fee covers document interpretation and advisory opinion — not a medical certificate.<br>
 Review begins after payment confirmation.<br><br>
 One submission = One individual case.<br>
