@@ -205,6 +205,13 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <section id="contact">
 <h2>Submit Eligibility Assessment Request</h2>
 <p>Please submit details for a single individual only. Review begins after payment confirmation.</p>
+
+<p style="background:#fff3cd;padding:12px;border-left:4px solid #f0ad4e;border-radius:6px;">
+<strong>Important:</strong> After clicking <b>Submit Request</b>, your email app will open.
+Please press <b>SEND</b> in your email to complete the request.
+If no email window appears, please email directly to <b>maritimemedicalreview@gmail.com</b>.
+</p>
+
 <form action="mailto:maritimemedicalreview@gmail.com" method="post" enctype="text/plain">
 <label>Select Support Level</label><br>
 <select name="Support Level" required>
@@ -213,14 +220,19 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <option>Detailed Case Review — ₹1500</option>
 <option>Medical Preparation Plan — ₹3500</option>
 </select><br><br>
+
 <label>Date of Birth (preferred) or Age</label><br>
 <input type="text" name="Age or DOB" placeholder="DD/MM/YYYY or Age" required><br><br>
+
 <label>Rank / Position / Aspiring For</label><br>
 <input type="text" name="Rank/Role" placeholder="Deck Cadet / Engine / Cruise Staff" required><br><br>
+
 <label>Experience Level</label><br>
 <input type="text" name="Experience" placeholder="Student / Trainee / New candidate / Experienced"><br><br>
+
 <label>Sector</label><br>
 <input type="text" name="Sector" placeholder="Cargo / Cruise / Offshore"><br><br>
+
 <h3>Medical Factors</h3>
 <input type="checkbox" name="Condition" value="Vision"> Vision/Refractive Error<br>
 <input type="checkbox" name="Condition" value="Colour Vision"> Colour Vision<br>
@@ -232,12 +244,17 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <input type="checkbox" name="Condition" value="Surgery"> Surgery History<br>
 <input type="checkbox" name="Condition" value="Abnormal Tests"> Abnormal Investigations<br>
 <label><input type="checkbox" name="Condition" value="Declared Unfit"> Previously Declared Unfit</label><br><br>
+
 <label>Brief Notes (required – describe findings for the selected conditions)</label><br>
 <textarea name="Notes" rows="4" required></textarea><br><br>
+
 <label>Upload Supporting Reports (PDF/JPG/JPEG/PNG — Max total 10MB, up to 5 files)</label><br>
-<input type="file" name="Reports" accept=".pdf,.jpg,.jpeg,.png" multiple><br><small>Please upload only relevant summary reports to avoid delay.</small><br><br>
+<input type="file" name="Reports" accept=".pdf,.jpg,.jpeg,.png" multiple>
+<br><small>Please upload only relevant summary reports to avoid delay.</small><br><br>
+
 <input type="submit" value="Submit Request" class="btn">
 </form>
+
 <div class="card"><strong>Professional Engagement Process:</strong><br>
 After submission you will receive an acceptance email confirming suitability for review.<br>
 After acceptance, choose support level and pay as per below:<br>
