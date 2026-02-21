@@ -4,116 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PEME Risk Self-Assessment Tool | Maritime Medical Review</title>
-<meta name="description" content="Assess your medical risk exposure before booking seafarer PEME. Structured maritime risk awareness tool for seafarers.">
+<meta name="description" content="Educational maritime risk awareness tool for seafarers before booking Pre-Employment Medical Examination (PEME).">
 <style>
 body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f6f8;color:#222;line-height:1.6}
 header{background:#0a3d62;color:#fff;padding:40px 20px;text-align:center}
-section{max-width:900px;margin:auto;padding:30px 20px}
-h2{color:#0a3d62}
+nav{background:#ffffff;padding:12px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+nav a{margin:0 15px;color:#0a3d62;text-decoration:none;font-weight:bold}
+section{max-width:950px;margin:auto;padding:30px 20px}
+h2{color:#0a3d62;margin-top:30px}
 .card{background:#fff;padding:18px;border-radius:8px;margin:15px 0;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+.notice{background:#eef4f8;padding:15px;border-left:4px solid #6b8aa6;margin:20px 0;border-radius:6px}
 button{background:#0a3d62;color:#fff;padding:12px 20px;border:none;border-radius:6px;font-weight:bold;cursor:pointer}
 button:hover{background:#08314d}
 .result{padding:20px;margin-top:20px;border-radius:8px;font-weight:bold}
 .low{background:#e6f4ea;color:#1e7e34}
 .moderate{background:#fff3cd;color:#856404}
 .high{background:#f8d7da;color:#721c24}
-.notice{background:#eef4f8;padding:15px;border-left:4px solid #6b8aa6;margin:20px 0;border-radius:6px}
+small{color:#555}
 </style>
 </head>
 <body>
 
 <header>
 <h1>PEME Risk Self-Assessment Tool</h1>
-<p>Pre-Employment Medical Risk Awareness for Seafarers</p>
+<p>Educational Risk Awareness Before Booking Your Seafarer Medical</p>
 </header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="peme-risk-tool.html">Risk Tool</a>
+<a href="index.html#contact">Contact</a>
+</nav>
 
 <section>
 
 <div class="notice">
 This tool provides educational risk awareness only.  
 It does NOT determine fitness certification.  
-Final decision rests with examining authority and employer regulations.
+Final decision always rests with the examining authority and employer regulations.
 </div>
 
-<h2>Before Booking PEME, Consider Checking:</h2>
+<h2>Basic Self-Checks Before Booking PEME</h2>
+
 <div class="card">
-• Recent blood pressure readings<br>
-• Fasting blood sugar / HbA1c (if history)<br>
-• Liver function test if alcohol use or fatty liver history<br>
-• BMI calculation<br>
-• Stability after recent surgery<br>
-• Any previous temporary unfit status
+Many candidates prefer to review these basic parameters before travelling for medical:
+<br><br>
+• Recent blood pressure reading  
+• Fasting blood sugar or HbA1c (if history or family history)  
+• Liver function test (if alcohol use or fatty liver history)  
+• BMI (weight vs height)  
+• ECG if age above 35 or cardiac symptoms  
+• Stability after recent surgery  
+<br><br>
+<small>These are not mandatory for this tool, but awareness reduces unexpected delays.</small>
 </div>
 
-<h2>Risk Assessment Questions</h2>
+<h2>Risk Awareness Questions</h2>
 
 <form id="riskForm">
 
 <div class="card">
-<strong>1. Blood Pressure Stability</strong><br>
-<input type="checkbox" value="1"> BP ≥140/90 on multiple occasions<br>
-<input type="checkbox" value="1"> Recently started/changed BP medication<br>
-<input type="checkbox" value="1"> Variable readings during prior medical
+<strong>1. Blood Pressure</strong><br>
+<input type="checkbox" value="1"> During any previous medical you were told “BP thoda high hai”<br>
+<input type="checkbox" value="1"> You are taking BP tablet or recently started medication<br>
+<input type="checkbox" value="1"> BP was repeated multiple times during past medical<br>
+<input type="checkbox" value="0"> I have not checked my BP recently
 </div>
 
 <div class="card">
 <strong>2. Blood Sugar / Diabetes</strong><br>
-<input type="checkbox" value="1"> Borderline or elevated HbA1c<br>
-<input type="checkbox" value="1"> On diabetes medication<br>
-<input type="checkbox" value="1"> Recent hypoglycaemia episode
+<input type="checkbox" value="1"> Fasting sugar or HbA1c was borderline or high<br>
+<input type="checkbox" value="1"> You are on diabetes medication<br>
+<input type="checkbox" value="1"> Doctor advised better sugar control before fitness<br>
+<input type="checkbox" value="0"> I have not checked sugar recently
 </div>
 
 <div class="card">
 <strong>3. Liver Function</strong><br>
-<input type="checkbox" value="1"> Elevated SGOT/SGPT/GGT in last 6 months<br>
-<input type="checkbox" value="1"> Fatty liver diagnosis<br>
-<input type="checkbox" value="1"> Regular alcohol intake with abnormal reports
+<input type="checkbox" value="1"> SGOT/SGPT/GGT reported high in past reports<br>
+<input type="checkbox" value="1"> You were told you have fatty liver<br>
+<input type="checkbox" value="1"> Regular alcohol intake with abnormal reports<br>
+<input type="checkbox" value="0"> I have not checked liver tests recently
 </div>
 
 <div class="card">
-<strong>4. Cardiac Evaluation</strong><br>
-<input type="checkbox" value="2"> Abnormal ECG/TMT finding<br>
-<input type="checkbox" value="2"> Advised cardiology review<br>
-<input type="checkbox" value="2"> Age >35 with risk factors
+<strong>4. Cardiac / ECG</strong><br>
+<input type="checkbox" value="2"> ECG showed abnormality<br>
+<input type="checkbox" value="2"> You were advised TMT or cardiology review<br>
+<input type="checkbox" value="1"> Age above 35 with BP, sugar or cholesterol issues
 </div>
 
 <div class="card">
-<strong>5. BMI / Weight</strong><br>
-<input type="checkbox" value="1"> BMI >30<br>
-<input type="checkbox" value="1"> Associated fatty liver or metabolic issues
+<strong>5. Weight / BMI</strong><br>
+<input type="checkbox" value="1"> BMI above 30 or overweight noted in past medical<br>
+<input type="checkbox" value="1"> Doctor advised weight reduction before joining
 </div>
 
 <div class="card">
-<strong>6. Vision / LASIK</strong><br>
-<input type="checkbox" value="1"> Recent LASIK (<6 months)<br>
-<input type="checkbox" value="1"> Previous colour vision issue
+<strong>6. Vision / LASIK / Colour Vision</strong><br>
+<input type="checkbox" value="1"> Recent LASIK or refractive surgery<br>
+<input type="checkbox" value="1"> Colour vision issue noted previously
 </div>
 
 <div class="card">
-<strong>7. Respiratory</strong><br>
-<input type="checkbox" value="1"> Asthma requiring inhaler<br>
-<input type="checkbox" value="1"> Recent respiratory hospitalization
-</div>
-
-<div class="card">
-<strong>8. Surgery History</strong><br>
+<strong>7. Surgery History</strong><br>
 <input type="checkbox" value="1"> Surgery within last 6 months<br>
-<input type="checkbox" value="1"> Implants or ongoing recovery
+<input type="checkbox" value="1"> Ongoing recovery or implant
 </div>
 
 <div class="card">
-<strong>9. Previous Temporary Unfit</strong><br>
-<input type="checkbox" value="2"> Previously declared temporary unfit<br>
-<input type="checkbox" value="1"> Reason not yet fully resolved
+<strong>8. Previous Temporary Unfit</strong><br>
+<input type="checkbox" value="2"> Previously declared Temporary Unfit<br>
+<input type="checkbox" value="1"> Same issue not fully corrected yet
 </div>
 
 <div class="card">
-<strong>10. Chronic Medication / Disclosure Concern</strong><br>
+<strong>9. Chronic Medication / Disclosure Concern</strong><br>
 <input type="checkbox" value="1"> On long-term medication<br>
-<input type="checkbox" value="1"> Unsure about disclosure requirements
+<input type="checkbox" value="1"> Unsure whether to disclose certain history
 </div>
 
-<button type="button" onclick="calculateScore()">View My Risk Level</button>
+<button type="button" onclick="calculateScore()">Evaluate Risk Exposure</button>
 
 </form>
 
@@ -134,16 +145,16 @@ function calculateScore() {
 
     if(total <= 2){
         resultBox.classList.add("low");
-        resultBox.innerHTML = "Low Risk Exposure: No significant indicators detected. Routine PEME may be appropriate, though no outcome is guaranteed.";
-    } else if(total <=5){
+        resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
+    } else if(total <= 6){
         resultBox.classList.add("moderate");
-        resultBox.innerHTML = "Moderate Risk Exposure: Clarification before booking medical may help avoid temporary deferral or repeat examination.";
+        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameters may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
     } else {
         resultBox.classList.add("high");
-        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation is advisable before investing in travel or medical booking.";
+        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
     }
 
-    resultBox.innerHTML += "<br><br><a href='index.html#contact'><button>Request Structured Interpretation</button></a>";
+    resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
 }
 </script>
 
