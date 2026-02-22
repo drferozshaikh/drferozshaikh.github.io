@@ -60,12 +60,12 @@ For detailed regulatory reference, see the
 <div class="card">
 Many candidates prefer to review these basic parameters before travelling for medical:
 <br><br>
-• Recent blood pressure reading  
-• Fasting blood sugar or HbA1c (if history or family history)  
-• Liver function test (if alcohol use or fatty liver history)  
-• BMI (weight vs height)  
-• ECG if age above 35 or cardiac symptoms  
-• Stability after recent surgery  
+• Recent blood pressure reading <br>  
+• Fasting blood sugar or HbA1c (if history or family history) <br>  
+• Liver function test (if alcohol use or fatty liver history) <br> 
+• BMI (weight vs height) <br> 
+• ECG if age above 35 or cardiac symptoms <br> 
+• Stability after recent surgery  <br>
 <br><br>
 <small>These are not mandatory for this tool, but awareness reduces unexpected delays.</small>
 </div>
@@ -144,23 +144,43 @@ Many candidates prefer to review these basic parameters before travelling for me
 </section>
 
 <script>
+<script>
 function calculateScore() {
     let total = 0;
-    const checkboxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
-    checkboxes.forEach(box => {
+    let checkedBoxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
+
+    if (checkedBoxes.length === 0) {
+        alert("Please select at least one relevant option before evaluating risk exposure.");
+        return;
+    }
+
+    let meaningfulSelection = false;
+
+    checkedBoxes.forEach(box => {
         total += parseInt(box.value);
+        if(parseInt(box.value) > 0){
+            meaningfulSelection = true;
+        }
     });
 
     let resultBox = document.getElementById("resultBox");
     resultBox.className = "result";
 
+    if (!meaningfulSelection) {
+        resultBox.classList.add("moderate");
+        resultBox.innerHTML = "Insufficient Data: You have selected only 'Not checked' options. Consider reviewing basic health parameters before booking your PEME to reduce uncertainty.<br><br><small>This tool provides educational risk awareness only.</small>";
+        return;
+    }
+
     if(total <= 2){
         resultBox.classList.add("low");
         resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
-    } else if(total <= 6){
+    } 
+    else if(total <= 6){
         resultBox.classList.add("moderate");
         resultBox.innerHTML = "Moderate Risk Exposure: Certain parameters may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
-    } else {
+    } 
+    else {
         resultBox.classList.add("high");
         resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
     }
