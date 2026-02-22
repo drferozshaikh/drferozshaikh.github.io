@@ -85,7 +85,7 @@ Many candidates prefer to review these basic parameters before travelling for me
 <div class="card">
 <strong>2. Blood Sugar / Diabetes</strong><br>
 <input type="checkbox" value="1"> Fasting sugar or HbA1c was borderline or high in past reports<br>
-<input type="checkbox" value="1"> You are on diabetes medication or insulin<br>
+<input type="checkbox" value="3"> You are on diabetes medication or insulin<br>
 <input type="checkbox" value="1"> Doctor advised better sugar control before fitness clearance<br>
 <input type="checkbox" value="0"> I have not checked sugar recently
 </div>
@@ -94,14 +94,14 @@ Many candidates prefer to review these basic parameters before travelling for me
 <strong>3. Liver Function (SGOT / SGPT / Fatty Liver)</strong><br>
 <input type="checkbox" value="1"> SGOT/SGPT/GGT reported high in past reports<br>
 <input type="checkbox" value="1"> You were told you have fatty liver/diagnosed on ultrasound (USG)<br>
-<input type="checkbox" value="1"> Regular alcohol intake with abnormal reports in the past<br>
+<input type="checkbox" value="3"> Regular alcohol intake with abnormal reports in the past<br>
 <input type="checkbox" value="0"> I have not checked liver tests recently
 </div>
 
 <div class="card">
 <strong>4. Cardiac / ECG</strong><br>
 <input type="checkbox" value="2"> ECG showed abnormality<br>
-<input type="checkbox" value="2"> You were advised TMT or cardiology review<br>
+<input type="checkbox" value="3"> You were advised TMT or cardiology review<br>
 <input type="checkbox" value="1"> Age above 35 with BP, sugar or cholesterol issues
 </div>
 
@@ -113,21 +113,21 @@ Many candidates prefer to review these basic parameters before travelling for me
 
 <div class="card">
 <strong>6. Vision / LASIK / Colour Vision</strong><br>
-<input type="checkbox" value="1"> Recent LASIK or refractive surgery<br>
+<input type="checkbox" value="2"> Recent LASIK or refractive surgery<br>
 <input type="checkbox" value="1"> Colour vision issue noted previously
 </div>
 
 <div class="card">
 <strong>7. Surgery History</strong><br>
 <input type="checkbox" value="1"> Surgery within last 6 months<br>
-<input type="checkbox" value="1"> Ongoing recovery or implant present
+<input type="checkbox" value="3"> Ongoing recovery or implant present
 </div>
 
 <div class="card">
 <strong>8. Neurological History</strong><br>
-<input type="checkbox" value="2"> History of seizures / epilepsy / akdi / fits<br>
-<input type="checkbox" value="2"> On anti-epileptic medication<br>
-<input type="checkbox" value="2"> History of unexplained blackout or loss of consciousness
+<input type="checkbox" value="3"> History of seizures / epilepsy / akdi / fits<br>
+<input type="checkbox" value="3"> On anti-epileptic medication<br>
+<input type="checkbox" value="3"> History of unexplained blackout or loss of consciousness
 </div>
 
 <div class="card">
@@ -139,7 +139,7 @@ Many candidates prefer to review these basic parameters before travelling for me
 <div class="card">
 <strong>10. Chronic Medication / Disclosure Concern</strong><br>
 <input type="checkbox" value="1"> On long-term medication<br>
-<input type="checkbox" value="1"> Unsure whether to disclose certain history
+<input type="checkbox" value="3"> Unsure whether to disclose certain history
 </div>
 
 
@@ -183,7 +183,7 @@ function calculateScore() {
         resultBox.classList.add("low");
         resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selections. Proceed with routine PEME while ensuring parameters remain stable, though no medical outcome can be guaranteed.";
     } 
-    else if(total <= 6){
+    else if(total <= 5){
         resultBox.classList.add("moderate");
         resultBox.innerHTML = "Moderate Risk Exposure: Certain parameters may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
     } 
