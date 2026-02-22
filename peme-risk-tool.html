@@ -60,12 +60,12 @@ For detailed regulatory reference, see the
 <div class="card">
 Many candidates prefer to review these basic parameters before travelling for medical:
 <br><br>
-• Recent blood pressure reading <br>  
-• Fasting blood sugar or HbA1c (if history or family history) <br>  
-• Liver function test (if alcohol use or fatty liver history) <br> 
-• BMI (weight vs height) <br> 
-• ECG if age above 35 or cardiac symptoms <br> 
-• Stability after recent surgery  <br>
+• Recent blood pressure reading<br>  
+• Fasting blood sugar or HbA1c (if history or family history)<br>  
+• Liver function test (if alcohol use or fatty liver history)<br> 
+• BMI (weight vs height)<br> 
+• ECG if age above 35 or cardiac symptoms<br> 
+• Stability after recent surgery<br>
 <br><br>
 <small>These are not mandatory for this tool, but awareness reduces unexpected delays.</small>
 </div>
@@ -84,17 +84,17 @@ Many candidates prefer to review these basic parameters before travelling for me
 
 <div class="card">
 <strong>2. Blood Sugar / Diabetes</strong><br>
-<input type="checkbox" value="1"> Fasting sugar or HbA1c was borderline or high<br>
-<input type="checkbox" value="1"> You are on diabetes medication<br>
-<input type="checkbox" value="1"> Doctor advised better sugar control before fitness<br>
+<input type="checkbox" value="1"> Fasting sugar or HbA1c was borderline or high in past reports<br>
+<input type="checkbox" value="1"> You are on diabetes medication or insulin<br>
+<input type="checkbox" value="1"> Doctor advised better sugar control before fitness clearance<br>
 <input type="checkbox" value="0"> I have not checked sugar recently
 </div>
 
 <div class="card">
-<strong>3. Liver Function</strong><br>
+<strong>3. Liver Function (SGOT / SGPT / Fatty Liver)</strong><br>
 <input type="checkbox" value="1"> SGOT/SGPT/GGT reported high in past reports<br>
-<input type="checkbox" value="1"> You were told you have fatty liver<br>
-<input type="checkbox" value="1"> Regular alcohol intake with abnormal reports<br>
+<input type="checkbox" value="1"> You were told you have fatty liver/diagnosed on ultrasound (USG)<br>
+<input type="checkbox" value="1"> Regular alcohol intake with abnormal reports in the past<br>
 <input type="checkbox" value="0"> I have not checked liver tests recently
 </div>
 
@@ -120,22 +120,30 @@ Many candidates prefer to review these basic parameters before travelling for me
 <div class="card">
 <strong>7. Surgery History</strong><br>
 <input type="checkbox" value="1"> Surgery within last 6 months<br>
-<input type="checkbox" value="1"> Ongoing recovery or implant
+<input type="checkbox" value="1"> Ongoing recovery or implant present
 </div>
 
 <div class="card">
-<strong>8. Previous Temporary Unfit</strong><br>
+<strong>8. Neurological History</strong><br>
+<input type="checkbox" value="2"> History of seizures / epilepsy / akdi / fits<br>
+<input type="checkbox" value="2"> On anti-epileptic medication<br>
+<input type="checkbox" value="2"> History of unexplained blackout or loss of consciousness
+</div>
+
+<div class="card">
+<strong>9. Previous Medical outcome/Temporary Unfit</strong><br>
 <input type="checkbox" value="2"> Previously declared Temporary Unfit<br>
 <input type="checkbox" value="1"> Same issue not fully corrected yet
 </div>
 
 <div class="card">
-<strong>9. Chronic Medication / Disclosure Concern</strong><br>
+<strong>10. Chronic Medication / Disclosure Concern</strong><br>
 <input type="checkbox" value="1"> On long-term medication<br>
 <input type="checkbox" value="1"> Unsure whether to disclose certain history
 </div>
 
-<button type="button" onclick="calculateScore()">Evaluate Risk Exposure</button>
+
+<button type="button" onclick="calculateScore()">Review Operational Risk Indicators</button>
 
 </form>
 
@@ -173,7 +181,7 @@ function calculateScore() {
 
     if(total <= 2){
         resultBox.classList.add("low");
-        resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
+        resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selections. Proceed with routine PEME while ensuring parameters remain stable, though no medical outcome can be guaranteed.";
     } 
     else if(total <= 6){
         resultBox.classList.add("moderate");
