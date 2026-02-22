@@ -182,15 +182,15 @@ function calculateScore() {
 
     if(total <= 2){
         resultBox.classList.add("low");
-        resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selections. Proceed with routine PEME while ensuring parameters remain stable, though no medical outcome can be guaranteed.";
+        resultBox.innerHTML = "Low Risk Exposure: No major risk indicators identified based on your selection/s. Proceed with routine PEME while ensuring parameters remain stable, though no medical outcome can be guaranteed.";
     } 
     else if(total <= 5){
         resultBox.classList.add("moderate");
-        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameters may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
+        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification before medical examination. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
     } 
     else {
         resultBox.classList.add("high");
-        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
+        resultBox.innerHTML = "Elevated Risk Exposure: Important or Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
     }
 
     resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
