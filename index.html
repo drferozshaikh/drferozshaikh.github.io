@@ -23,7 +23,7 @@ nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,
 .dropdown-menu {display: none;position: absolute;top: 100%;left: 0;background: white;min-width: 250px;box-shadow: 0 6px 18px rgba(0,0,0,0.08);border-radius: 8px;padding: 10px 0;z-index: 999;}
 .dropdown-menu li {list-style: none;padding: 6px 16px;}
 .dropdown-menu li a {display: block;font-weight: 500;}
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown-menu.show {display: block;}
 section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;}
 h2{color:#0a3d62;margin-top:0;font-weight:700}
 .card{background:white;padding:18px 20px;border-radius:12px;margin:12px 0;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
@@ -31,8 +31,13 @@ h2{color:#0a3d62;margin-top:0;font-weight:700}
 .highlight{background:#eef4f8;padding:18px;border-left:5px solid #6b8aa6;border-radius:10px;margin:18px 0}
 form input[type="text"], form textarea{width:100%;padding:12px;border:1px solid #cfd8e3;border-radius:8px;font-family:inherit}
 footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:40px;font-size:14px}
+section {transition: 0.3s ease;}
+section:hover {transform: translateY(-3px);box-shadow: 0 4px 15px rgba(0,0,0,0.1);}
 </style>
 </head>
+<script>
+document.getElementById("guidanceBtn").addEventListener("click", function() {document.querySelector(".dropdown-menu").classList.toggle("show");});window.addEventListener("scroll", function() {document.querySelector(".dropdown-menu").classList.remove("show");});
+</script>
 <body>
 <header>
 <div style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;text-align:left">
@@ -53,7 +58,7 @@ footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:
 <li><a href="peme-risk-tool.html">PEME Tool</a></li>
 
 <li class="dropdown">
-<a href="#">Guidance ▾</a>
+<button id="guidanceBtn">Guidance</button>
 <ul class="dropdown-menu">
 <li><a href="#problems">Common Problems</a></li>
 <li><a href="#prepeme">Before Booking PEME</a></li>
