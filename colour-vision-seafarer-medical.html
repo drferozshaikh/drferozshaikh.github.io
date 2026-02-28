@@ -23,22 +23,17 @@ body{
 }
 
 /* NAVBAR FULL WIDTH */
-nav{
-  background:white;
-  padding:14px;
-  text-align:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
-  position:sticky;
-  top:0;
-  z-index:999;
-  width:100%;
-}
-nav a{
-  margin:0 15px;
-  color:#0a3d62;
-  text-decoration:none;
-  font-weight:bold
-}
+nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:999;} nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600} section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;} h2{color:#0a3d62;margin-top:0;font-weight:700}
+.main-nav {list-style: none;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
+.main-nav > li {position: relative;margin: 0 14px;}
+.main-nav a {color: #0a3d62;text-decoration: none;font-weight: 600;}
+.dropdown-menu {display: none;position: absolute;top: 100%;left: 0;background: white;min-width: 250px;box-shadow: 0 6px 18px rgba(0,0,0,0.08);border-radius: 8px;padding: 10px 0;z-index: 999;}
+.dropdown-menu li {list-style: none;padding: 6px 16px;}
+.dropdown-menu li a {display: block;font-weight: 500;}
+.dropdown:hover .dropdown-menu {display: block;}
+section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;}
+h2{color:#0a3d62;margin-top:0;font-weight:700}
+
 
 /* MAIN CONTENT CENTERED */
 .main-content{
@@ -116,15 +111,33 @@ footer{
 <body>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="index.html#about">About</a>
-<a href="index.html#who">Who Should Contact</a>
-<a href="index.html#problems">Common Problems</a>
-<a href="peme-risk-tool.html">PEME Risk Tool</a>
-<a href="index.html#services">Services</a>
-<a href="index.html#process">Process</a>
-<a href="guidelines.html">Guidelines</a>
-<a href="index.html#contact">Contact</a>
+<ul class="main-nav">
+<li><a href="index.html">Home</a></li> 
+<li><a href="#who">Who It’s For</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="peme-risk-tool.html">PEME Tool</a></li>
+
+<li class="dropdown">
+<a href="#">Guidance ▾</a>
+<ul class="dropdown-menu">
+<li><a href="#problems">Common Problems</a></li>
+<li><a href="#prepeme">Before Booking PEME</a></li>
+<li><a href="#evaluation">Fitness Interpretation</a></li>
+<li><a href="#faq">Common Questions</a></li>
+<li><a href="#search-answers">Medical Concerns Explained</a></li>
+<li><a href="/liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
+<li><a href="/temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
+<li><a href="/colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
+<li><a href="/bp-seafarer-medical.html">High Blood Pressure</a></li>
+<li><a href="/diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
+<li><a href="guidelines.html">Maritime Guidelines</a></li>
+</ul>
+</li>
+
+<li><a href="#companies">For Companies</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 
 <div class="main-content">
