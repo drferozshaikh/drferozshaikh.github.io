@@ -216,6 +216,25 @@ background:#134e7a;
 transform:scale(0.95);
 box-shadow:0 2px 4px rgba(0,0,0,0.2) inset;
 }
+
+.guideline-row{
+display:flex;
+gap:25px;
+align-items:flex-start;
+flex-wrap:wrap;
+}
+
+.guideline-row img{
+width:220px;
+border-radius:6px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.guideline-text{
+flex:1;
+min-width:260px;
+}
+
 /* FORM */
 
 form input[type="text"],
