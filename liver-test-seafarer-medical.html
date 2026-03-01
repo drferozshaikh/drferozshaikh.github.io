@@ -8,79 +8,185 @@
 
 <meta name="description" content="Understand whether high SGPT, SGOT or fatty liver can cause failure in seafarer medical examination (PEME). Practical explanation for cargo and cruise ship candidates.">
 <meta name="copyright" content="© 2026 Maritime Medical Review. All rights reserved.">
-  
+
 <link rel="canonical" href="https://drferozshaikh.github.io/liver-test-seafarer-medical.html">
 
 <style>
 
-/* RESET */
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  margin:0;
-  padding:0;
-  line-height:1.7;
-  color:#222;
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+line-height:1.7;
+color:#222;
 }
 
-/* NAVBAR FULL WIDTH */
-nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:999;} nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600} section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;} h2{color:#0a3d62;margin-top:0;font-weight:700}
-.main-nav {list-style: none;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
-.main-nav > li {position: relative;margin: 0 14px;}
-.main-nav a {color: #0a3d62;text-decoration: none;font-weight: 600;}
-.dropdown-menu {display: none;position: absolute;top: 100%;left: 0;background: white;min-width: 250px;box-shadow: 0 6px 18px rgba(0,0,0,0.08);border-radius: 8px;padding: 10px 0;z-index: 999;}
-.dropdown-menu li {list-style: none;padding: 6px 16px;}
-.dropdown-menu li a {display: block;font-weight: 500;}
-.dropdown:hover .dropdown-menu {display: block;}
-section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;}
-h2{color:#0a3d62;margin-top:0;font-weight:700}
+/* NAVBAR */
 
+nav{
+background:white;
+padding:14px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+position:sticky;
+top:0;
+z-index:999;
+}
 
-/* MAIN CONTENT CENTERED */
+.main-nav{
+list-style:none;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.main-nav > li{
+position:relative;
+margin:0 14px;
+}
+
+.main-nav a{
+color:#0a3d62;
+text-decoration:none;
+font-weight:600;
+}
+
+/* DROPDOWN */
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:white;
+min-width:260px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+border-radius:8px;
+padding:10px 0;
+text-align:left;
+}
+
+.dropdown-menu li{
+list-style:none;
+padding:6px 16px;
+}
+
+.dropdown-menu li a{
+display:block;
+font-weight:500;
+}
+
+.dropdown-menu.show{
+display:block;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb{
+max-width:1000px;
+margin:auto;
+padding:10px 20px;
+font-size:14px;
+color:#666;
+}
+
+.breadcrumb a{
+color:#0a3d62;
+text-decoration:none;
+}
+
+.breadcrumb a:hover{
+text-decoration:underline;
+}
+
+/* CONTENT */
+
 .main-content{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
-h1,h2{color:#0a3d62}
-h2{margin-top:30px}
+h1,h2{
+color:#0a3d62;
+}
+
+h2{
+margin-top:30px;
+}
 
 .box{
-  background:#eef4f8;
-  padding:16px;
-  border-left:5px solid #6b8aa6;
-  margin:18px 0
+background:#eef4f8;
+padding:16px;
+border-left:5px solid #6b8aa6;
+margin:18px 0;
 }
 
 .notice{
-  background:#eef4f8;
-  padding:18px;
-  border-left:4px solid #6b8aa6;
-  margin:25px 0;
-  border-radius:6px
+background:#eef4f8;
+padding:18px;
+border-left:4px solid #6b8aa6;
+margin:25px 0;
+border-radius:6px;
 }
+
+/* HOVER LINES */
+
+.main-content p:hover,
+.main-content li:hover{
+background:#f2f6fa;
+}
+
+/* BUTTON */
 
 a.button{
-  display:inline-block;
-  background:#0a3d62;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:6px;
-  margin-top:15px
+display:inline-block;
+background:#0a3d62;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:6px;
+margin-top:15px;
 }
 
+/* FOOTER */
+
 footer{
-  background:#0a3d62;
-  color:white;
-  text-align:center;
-  padding:25px;
-  margin-top:40px;
-  font-size:14px;
-  width:100%;
+background:#0a3d62;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+font-size:14px;
 }
 
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const btn=document.getElementById("guidanceBtn");
+const menu=document.querySelector(".dropdown-menu");
+
+btn.addEventListener("click",function(e){
+e.preventDefault();
+menu.classList.toggle("show");
+});
+
+window.addEventListener("scroll",function(){
+menu.classList.remove("show");
+});
+
+document.addEventListener("click",function(e){
+if(!btn.contains(e.target) && !menu.contains(e.target)){
+menu.classList.remove("show");
+}
+});
+
+});
+</script>
 
 <script type="application/ld+json">
 {
@@ -107,49 +213,55 @@ footer{
 
 <nav>
 <ul class="main-nav">
-<li><a href="index.html">Home</a></li> 
+
+<li><a href="index.html">Home</a></li>
 <li><a href="index.html#who">Who It’s For</a></li>
 <li><a href="index.html#services">Services</a></li>
 <li><a href="peme-risk-tool.html">PEME Tool</a></li>
 
 <li class="dropdown">
-<a href="#">Guidance ▾</a>
+<a href="#" id="guidanceBtn">Guidance ▾</a>
+
 <ul class="dropdown-menu">
-<li><a href="#problems">Common Problems</a></li>
-<li><a href="#prepeme">Before Booking PEME</a></li>
-<li><a href="#evaluation">Fitness Interpretation</a></li>
-<li><a href="#faq">Common Questions</a></li>
-<li><a href="#search-answers">Medical Concerns Explained</a></li>
-<li><a href="/liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
-<li><a href="/temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
-<li><a href="/colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
-<li><a href="/bp-seafarer-medical.html">High Blood Pressure</a></li>
-<li><a href="/diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
+
+<li><a href="liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
+<li><a href="temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
+<li><a href="colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
+<li><a href="bp-seafarer-medical.html">High Blood Pressure</a></li>
+<li><a href="diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
 <li><a href="guidelines.html">Maritime Guidelines</a></li>
+
 </ul>
 </li>
 
 <li><a href="index.html#companies">For Companies</a></li>
 <li><a href="index.html#contact">Contact</a></li>
-</ul>
 
+</ul>
 </nav>
+
+<div class="breadcrumb">
+<a href="index.html">Home</a> › 
+<a href="index.html#search-answers">Medical Guidance</a> › 
+High Liver Enzymes
+</div>
 
 <div class="main-content">
 
 <h1>Can High Liver Enzymes Fail Seafarer Medical?</h1>
 
 <p>
-One of the most common worries before a ship medical examination (PEME) is abnormal liver test results.
-Candidates often see <strong>SGPT, SGOT or GGT elevated</strong> and fear permanent rejection.
+One of the most common worries before a ship medical examination (PEME) is abnormal liver test results. Candidates often see <strong>SGPT, SGOT or GGT elevated</strong> and fear permanent rejection.
+</p>
+
+<p>
 In reality, maritime fitness decisions are based on operational risk — not just the lab number.
 </p>
 
 <h2>Why liver tests matter at sea</h2>
+
 <p>
-Ship duty involves long voyages without specialist doctors onboard.
-Medical decisions focus on predicting whether a condition may suddenly worsen during voyage.
-The concern with liver abnormalities is not the report itself but:
+Ship duty involves long voyages without specialist doctors onboard. Medical decisions focus on predicting whether a condition may suddenly worsen during voyage.
 </p>
 
 <ul>
@@ -160,52 +272,40 @@ The concern with liver abnormalities is not the report itself but:
 </ul>
 
 <div class="box">
-Most candidates with mild abnormal reports are NOT permanently rejected.
-They are usually deferred until stability is confirmed.
+Most candidates with mild abnormal reports are NOT permanently rejected. They are usually deferred until stability is confirmed.
 </div>
 
-<h2>Common scenarios and likely outcomes</h2>
+<h2>Common scenarios</h2>
 
 <h3>1. Mild SGPT / SGOT elevation</h3>
-<p>
-Usually temporary unfit. Repeat test after rest, diet control or medication adjustment.
-Very common in young candidates.
-</p>
+<p>Usually temporary unfit. Repeat test after rest or diet control.</p>
 
 <h3>2. Fatty liver on ultrasound</h3>
-<p>
-Rarely disqualifies alone. Decision depends on weight, sugar levels and long-term risk.
-</p>
+<p>Rarely disqualifies alone. Decision depends on metabolic risk.</p>
 
-<h3>3. High GGT (possible alcohol effect)</h3>
-<p>
-Often leads to repeat testing period. Persistent elevation may delay joining but not always career ending.
-</p>
+<h3>3. High GGT</h3>
+<p>Often linked with alcohol or medication effect and requires repeat testing.</p>
 
 <h3>4. Persistently high values</h3>
-<p>
-Requires evaluation for chronic liver disease. Only advanced disease affects long-term eligibility.
-</p>
+<p>Requires evaluation for chronic liver disease.</p>
 
-<h2>Temporary unfit vs permanent unfit</h2>
+<h2>Temporary vs Permanent Unfit</h2>
 
 <p>
 Most liver cases fall into <strong>temporary unfit</strong> category — meaning improvement allows re-assessment.
-Permanent unfit is uncommon and usually linked to advanced disease or high complication risk.
 </p>
 
 <div class="box">
-Key point:  
-PEME does not judge past illness — it predicts future risk during voyage.
+PEME does not judge past illness — it predicts risk during voyage.
 </div>
 
-<h2>Before spending money on medical</h2>
+<h2>Before booking medical</h2>
+
 <p>
-Many candidates travel long distance for examination without knowing whether abnormal results need correction first.
-Understanding likely interpretation helps avoid repeated medical fees and delays.
+Many candidates travel long distance without knowing whether abnormal results require correction first.
 </p>
 
-<a href="https://drferozshaikh.github.io/#contact" class="button">
+<a href="index.html#contact" class="button">
 Request Eligibility Interpretation
 </a>
 
@@ -213,25 +313,29 @@ Request Eligibility Interpretation
 
 <div class="notice">
 Related Tools:<br>
-• <a href="peme-risk-tool.html">Use PEME Risk Self-Assessment Tool</a><br>
-• <a href="guidelines.html">Review Maritime Medical Guidelines</a><br>
-• <a href="index.html#contact">Request Structured Case Review</a>
+• <a href="peme-risk-tool.html">PEME Risk Self-Assessment Tool</a><br>
+• <a href="guidelines.html">Maritime Medical Guidelines</a><br>
+• <a href="index.html#contact">Request Case Review</a>
 </div>
 
 <hr>
 
 <p style="font-size:14px;color:#555">
-This article provides educational explanation of maritime fitness interpretation.
-Final certification always depends on examining authority and applicable regulations.
+Educational explanation only. Final certification depends on examining authority.
 </p>
 
 </div>
 
 <footer>
-<p><strong>Professional Disclaimer:</strong> Independent educational opinion based on provided documents only. Not a diagnosis, prescription, treatment, or statutory fitness certificate.</p>
-<p><strong>Decision Authority:</strong> Final fitness decision always rests with examining authority, employer and flag regulations.</p>
-<p><strong>Use Limitation:</strong> This service does not replace medical examination or emergency care.</p>
-<p>© 2026 Maritime Medical Review — Professional advisory content protected.</p>
+
+<p><strong>Professional Disclaimer:</strong> Independent educational opinion based on provided documents only.</p>
+
+<p><strong>Decision Authority:</strong> Final fitness decision rests with examining authority.</p>
+
+<p><strong>Use Limitation:</strong> This service does not replace medical examination.</p>
+
+<p>© 2026 Maritime Medical Review</p>
+
 </footer>
 
 </body>
