@@ -23,22 +23,16 @@
 
 <style>
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body{
-font-family:Arial,Helvetica,sans-serif;
+font-family:'Inter',Arial,Helvetica,sans-serif;
 margin:0;
-background:#f4f6f8;
-color:#222;
 line-height:1.7;
+color:#1a1a1a;
+background:#f7f8fa;
 letter-spacing:.2px;
-}
-
-/* HEADER */
-
-header{
-background:#0a3d62;
-color:#fff;
-padding:50px 20px;
-text-align:center;
 }
 
 /* NAVBAR */
@@ -109,10 +103,18 @@ font-weight:500;
 background:#f2f6fa;
 }
 
-.dropdown:hover .dropdown-menu{
+/* dropdown show */
+
+.dropdown-menu.show{
 display:block;
 }
-/* BREADCRUMB */
+
+/* arrow */
+
+#guidanceBtn::after{
+content:" ▾";
+font-size:12px;
+}
 
 .breadcrumb{
 max-width:1000px;
@@ -130,66 +132,45 @@ text-decoration:none;
 .breadcrumb a:hover{
 text-decoration:underline;
 }
+
 /* CONTENT */
 
-section{
-padding:40px 20px;
-max-width:1000px;
+.main-content{
+max-width:900px;
 margin:auto;
-scroll-margin-top:90px;
+padding:20px;
+}
+
+/* HEADINGS */
+
+h1{
+margin-top:30px;
+font-weight:700;
 }
 
 h2{
+font-size:26px;
 color:#0a3d62;
 margin-top:30px;
 }
 
-/* CARDS */
-
-.card{
-background:#fff;
-padding:20px;
-border-radius:8px;
-margin:18px 0;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-display:flex;
-gap:20px;
-align-items:flex-start;
-flex-wrap:wrap;
-}
-
-.card img{
-width:120px;
-border-radius:4px;
-}
-
-/* NOTICE BOX */
+/* NOTICE */
 
 .notice{
 background:#eef4f8;
 padding:18px;
 border-left:4px solid #6b8aa6;
 margin:25px 0;
-border-radius:6px
+border-radius:6px;
 }
 
-a.guideline-link{
-display:inline-block;
-margin-top:10px;
-color:#0a3d62;
-font-weight:bold;
-text-decoration:none
-}
-
-a.guideline-link:hover{
-text-decoration:underline
-}
 /* HOVER LINES */
 
 .main-content p:hover,
 .main-content li:hover{
 background:#f2f6fa;
 }
+
 /* FOOTER */
 
 footer{
@@ -198,10 +179,9 @@ color:#fff;
 text-align:center;
 padding:25px;
 margin-top:40px;
-font-size:14px
+font-size:14px;
+width:100%;
 }
-
-small{color:#555}
 
 </style>
 
