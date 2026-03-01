@@ -20,13 +20,19 @@
 
 <style>
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body{
-font-family:Arial,Helvetica,sans-serif;
+font-family:'Inter',Arial,Helvetica,sans-serif;
 margin:0;
 line-height:1.7;
-color:#222;
-background:#f7f8fa
+color:#1a1a1a;
+background:#f7f8fa;
+letter-spacing:.2px;
 }
+
+/* NAVBAR */
 
 nav{
 background:white;
@@ -44,36 +50,26 @@ margin:0;
 padding:0;
 display:flex;
 justify-content:center;
-flex-wrap:wrap
+align-items:center;
+flex-wrap:wrap;
 }
 
-.main-nav li{
+.main-nav > li{
+position:relative;
 margin:0 14px;
-position:relative
 }
 
 .main-nav a{
+color:#0a3d62;
 text-decoration:none;
 font-weight:600;
-color:#0a3d62
+padding:6px 4px;
 }
 
 .main-nav a:hover{
-color:#134e7a
+color:#134e7a;
 }
 
-.dropdown-menu{
-display:none;
-position:absolute;
-top:100%;
-left:0;
-background:white;
-min-width:260px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-border-radius:8px;
-padding:10px 0;
-z-index:999
-}
 /* DROPDOWN */
 
 .dropdown-menu{
@@ -116,61 +112,72 @@ display:block;
 content:" ▾";
 font-size:12px;
 }
-section{
+
+.breadcrumb{
+max-width:1000px;
+margin:auto;
+padding:10px 20px;
+font-size:14px;
+color:#666;
+}
+
+.breadcrumb a{
+color:#0a3d62;
+text-decoration:none;
+}
+
+.breadcrumb a:hover{
+text-decoration:underline;
+}
+
+/* CONTENT */
+
+.main-content{
 max-width:900px;
 margin:auto;
-padding:40px 20px
+padding:20px;
 }
 
-h1,h2{
-color:#0a3d62
+/* HEADINGS */
+
+h1{
+margin-top:30px;
+font-weight:700;
 }
 
-.card{
-background:white;
-padding:18px;
-border-radius:10px;
-margin:16px 0;
-box-shadow:0 4px 12px rgba(0,0,0,0.06)
+h2{
+font-size:26px;
+color:#0a3d62;
+margin-top:30px;
 }
-.breadcrumb{
-font-size:14px;
-margin-bottom:20px
-}
+
+/* NOTICE */
+
 .notice{
 background:#eef4f8;
 padding:18px;
-border-left:5px solid #6b8aa6;
-margin:18px 0;
-border-radius:8px
-}
-
-a.button{
-display:inline-block;
-background:#0a3d62;
-color:white;
-padding:12px 20px;
+border-left:4px solid #6b8aa6;
+margin:25px 0;
 border-radius:6px;
-text-decoration:none;
-margin-top:10px
 }
 
-a.button:hover{
-background:#134e7a
+/* HOVER LINES */
+
+.main-content p:hover,
+.main-content li:hover{
+background:#f2f6fa;
 }
+
+/* FOOTER */
 
 footer{
 background:#0a3d62;
-color:white;
+color:#fff;
 text-align:center;
 padding:25px;
 margin-top:40px;
-font-size:14px
-}
-
-.breadcrumb{
 font-size:14px;
-margin-bottom:20px
+width:100%;
 }
 
 </style>
