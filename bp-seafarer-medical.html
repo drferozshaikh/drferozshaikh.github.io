@@ -94,16 +94,21 @@ background:#f2f6fa;
 display:block;
 }
 
-#guidanceBtn::after{
-content:" ▾";
-font-size:12px;
-}
 .breadcrumb{
 max-width:1000px;
 margin:auto;
 padding:10px 20px;
 font-size:14px;
 color:#666;
+}
+
+.breadcrumb a{
+color:#0a3d62;
+text-decoration:none;
+}
+
+.breadcrumb a:hover{
+text-decoration:underline;
 }
 
 /* CONTENT */
@@ -228,7 +233,11 @@ width:100%;
 </ul>
 
 </nav>
-
+<div class="breadcrumb">
+<a href="index.html">Home</a> › 
+<a href="index.html#search-answers">Medical Guidance</a> › 
+High Blood Pressure
+</div>
 <div class="main-content">
 
 <h1>High Blood Pressure in Seafarer Medical</h1>
