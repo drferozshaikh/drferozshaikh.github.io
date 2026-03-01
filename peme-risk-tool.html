@@ -1,184 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Maritime Medical Review",
-  "url": "https://drferozshaikh.github.io/",
-  "logo": "https://drferozshaikh.github.io/logo.png"
-}
-</script>
+
 <title>PEME Risk Self-Assessment Tool | Maritime Medical Review</title>
 
 <meta name="description" content="Educational maritime risk awareness tool for seafarers before booking Pre-Employment Medical Examination (PEME).">
+
 <meta name="copyright" content="© 2026 Maritime Medical Review">
 
 <link rel="canonical" href="https://drferozshaikh.github.io/peme-risk-tool.html">
 
-<style>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
-body{
-font-family:'Inter',Arial,Helvetica,sans-serif;
-margin:0;
-line-height:1.7;
-color:#1a1a1a;
-background:#f7f8fa;
-letter-spacing:.2px;
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Maritime Medical Review",
+ "url": "https://drferozshaikh.github.io/",
+ "logo": "https://drferozshaikh.github.io/logo.png"
 }
+</script>
 
-/* NAVBAR */
-
-nav{
-background:white;
-padding:14px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.06);
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.main-nav{
-list-style:none;
-margin:0;
-padding:0;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.main-nav > li{
-position:relative;
-margin:0 14px;
-}
-
-.main-nav a{
-color:#0a3d62;
-text-decoration:none;
-font-weight:600;
-padding:6px 4px;
-}
-
-.main-nav a:hover{
-color:#134e7a;
-}
-
-/* DROPDOWN */
-
-.dropdown-menu{
-display:none;
-position:absolute;
-top:100%;
-left:0;
-background:white;
-min-width:260px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-border-radius:8px;
-padding:10px 0;
-z-index:999;
-text-align:left;
-}
-
-.dropdown-menu li{
-list-style:none;
-padding:6px 16px;
-}
-
-.dropdown-menu li a{
-display:block;
-font-weight:500;
-}
-
-.dropdown-menu li:hover{
-background:#f2f6fa;
-}
-
-/* dropdown show */
-
-.dropdown-menu.show{
-display:block;
-}
-
-/* arrow */
-
-#guidanceBtn::after{
-content:" ▾";
-font-size:12px;
-}
-
-.breadcrumb{
-max-width:1000px;
-margin:auto;
-padding:10px 20px;
-font-size:14px;
-color:#666;
-}
-
-.breadcrumb a{
-color:#0a3d62;
-text-decoration:none;
-}
-
-.breadcrumb a:hover{
-text-decoration:underline;
-}
-
-/* CONTENT */
-
-.main-content{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-/* HEADINGS */
-
-h1{
-margin-top:30px;
-font-weight:700;
-}
-
-h2{
-font-size:26px;
-color:#0a3d62;
-margin-top:30px;
-}
-
-/* NOTICE */
-
-.notice{
-background:#eef4f8;
-padding:18px;
-border-left:4px solid #6b8aa6;
-margin:25px 0;
-border-radius:6px;
-}
-
-/* HOVER LINES */
-
-.main-content p:hover,
-.main-content li:hover{
-background:#f2f6fa;
-}
-
-/* FOOTER */
-
-footer{
-background:#0a3d62;
-color:#fff;
-text-align:center;
-padding:25px;
-margin-top:40px;
-font-size:14px;
-width:100%;
-}
-
-</style>
 </head>
 
 <body>
@@ -191,33 +39,57 @@ width:100%;
 <nav>
 
 <ul class="main-nav">
+
 <li><a href="index.html">Home</a></li>
-<li><a href="#who">Who It’s For</a></li>
-<li><a href="#services">Services</a></li>
+
+<li><a href="index.html#who">Who It’s For</a></li>
+
+<li><a href="index.html#services">Services</a></li>
+
 <li><a href="peme-risk-tool.html">PEME Risk Tool</a></li>
 
 <li class="dropdown">
+
 <a href="#" id="guidanceBtn">Guidance</a>
+
 <ul class="dropdown-menu">
-<li><a href="#problems">Common Problems</a></li>
-<li><a href="#prepeme">Before Booking PEME</a></li>
+
+<li><a href="index.html#problems">Common Problems</a></li>
+
+<li><a href="index.html#prepeme">Before Booking PEME</a></li>
+
 <li><a href="seafarer-medical-test-list.html">Complete PEME Test List</a></li>
-<li><a href="#evaluation">Fitness Interpretation</a></li>
-<li><a href="#faq">Common Questions</a></li>
-<li><a href="#search-answers">Medical Concerns Explained</a></li>
-<li><a href="/liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
-<li><a href="/temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
-<li><a href="/colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
-<li><a href="/bp-seafarer-medical.html">High Blood Pressure</a></li>
-<li><a href="/diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
+
+<li><a href="index.html#evaluation">Fitness Interpretation</a></li>
+
+<li><a href="index.html#faq">Common Questions</a></li>
+
+<li><a href="index.html#search-answers">Medical Concerns Explained</a></li>
+
+<li><a href="liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
+
+<li><a href="temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
+
+<li><a href="colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
+
+<li><a href="bp-seafarer-medical.html">High Blood Pressure</a></li>
+
+<li><a href="diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
+
 <li><a href="guidelines.html">Maritime Guidelines</a></li>
+
 </ul>
+
 </li>
 
-<li><a href="#companies">For Companies</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="index.html#companies">For Companies</a></li>
+
+<li><a href="index.html#contact">Contact</a></li>
+
 </ul>
+
 </nav>
+
 
 <section>
 
@@ -225,12 +97,12 @@ width:100%;
 Home → Tools → PEME Risk Self-Assessment
 </div>
 
-<div class="notice">
+<div class="highlight">
 This tool provides educational risk awareness only.  
 It does NOT determine fitness certification.
 </div>
 
-<div class="notice">
+<div class="highlight">
 For regulatory reference see  
 <a href="guidelines.html"><strong>Maritime Medical Guidelines</strong></a>
 </div>
@@ -238,21 +110,29 @@ For regulatory reference see
 <h2>Basic Self-Checks Before Booking PEME</h2>
 
 <div class="card">
+
 Many candidates prefer to review these basic parameters before travelling for medical:
+
 <br><br>
-• Recent blood pressure reading<br> 
-• Fasting blood sugar or HbA1c (if history or family history) <br> 
-• Liver function test (if alcohol use or fatty liver history)  <br>
-• BMI (weight vs height)  <br>
-• ECG if age above 35 or cardiac symptoms  <br>
-• Stability after recent surgery  <br>
+
+• Recent blood pressure reading<br>
+• Fasting blood sugar or HbA1c (if history or family history)<br>
+• Liver function test (if alcohol use or fatty liver history)<br>
+• BMI (weight vs height)<br>
+• ECG if age above 35 or cardiac symptoms<br>
+• Stability after recent surgery
+
 <br><br>
+
 <small>These are not mandatory for this tool, but awareness reduces unexpected delays.</small>
+
 </div>
+
 
 <h2>Risk Awareness Questions</h2>
 
 <form id="riskForm">
+
 
 <div class="card">
 <strong>1. Blood Pressure (High BP)</strong><br>
@@ -262,6 +142,7 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
+
 <div class="card">
 <strong>2. Blood Sugar / Diabetes (“Sugar Problem”)</strong><br>
 <input type="checkbox" value="1"> Fasting sugar or HbA1c borderline/high in past reports<br>
@@ -269,6 +150,7 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="1"> Advised better sugar control before fitness clearance<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
+
 
 <div class="card">
 <strong>3. Liver Function (SGOT / SGPT / Fatty Liver)</strong><br>
@@ -278,6 +160,7 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
+
 <div class="card">
 <strong>4. Cardiac / ECG</strong><br>
 <input type="checkbox" value="2"> ECG showed abnormality<br>
@@ -285,11 +168,13 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="2"> Age above 35 with BP, sugar or cholesterol issues
 </div>
 
+
 <div class="card">
 <strong>5. Weight / BMI</strong><br>
 <input type="checkbox" value="1"> BMI above 30 or overweight noted previously<br>
 <input type="checkbox" value="1"> Advised weight reduction before joining
 </div>
+
 
 <div class="card">
 <strong>6. Vision / Colour Vision / LASIK</strong><br>
@@ -297,11 +182,13 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="1"> Colour vision issue noted previously
 </div>
 
+
 <div class="card">
 <strong>7. Surgery History</strong><br>
 <input type="checkbox" value="1"> Surgery within last 6 months<br>
 <input type="checkbox" value="2"> Ongoing recovery or implant present
 </div>
+
 
 <div class="card">
 <strong>8. Neurological History (Fits / Akdi / Seizure)</strong><br>
@@ -310,11 +197,13 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="2"> Unexplained loss of consciousness in past
 </div>
 
+
 <div class="card">
 <strong>9. Previous Medical Outcome</strong><br>
 <input type="checkbox" value="2"> Previously declared Temporary Unfit<br>
 <input type="checkbox" value="2"> Same issue not fully corrected yet
 </div>
+
 
 <div class="card">
 <strong>10. Long-Term Medication / Disclosure Concern</strong><br>
@@ -322,7 +211,8 @@ Many candidates prefer to review these basic parameters before travelling for me
 <input type="checkbox" value="2"> Unsure whether certain medical history should be disclosed
 </div>
 
-<button type="button" onclick="calculateScore()">Evaluate Risk Exposure</button>
+
+<a class="btn" onclick="calculateScore()">Evaluate Risk Exposure</a>
 
 </form>
 
@@ -330,51 +220,60 @@ Many candidates prefer to review these basic parameters before travelling for me
 
 </section>
 
+
 <script>
 
 function calculateScore() {
-    let total = 0;
-    let checkedBoxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
 
-    if (checkedBoxes.length === 0) {
-        alert("Please select at least one relevant option before evaluating risk exposure.");
-        return;
-    }
+let total = 0;
+let checkedBoxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
 
-    let meaningfulSelection = false;
-
-    checkedBoxes.forEach(box => {
-        total += parseInt(box.value);
-        if(parseInt(box.value) > 0){
-            meaningfulSelection = true;
-        }
-    });
-
-    let resultBox = document.getElementById("resultBox");
-    resultBox.className = "result";
-
-    if (!meaningfulSelection) {
-        resultBox.classList.add("moderate");
-        resultBox.innerHTML = "Insufficient Data: You have selected only 'Not checked' options. Consider reviewing basic health parameters before booking your PEME to reduce uncertainty.<br><br><small>This tool provides educational risk awareness only.</small>";
-        return;
-    }
-
-    if(total <= 2){
-        resultBox.classList.add("low");
-        resultBox.innerHTML = "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
-    } 
-    else if(total <= 5){
-        resultBox.classList.add("moderate");
-        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
-    } 
-    else {
-        resultBox.classList.add("high");
-        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
-    }
-
-    resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
+if (checkedBoxes.length === 0) {
+alert("Please select at least one relevant option before evaluating risk exposure.");
+return;
 }
+
+let meaningfulSelection = false;
+
+checkedBoxes.forEach(box => {
+total += parseInt(box.value);
+if(parseInt(box.value) > 0){
+meaningfulSelection = true;
+}
+});
+
+let resultBox = document.getElementById("resultBox");
+resultBox.className = "card";
+
+if (!meaningfulSelection) {
+
+resultBox.innerHTML = "Insufficient Data: You have selected only 'Not checked' options. Consider reviewing basic health parameters before booking your PEME to reduce uncertainty.<br><br><small>This tool provides educational risk awareness only.</small>";
+return;
+
+}
+
+if(total <= 2){
+
+resultBox.innerHTML = "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
+
+}
+else if(total <= 5){
+
+resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
+
+}
+else {
+
+resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
+
+}
+
+resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
+
+}
+
 </script>
+
 
 <footer>
 
