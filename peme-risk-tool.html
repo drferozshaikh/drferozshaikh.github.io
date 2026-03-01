@@ -21,15 +21,18 @@
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body{
-font-family:Arial,Helvetica,sans-serif;
+font-family:'Inter',Arial,Helvetica,sans-serif;
 margin:0;
-background:#f7f8fa;
 line-height:1.7;
-color:#222
+color:#1a1a1a;
+background:#f7f8fa;
+letter-spacing:.2px;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
 background:white;
@@ -38,7 +41,7 @@ text-align:center;
 box-shadow:0 2px 8px rgba(0,0,0,0.06);
 position:sticky;
 top:0;
-z-index:999
+z-index:999;
 }
 
 .main-nav{
@@ -47,23 +50,26 @@ margin:0;
 padding:0;
 display:flex;
 justify-content:center;
-flex-wrap:wrap
+align-items:center;
+flex-wrap:wrap;
 }
 
-.main-nav li{
+.main-nav > li{
+position:relative;
 margin:0 14px;
-position:relative
 }
 
 .main-nav a{
+color:#0a3d62;
 text-decoration:none;
 font-weight:600;
-color:#0a3d62
+padding:6px 4px;
 }
 
 .main-nav a:hover{
-color:#134e7a
+color:#134e7a;
 }
+
 /* DROPDOWN */
 
 .dropdown-menu{
@@ -106,79 +112,73 @@ display:block;
 content:" ▾";
 font-size:12px;
 }
-/* PAGE */
-
-header{
-background:#0a3d62;
-color:white;
-padding:40px 20px;
-text-align:center
-}
-
-section{
-max-width:1000px;
-margin:auto;
-padding:40px 20px
-}
 
 .breadcrumb{
+max-width:1000px;
+margin:auto;
+padding:10px 20px;
 font-size:14px;
-margin-bottom:20px
+color:#666;
 }
 
-.card{
-background:white;
-padding:18px;
-border-radius:10px;
-margin:16px 0;
-box-shadow:0 4px 12px rgba(0,0,0,0.06)
+.breadcrumb a{
+color:#0a3d62;
+text-decoration:none;
 }
+
+.breadcrumb a:hover{
+text-decoration:underline;
+}
+
+/* CONTENT */
+
+.main-content{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* HEADINGS */
+
+h1{
+margin-top:30px;
+font-weight:700;
+}
+
+h2{
+font-size:26px;
+color:#0a3d62;
+margin-top:30px;
+}
+
+/* NOTICE */
 
 .notice{
 background:#eef4f8;
-padding:16px;
-border-left:5px solid #6b8aa6;
-margin:18px 0;
-border-radius:8px
-}
-
-button{
-background:#0a3d62;
-color:white;
-padding:12px 20px;
-border:none;
+padding:18px;
+border-left:4px solid #6b8aa6;
+margin:25px 0;
 border-radius:6px;
-font-weight:bold;
-cursor:pointer
 }
 
-button:hover{
-background:#134e7a
-}
+/* HOVER LINES */
 
-.result{
-padding:20px;
-margin-top:20px;
-border-radius:8px;
-font-weight:bold
+.main-content p:hover,
+.main-content li:hover{
+background:#f2f6fa;
 }
-
-.low{background:#e6f4ea;color:#1e7e34}
-.moderate{background:#fff3cd;color:#856404}
-.high{background:#f8d7da;color:#721c24}
 
 /* FOOTER */
 
 footer{
 background:#0a3d62;
-color:white;
+color:#fff;
 text-align:center;
 padding:25px;
 margin-top:40px;
-font-size:14px
+font-size:14px;
+width:100%;
 }
-
-small{color:#555}
 
 </style>
 </head>
