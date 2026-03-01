@@ -21,19 +21,98 @@
 <link rel="canonical" href="https://drferozshaikh.github.io/eyesight-seafarer-medical.html">
 
 <style>
-body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:auto;padding:20px;line-height:1.7;color:#222}
-h1,h2{color:#0a3d62}
-.box{background:#eef4f8;padding:16px;border-left:5px solid #6b8aa6;margin:18px 0}
-a.button{display:inline-block;background:#0a3d62;color:white;padding:12px 20px;text-decoration:none;border-radius:6px;margin-top:15px}
-nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:999;} nav a{color:#0a3d62;margin:0 14px;text-decoration:none;font-weight:600} section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;} h2{color:#0a3d62;margin-top:0;font-weight:700}
-.main-nav {list-style: none;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
-.main-nav > li {position: relative;margin: 0 14px;}
-.main-nav a {color: #0a3d62;text-decoration: none;font-weight: 600;}
-.dropdown-menu {display: none;position: absolute;top: 100%;left: 0;background: white;min-width: 250px;box-shadow: 0 6px 18px rgba(0,0,0,0.08);border-radius: 8px;padding: 10px 0;z-index: 999;}
-.dropdown-menu li {list-style: none;padding: 6px 16px;}
-.dropdown-menu li a {display: block;font-weight: 500;}
-.dropdown:hover .dropdown-menu {display: block;}
-/* BREADCRUMB */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body{
+font-family:'Inter',Arial,Helvetica,sans-serif;
+margin:0;
+line-height:1.7;
+color:#1a1a1a;
+background:#f7f8fa;
+letter-spacing:.2px;
+}
+
+/* NAVBAR */
+
+nav{
+background:white;
+padding:14px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.main-nav{
+list-style:none;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.main-nav > li{
+position:relative;
+margin:0 14px;
+}
+
+.main-nav a{
+color:#0a3d62;
+text-decoration:none;
+font-weight:600;
+padding:6px 4px;
+}
+
+.main-nav a:hover{
+color:#134e7a;
+}
+
+/* DROPDOWN */
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:white;
+min-width:260px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+border-radius:8px;
+padding:10px 0;
+z-index:999;
+text-align:left;
+}
+
+.dropdown-menu li{
+list-style:none;
+padding:6px 16px;
+}
+
+.dropdown-menu li a{
+display:block;
+font-weight:500;
+}
+
+.dropdown-menu li:hover{
+background:#f2f6fa;
+}
+
+/* dropdown show */
+
+.dropdown-menu.show{
+display:block;
+}
+
+/* arrow */
+
+#guidanceBtn::after{
+content:" ▾";
+font-size:12px;
+}
 
 .breadcrumb{
 max-width:1000px;
@@ -51,15 +130,57 @@ text-decoration:none;
 .breadcrumb a:hover{
 text-decoration:underline;
 }
-section{padding:40px 20px;max-width:1000px;margin:auto;scroll-margin-top:90px;}
-h2{color:#0a3d62;margin-top:0;font-weight:700}
+
+/* CONTENT */
+
+.main-content{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* HEADINGS */
+
+h1{
+margin-top:30px;
+font-weight:700;
+}
+
+h2{
+font-size:26px;
+color:#0a3d62;
+margin-top:30px;
+}
+
+/* NOTICE */
+
+.notice{
+background:#eef4f8;
+padding:18px;
+border-left:4px solid #6b8aa6;
+margin:25px 0;
+border-radius:6px;
+}
+
 /* HOVER LINES */
 
 .main-content p:hover,
 .main-content li:hover{
 background:#f2f6fa;
 }
-footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:40px;font-size:14px}
+
+/* FOOTER */
+
+footer{
+background:#0a3d62;
+color:#fff;
+text-align:center;
+padding:25px;
+margin-top:40px;
+font-size:14px;
+width:100%;
+}
+
 </style>
 
 <script type="application/ld+json">
