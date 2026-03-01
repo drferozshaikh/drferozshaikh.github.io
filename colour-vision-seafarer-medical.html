@@ -25,6 +25,7 @@
 
 <style>
 
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body{
@@ -95,18 +96,28 @@ list-style:none;
 padding:6px 16px;
 }
 
+.dropdown-menu li a{
+display:block;
+font-weight:500;
+}
+
 .dropdown-menu li:hover{
 background:#f2f6fa;
 }
+
+/* dropdown show */
 
 .dropdown-menu.show{
 display:block;
 }
 
+/* arrow */
+
 #guidanceBtn::after{
 content:" ▾";
 font-size:12px;
 }
+
 .breadcrumb{
 max-width:1000px;
 margin:auto;
@@ -137,22 +148,12 @@ padding:20px;
 h1{
 margin-top:30px;
 font-weight:700;
-color:#0a3d62;
 }
 
 h2{
 font-size:26px;
 color:#0a3d62;
 margin-top:30px;
-}
-
-/* BOX */
-
-.box{
-background:#eef4f8;
-padding:16px;
-border-left:5px solid #6b8aa6;
-margin:18px 0;
 }
 
 /* NOTICE */
@@ -163,22 +164,6 @@ padding:18px;
 border-left:4px solid #6b8aa6;
 margin:25px 0;
 border-radius:6px;
-}
-
-/* BUTTON */
-
-a.button{
-display:inline-block;
-background:#0a3d62;
-color:white;
-padding:12px 20px;
-text-decoration:none;
-border-radius:6px;
-margin-top:15px;
-}
-
-a.button:hover{
-background:#134e7a;
 }
 
 /* HOVER LINES */
@@ -192,7 +177,7 @@ background:#f2f6fa;
 
 footer{
 background:#0a3d62;
-color:white;
+color:#fff;
 text-align:center;
 padding:25px;
 margin-top:40px;
