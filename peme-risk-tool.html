@@ -311,30 +311,6 @@ Many candidates prefer to review these basic parameters before travelling for me
 
 </section>
 
-<script>
-function calculateScore() {
-    let total = 0;
-    const checkboxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
-    checkboxes.forEach(box => {
-        total += parseInt(box.value);
-    });
-
-    let resultBox = document.getElementById("resultBox");
-    resultBox.className = "result";
-
-    if(total <= 2){
-        resultBox.classList.add("low");
-        resultBox.innerHTML = "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
-    } else if(total <= 5){
-        resultBox.classList.add("moderate");
-        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
-    } else {
-        resultBox.classList.add("high");
-        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
-    }
-
-    resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
-}
 </script>
 
 function calculateScore() {
