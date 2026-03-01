@@ -81,7 +81,14 @@ padding:10px 0;
 z-index:999;
 text-align:left;
 }
+.dropdown-menu::-webkit-scrollbar{
+width:6px;
+}
 
+.dropdown-menu::-webkit-scrollbar-thumb{
+background:#c5d2df;
+border-radius:10px;
+}
 .dropdown-menu li{
 list-style:none;
 padding:6px 16px;
