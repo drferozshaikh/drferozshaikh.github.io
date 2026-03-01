@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Maritime Medical Review",
+  "url": "https://drferozshaikh.github.io/",
+  "logo": "https://drferozshaikh.github.io/logo.png"
+}
+</script>
 <title>Complete Seafarer Medical Test List (PEME) | What Tests Are Done in Ship Medical</title>
 
 <meta name="description" content="Full list of medical tests performed during seafarer medical examination (PEME). Understand blood tests, ECG, eyesight, BMI, urine tests and operational fitness checks before ship joining.">
@@ -66,20 +74,48 @@ border-radius:8px;
 padding:10px 0;
 z-index:999
 }
+/* DROPDOWN */
 
-.dropdown:hover .dropdown-menu{
-display:block
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:white;
+min-width:260px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+border-radius:8px;
+padding:10px 0;
+z-index:999;
+text-align:left;
 }
 
 .dropdown-menu li{
 list-style:none;
-padding:6px 16px
+padding:6px 16px;
+}
+
+.dropdown-menu li a{
+display:block;
+font-weight:500;
 }
 
 .dropdown-menu li:hover{
-background:#f2f6fa
+background:#f2f6fa;
 }
 
+/* dropdown show */
+
+.dropdown-menu.show{
+display:block;
+}
+
+/* arrow */
+
+#guidanceBtn::after{
+content:" ▾";
+font-size:12px;
+}
 section{
 max-width:900px;
 margin:auto;
@@ -97,7 +133,10 @@ border-radius:10px;
 margin:16px 0;
 box-shadow:0 4px 12px rgba(0,0,0,0.06)
 }
-
+.breadcrumb{
+font-size:14px;
+margin-bottom:20px
+}
 .notice{
 background:#eef4f8;
 padding:18px;
@@ -160,32 +199,33 @@ margin-bottom:20px
 <body>
 
 <nav>
-<ul class="main-nav">
 
+<ul class="main-nav">
 <li><a href="index.html">Home</a></li>
-<li><a href="index.html#who">Who It’s For</a></li>
-<li><a href="index.html#services">Services</a></li>
-<li><a href="peme-risk-tool.html">PEME Tool</a></li>
+<li><a href="#who">Who It’s For</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="peme-risk-tool.html">PEME Risk Tool</a></li>
 
 <li class="dropdown">
-<a href="#">Guidance ▾</a>
+<a href="#" id="guidanceBtn">Guidance</a>
 <ul class="dropdown-menu">
-
+<li><a href="#problems">Common Problems</a></li>
+<li><a href="#prepeme">Before Booking PEME</a></li>
 <li><a href="seafarer-medical-test-list.html">Complete PEME Test List</a></li>
-
-<li><a href="liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
-<li><a href="temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
-<li><a href="colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
-<li><a href="bp-seafarer-medical.html">High Blood Pressure</a></li>
-<li><a href="diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
+<li><a href="#evaluation">Fitness Interpretation</a></li>
+<li><a href="#faq">Common Questions</a></li>
+<li><a href="#search-answers">Medical Concerns Explained</a></li>
+<li><a href="/liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
+<li><a href="/temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
+<li><a href="/colour-vision-seafarer-medical.html">Colour Vision Rules</a></li>
+<li><a href="/bp-seafarer-medical.html">High Blood Pressure</a></li>
+<li><a href="/diabetes-seafarer-medical.html">Diabetes & Sugar</a></li>
 <li><a href="guidelines.html">Maritime Guidelines</a></li>
-
 </ul>
 </li>
 
-<li><a href="index.html#companies">For Companies</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-
+<li><a href="#companies">For Companies</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
@@ -319,9 +359,11 @@ Use PEME Risk Self-Assessment Tool
 
 <footer>
 
-<p><strong>Professional Disclaimer:</strong> Independent educational explanation based on maritime medical practice. This page does not provide medical certification.</p>
+<p><strong>Professional Disclaimer:</strong> Independent educational opinion based on provided documents only. Not a diagnosis, prescription, treatment, or statutory fitness certificate.</p>
 
-<p><strong>Decision Authority:</strong> Final fitness certification rests with the examining authority and applicable maritime regulations.</p>
+<p><strong>Decision Authority:</strong> Final fitness decision rests with examining authority, employer and flag regulations.</p>
+
+<p><strong>Use Limitation:</strong> This service does not replace medical examination or emergency care.</p>
 
 <p>© 2026 Maritime Medical Review</p>
 
