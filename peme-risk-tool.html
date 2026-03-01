@@ -7,6 +7,7 @@
 <title>PEME Risk Self-Assessment Tool | Maritime Medical Review</title>
 
 <meta name="description" content="Educational maritime risk awareness tool for seafarers before booking Pre-Employment Medical Examination (PEME).">
+<meta name="copyright" content="© 2026 Maritime Medical Review">
 
 <link rel="canonical" href="https://drferozshaikh.github.io/peme-risk-tool.html">
 
@@ -15,12 +16,12 @@
 body{
 font-family:Arial,Helvetica,sans-serif;
 margin:0;
-background:#f4f6f8;
-color:#222;
-line-height:1.6;
+background:#f7f8fa;
+line-height:1.7;
+color:#222
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 nav{
 background:white;
@@ -29,7 +30,7 @@ text-align:center;
 box-shadow:0 2px 8px rgba(0,0,0,0.06);
 position:sticky;
 top:0;
-z-index:999;
+z-index:999
 }
 
 .main-nav{
@@ -38,22 +39,23 @@ margin:0;
 padding:0;
 display:flex;
 justify-content:center;
-align-items:center;
-flex-wrap:wrap;
+flex-wrap:wrap
 }
 
-.main-nav > li{
-position:relative;
+.main-nav li{
 margin:0 14px;
+position:relative
 }
 
 .main-nav a{
-color:#0a3d62;
 text-decoration:none;
 font-weight:600;
+color:#0a3d62
 }
 
-/* DROPDOWN */
+.main-nav a:hover{
+color:#134e7a
+}
 
 .dropdown-menu{
 display:none;
@@ -65,173 +67,108 @@ min-width:260px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 border-radius:8px;
 padding:10px 0;
-text-align:left;
+z-index:999
+}
+
+.dropdown:hover .dropdown-menu{
+display:block
 }
 
 .dropdown-menu li{
 list-style:none;
-padding:6px 16px;
+padding:6px 16px
 }
 
-.dropdown-menu li a{
-display:block;
-font-weight:500;
+.dropdown-menu li:hover{
+background:#f2f6fa
 }
 
-.dropdown-menu.show{
-display:block;
-}
-
-/* BREADCRUMB */
-
-.breadcrumb{
-max-width:1000px;
-margin:auto;
-padding:10px 20px;
-font-size:14px;
-color:#666;
-}
-
-.breadcrumb a{
-color:#0a3d62;
-text-decoration:none;
-}
-
-.breadcrumb a:hover{
-text-decoration:underline;
-}
-
-/* PAGE HEADER */
+/* PAGE */
 
 header{
 background:#0a3d62;
 color:white;
 padding:40px 20px;
-text-align:center;
+text-align:center
 }
-
-/* CONTENT */
 
 section{
 max-width:1000px;
 margin:auto;
-padding:40px 20px;
+padding:40px 20px
 }
 
-h2{
-color:#0a3d62;
+.breadcrumb{
+font-size:14px;
+margin-bottom:20px
 }
 
 .card{
-background:#fff;
+background:white;
 padding:18px;
-border-radius:8px;
-margin:15px 0;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+border-radius:10px;
+margin:16px 0;
+box-shadow:0 4px 12px rgba(0,0,0,0.06)
 }
 
 .notice{
 background:#eef4f8;
-padding:15px;
-border-left:4px solid #6b8aa6;
-margin:20px 0;
-border-radius:6px;
+padding:16px;
+border-left:5px solid #6b8aa6;
+margin:18px 0;
+border-radius:8px
 }
-
-/* hover only text lines */
-
-.card p:hover,
-.card li:hover{
-background:#f2f6fa;
-}
-
-/* BUTTON */
 
 button{
 background:#0a3d62;
-color:#fff;
+color:white;
 padding:12px 20px;
 border:none;
 border-radius:6px;
 font-weight:bold;
-cursor:pointer;
+cursor:pointer
 }
 
 button:hover{
-background:#08314d;
+background:#134e7a
 }
-
-/* RESULT BOX */
 
 .result{
 padding:20px;
 margin-top:20px;
 border-radius:8px;
-font-weight:bold;
+font-weight:bold
 }
 
-.low{
-background:#e6f4ea;
-color:#1e7e34;
-}
-
-.moderate{
-background:#fff3cd;
-color:#856404;
-}
-
-.high{
-background:#f8d7da;
-color:#721c24;
-}
+.low{background:#e6f4ea;color:#1e7e34}
+.moderate{background:#fff3cd;color:#856404}
+.high{background:#f8d7da;color:#721c24}
 
 /* FOOTER */
 
 footer{
 background:#0a3d62;
-color:#fff;
+color:white;
 text-align:center;
 padding:25px;
 margin-top:40px;
-font-size:14px;
+font-size:14px
 }
+
+small{color:#555}
 
 </style>
-
-<script>
-document.addEventListener("DOMContentLoaded",function(){
-
-const btn=document.getElementById("guidanceBtn");
-const menu=document.querySelector(".dropdown-menu");
-
-btn.addEventListener("click",function(e){
-e.preventDefault();
-menu.classList.toggle("show");
-});
-
-window.addEventListener("scroll",function(){
-menu.classList.remove("show");
-});
-
-document.addEventListener("click",function(e){
-if(!btn.contains(e.target) && !menu.contains(e.target)){
-menu.classList.remove("show");
-}
-});
-
-});
-</script>
-
 </head>
 
 <body>
 
 <header>
 <h1>PEME Risk Self-Assessment Tool</h1>
-<p>Educational Risk Awareness Before Booking Your Seafarer Medical</p>
+<p>Educational Risk Awareness Before Booking Seafarer Medical</p>
 </header>
 
 <nav>
+
 <ul class="main-nav">
 
 <li><a href="index.html">Home</a></li>
@@ -240,9 +177,11 @@ menu.classList.remove("show");
 <li><a href="peme-risk-tool.html">PEME Tool</a></li>
 
 <li class="dropdown">
-<a href="#" id="guidanceBtn">Guidance ▾</a>
+<a href="#">Guidance ▾</a>
 
 <ul class="dropdown-menu">
+
+<li><a href="seafarer-medical-test-list.html">Complete PEME Test List</a></li>
 
 <li><a href="liver-test-seafarer-medical.html">High Liver Enzymes</a></li>
 <li><a href="temporary-unfit-seafarer-medical.html">Temporary Unfit</a></li>
@@ -258,13 +197,14 @@ menu.classList.remove("show");
 <li><a href="index.html#contact">Contact</a></li>
 
 </ul>
+
 </nav>
 
-<div class="breadcrumb">
-<a href="index.html">Home</a> › PEME Risk Tool
-</div>
-
 <section>
+
+<div class="breadcrumb">
+Home → Tools → PEME Risk Self-Assessment
+</div>
 
 <div class="notice">
 This tool provides educational risk awareness only.  
@@ -272,24 +212,28 @@ It does NOT determine fitness certification.
 </div>
 
 <div class="notice">
-For detailed regulatory reference see the
-<a href="guidelines.html"><strong>Maritime Medical Guidelines</strong></a>.
+For regulatory reference see  
+<a href="guidelines.html"><strong>Maritime Medical Guidelines</strong></a>
 </div>
 
-<h2>Basic Self-Checks Before Booking PEME</h2>
+<h2>Basic Awareness Before Booking PEME</h2>
 
 <div class="card">
 
-Many candidates prefer reviewing these parameters before travelling for medical:
+Typical parameters candidates review before medical:
 
 <br><br>
 
-• Recent blood pressure reading<br>
-• Fasting blood sugar or HbA1c<br>
-• Liver function test if alcohol or fatty liver history<br>
-• BMI (weight vs height)<br>
-• ECG if age above 35<br>
-• Stability after recent surgery
+• Blood pressure  
+• Blood sugar / HbA1c  
+• Liver function tests  
+• BMI (weight vs height)  
+• ECG if age above 35  
+• Stability after recent surgery  
+
+<br><br>
+
+<small>These are awareness indicators only.</small>
 
 </div>
 
@@ -299,31 +243,55 @@ Many candidates prefer reviewing these parameters before travelling for medical:
 
 <div class="card">
 <strong>Blood Pressure</strong><br>
-<input type="checkbox" value="1"> Previously told BP high<br>
-<input type="checkbox" value="1"> Taking BP medication<br>
-<input type="checkbox" value="1"> BP repeated multiple times in past medical<br>
+<input type="checkbox" value="1"> BP previously reported high<br>
+<input type="checkbox" value="1"> On BP medication<br>
+<input type="checkbox" value="1"> BP repeated multiple times in previous medical<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
 <div class="card">
-<strong>Blood Sugar / Diabetes</strong><br>
+<strong>Blood Sugar</strong><br>
 <input type="checkbox" value="1"> Borderline sugar previously<br>
 <input type="checkbox" value="3"> On diabetes medication<br>
-<input type="checkbox" value="1"> Doctor advised control before clearance<br>
+<input type="checkbox" value="1"> Doctor advised sugar control<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
 <div class="card">
 <strong>Liver Function</strong><br>
-<input type="checkbox" value="1"> SGOT/SGPT/GGT high earlier<br>
-<input type="checkbox" value="1"> Fatty liver diagnosed<br>
+<input type="checkbox" value="1"> SGOT / SGPT elevated previously<br>
+<input type="checkbox" value="1"> Fatty liver reported<br>
 <input type="checkbox" value="3"> Alcohol related abnormal reports<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
-<button type="button" onclick="calculateScore()">
-Review Operational Risk Indicators
-</button>
+<div class="card">
+<strong>Cardiac</strong><br>
+<input type="checkbox" value="2"> Abnormal ECG<br>
+<input type="checkbox" value="3"> Cardiology review advised<br>
+<input type="checkbox" value="1"> Age above 35 with risk factors
+</div>
+
+<div class="card">
+<strong>Vision</strong><br>
+<input type="checkbox" value="2"> Recent LASIK<br>
+<input type="checkbox" value="1"> Colour vision issue
+</div>
+
+<div class="card">
+<strong>Surgery History</strong><br>
+<input type="checkbox" value="1"> Surgery within last 6 months<br>
+<input type="checkbox" value="3"> Ongoing recovery
+</div>
+
+<div class="card">
+<strong>Neurological History</strong><br>
+<input type="checkbox" value="3"> History of seizures / fits<br>
+<input type="checkbox" value="3"> On anti-epileptic medication<br>
+<input type="checkbox" value="3"> Unexplained blackout
+</div>
+
+<button type="button" onclick="calculateScore()">Evaluate Risk Indicators</button>
 
 </form>
 
@@ -335,33 +303,37 @@ Review Operational Risk Indicators
 
 function calculateScore(){
 
-let total=0;
-let boxes=document.querySelectorAll('#riskForm input:checked');
+let total=0
+let checked=document.querySelectorAll('#riskForm input:checked')
 
-if(boxes.length===0){
-alert("Please select at least one relevant option.");
-return;
+if(checked.length===0){
+alert("Please select at least one relevant option.")
+return
 }
 
-boxes.forEach(b=>{
-total+=parseInt(b.value);
-});
+checked.forEach(box=>{
+total+=parseInt(box.value)
+})
 
-let result=document.getElementById("resultBox");
-result.className="result";
+let result=document.getElementById("resultBox")
+result.className="result"
 
 if(total<=2){
-result.classList.add("low");
-result.innerHTML="Low Risk Exposure. Proceed with routine PEME.";
+result.classList.add("low")
+result.innerHTML="Low risk indicators based on your selection."
 }
+
 else if(total<=5){
-result.classList.add("moderate");
-result.innerHTML="Moderate Risk Exposure. Review parameters before medical.";
+result.classList.add("moderate")
+result.innerHTML="Moderate risk indicators detected. Reviewing parameters before medical may help."
 }
+
 else{
-result.classList.add("high");
-result.innerHTML="Elevated Risk Exposure. Professional interpretation recommended.";
+result.classList.add("high")
+result.innerHTML="Elevated risk indicators present. Professional interpretation may help before booking PEME."
 }
+
+result.innerHTML+="<br><br><small>This tool provides educational awareness only.</small>"
 
 }
 
@@ -369,7 +341,7 @@ result.innerHTML="Elevated Risk Exposure. Professional interpretation recommende
 
 <footer>
 
-<p><strong>Professional Disclaimer:</strong> Educational awareness only.</p>
+<p><strong>Professional Disclaimer:</strong> Educational explanation only. Not a medical certificate.</p>
 
 <p><strong>Decision Authority:</strong> Final fitness decision rests with examining authority.</p>
 
