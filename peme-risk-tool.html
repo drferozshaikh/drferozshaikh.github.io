@@ -216,25 +216,19 @@ For regulatory reference see
 <a href="guidelines.html"><strong>Maritime Medical Guidelines</strong></a>
 </div>
 
-<h2>Basic Awareness Before Booking PEME</h2>
+<h2>Basic Self-Checks Before Booking PEME</h2>
 
 <div class="card">
-
-Typical parameters candidates review before medical:
-
+Many candidates prefer to review these basic parameters before travelling for medical:
 <br><br>
-
-• Blood pressure  
-• Blood sugar / HbA1c  
-• Liver function tests  
+• Recent blood pressure reading  
+• Fasting blood sugar or HbA1c (if history or family history)  
+• Liver function test (if alcohol use or fatty liver history)  
 • BMI (weight vs height)  
-• ECG if age above 35  
+• ECG if age above 35 or cardiac symptoms  
 • Stability after recent surgery  
-
 <br><br>
-
-<small>These are awareness indicators only.</small>
-
+<small>These are not mandatory for this tool, but awareness reduces unexpected delays.</small>
 </div>
 
 <h2>Risk Awareness Questions</h2>
@@ -242,56 +236,74 @@ Typical parameters candidates review before medical:
 <form id="riskForm">
 
 <div class="card">
-<strong>Blood Pressure</strong><br>
-<input type="checkbox" value="1"> BP previously reported high<br>
-<input type="checkbox" value="1"> On BP medication<br>
-<input type="checkbox" value="1"> BP repeated multiple times in previous medical<br>
+<strong>1. Blood Pressure (High BP)</strong><br>
+<input type="checkbox" value="1"> Previously told “BP thoda high hai” during medical<br>
+<input type="checkbox" value="1"> Currently on BP medication<br>
+<input type="checkbox" value="1"> BP was repeated multiple times during past PEME<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
 <div class="card">
-<strong>Blood Sugar</strong><br>
-<input type="checkbox" value="1"> Borderline sugar previously<br>
-<input type="checkbox" value="3"> On diabetes medication<br>
-<input type="checkbox" value="1"> Doctor advised sugar control<br>
+<strong>2. Blood Sugar / Diabetes (“Sugar Problem”)</strong><br>
+<input type="checkbox" value="1"> Fasting sugar or HbA1c borderline/high in past reports<br>
+<input type="checkbox" value="3"> On diabetes medication or insulin<br>
+<input type="checkbox" value="1"> Advised better sugar control before fitness clearance<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
 <div class="card">
-<strong>Liver Function</strong><br>
-<input type="checkbox" value="1"> SGOT / SGPT elevated previously<br>
-<input type="checkbox" value="1"> Fatty liver reported<br>
-<input type="checkbox" value="3"> Alcohol related abnormal reports<br>
+<strong>3. Liver Function (SGOT / SGPT / Fatty Liver)</strong><br>
+<input type="checkbox" value="2"> Liver enzymes reported high in past tests<br>
+<input type="checkbox" value="1"> Fatty liver diagnosed on ultrasound<br>
+<input type="checkbox" value="1"> Alcohol intake with abnormal reports<br>
 <input type="checkbox" value="0"> Not checked recently
 </div>
 
 <div class="card">
-<strong>Cardiac</strong><br>
-<input type="checkbox" value="2"> Abnormal ECG<br>
-<input type="checkbox" value="3"> Cardiology review advised<br>
-<input type="checkbox" value="1"> Age above 35 with risk factors
+<strong>4. Cardiac / ECG</strong><br>
+<input type="checkbox" value="2"> ECG showed abnormality<br>
+<input type="checkbox" value="2"> Advised TMT / cardiology consultation<br>
+<input type="checkbox" value="2"> Age above 35 with BP, sugar or cholesterol issues
 </div>
 
 <div class="card">
-<strong>Vision</strong><br>
-<input type="checkbox" value="2"> Recent LASIK<br>
-<input type="checkbox" value="1"> Colour vision issue
+<strong>5. Weight / BMI</strong><br>
+<input type="checkbox" value="1"> BMI above 30 or overweight noted previously<br>
+<input type="checkbox" value="1"> Advised weight reduction before joining
 </div>
 
 <div class="card">
-<strong>Surgery History</strong><br>
+<strong>6. Vision / Colour Vision / LASIK</strong><br>
+<input type="checkbox" value="2"> Recent LASIK or refractive surgery<br>
+<input type="checkbox" value="1"> Colour vision issue noted previously
+</div>
+
+<div class="card">
+<strong>7. Surgery History</strong><br>
 <input type="checkbox" value="1"> Surgery within last 6 months<br>
-<input type="checkbox" value="3"> Ongoing recovery
+<input type="checkbox" value="2"> Ongoing recovery or implant present
 </div>
 
 <div class="card">
-<strong>Neurological History</strong><br>
-<input type="checkbox" value="3"> History of seizures / fits<br>
-<input type="checkbox" value="3"> On anti-epileptic medication<br>
-<input type="checkbox" value="3"> Unexplained blackout
+<strong>8. Neurological History (Fits / Akdi / Seizure)</strong><br>
+<input type="checkbox" value="2"> History of epilepsy / seizures / blackout episodes<br>
+<input type="checkbox" value="2"> On anti-epileptic medication<br>
+<input type="checkbox" value="2"> Unexplained loss of consciousness in past
 </div>
 
-<button type="button" onclick="calculateScore()">Evaluate Risk Indicators</button>
+<div class="card">
+<strong>9. Previous Medical Outcome</strong><br>
+<input type="checkbox" value="2"> Previously declared Temporary Unfit<br>
+<input type="checkbox" value="2"> Same issue not fully corrected yet
+</div>
+
+<div class="card">
+<strong>10. Long-Term Medication / Disclosure Concern</strong><br>
+<input type="checkbox" value="1"> On regular long-term medication<br>
+<input type="checkbox" value="2"> Unsure whether certain medical history should be disclosed
+</div>
+
+<button type="button" onclick="calculateScore()">Evaluate Risk Exposure</button>
 
 </form>
 
@@ -300,43 +312,73 @@ Typical parameters candidates review before medical:
 </section>
 
 <script>
+function calculateScore() {
+    let total = 0;
+    const checkboxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
+    checkboxes.forEach(box => {
+        total += parseInt(box.value);
+    });
 
-function calculateScore(){
+    let resultBox = document.getElementById("resultBox");
+    resultBox.className = "result";
 
-let total=0
-let checked=document.querySelectorAll('#riskForm input:checked')
+    if(total <= 2){
+        resultBox.classList.add("low");
+        resultBox.innerHTML = "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
+    } else if(total <= 5){
+        resultBox.classList.add("moderate");
+        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
+    } else {
+        resultBox.classList.add("high");
+        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
+    }
 
-if(checked.length===0){
-alert("Please select at least one relevant option.")
-return
+    resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
 }
+</script>
 
-checked.forEach(box=>{
-total+=parseInt(box.value)
-})
+function calculateScore() {
+    let total = 0;
+    let checkedBoxes = document.querySelectorAll('#riskForm input[type="checkbox"]:checked');
 
-let result=document.getElementById("resultBox")
-result.className="result"
+    if (checkedBoxes.length === 0) {
+        alert("Please select at least one relevant option before evaluating risk exposure.");
+        return;
+    }
 
-if(total<=2){
-result.classList.add("low")
-result.innerHTML="Low risk indicators based on your selection."
+    let meaningfulSelection = false;
+
+    checkedBoxes.forEach(box => {
+        total += parseInt(box.value);
+        if(parseInt(box.value) > 0){
+            meaningfulSelection = true;
+        }
+    });
+
+    let resultBox = document.getElementById("resultBox");
+    resultBox.className = "result";
+
+    if (!meaningfulSelection) {
+        resultBox.classList.add("moderate");
+        resultBox.innerHTML = "Insufficient Data: You have selected only 'Not checked' options. Consider reviewing basic health parameters before booking your PEME to reduce uncertainty.<br><br><small>This tool provides educational risk awareness only.</small>";
+        return;
+    }
+
+    if(total <= 2){
+        resultBox.classList.add("low");
+        resultBox.innerHTML = "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
+    } 
+    else if(total <= 5){
+        resultBox.classList.add("moderate");
+        resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
+    } 
+    else {
+        resultBox.classList.add("high");
+        resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
+    }
+
+    resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
 }
-
-else if(total<=5){
-result.classList.add("moderate")
-result.innerHTML="Moderate risk indicators detected. Reviewing parameters before medical may help."
-}
-
-else{
-result.classList.add("high")
-result.innerHTML="Elevated risk indicators present. Professional interpretation may help before booking PEME."
-}
-
-result.innerHTML+="<br><br><small>This tool provides educational awareness only.</small>"
-
-}
-
 </script>
 
 <footer>
