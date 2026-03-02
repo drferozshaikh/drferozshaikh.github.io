@@ -102,7 +102,35 @@ display:block;
 content:" ▾";
 font-size:12px;
 }
+/* MOBILE MENU */
 
+.mobile-menu-btn{
+display:none;
+font-weight:600;
+font-size:18px;
+padding:12px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.mobile-menu-btn{
+display:block;
+text-align:center;
+background:#ffffff;
+border-bottom:1px solid #e5e5e5;
+}
+
+.main-nav{
+display:none;
+flex-direction:column;
+}
+
+.main-nav.show{
+display:flex;
+}
+
+}
 /* BREADCRUMB */
 
 .breadcrumb{
