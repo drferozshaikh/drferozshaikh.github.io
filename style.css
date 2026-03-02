@@ -201,6 +201,21 @@ display:block;
 .dropdown-menu{
 display:none;
 }
+@media (max-width:768px){
+
+.dropdown:hover .dropdown-menu{
+display:none;
+}
+
+.dropdown-menu{
+display:none;
+}
+
+.dropdown.active .dropdown-menu{
+display:block;
+}
+
+}
 /* =========================
    DROPDOWN ARROW INDICATOR
 ========================= */
@@ -257,7 +272,9 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-
+section{
+scroll-margin-top:110px;
+}
 /* =========================
    CARDS
 ========================= */
