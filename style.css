@@ -73,25 +73,31 @@ top:100%;
 left:0;
 background:white;
 min-width:260px;
-
-/* SCROLL FIX */
-max-height:calc(100vh - 120px);
+max-height:70vh;
 overflow-y:auto;
 overflow-x:hidden;
 -webkit-overflow-scrolling:touch;
-
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 border-radius:8px;
 padding:10px 0;
 z-index:999;
 text-align:left;
 }
-.dropdown-menu li{
-list-style:none;
-padding:6px 16px;
-white-space:normal;
-}
 
+/* MOBILE FIX */
+
+@media (max-width:768px){
+
+.dropdown-menu{
+position:fixed;
+top:70px;
+left:10px;
+right:10px;
+max-height:75vh;
+border-radius:12px;
+overflow-y:auto;
+}
+  
 #guidanceBtn::after{
 content:" ▾";
 font-size:12px;
