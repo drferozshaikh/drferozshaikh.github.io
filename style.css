@@ -193,13 +193,14 @@ font-weight:500;
 .dropdown-menu a:hover{
 background:#f2f6fa;
 }
+/* show dropdown only when actually hovering */
 
-/* show dropdown */
-
-.dropdown:hover .dropdown-menu{
+.dropdown:hover > .dropdown-menu{
 display:block;
 }
-
+.dropdown-menu{
+display:none;
+}
 /* =========================
    DROPDOWN ARROW INDICATOR
 ========================= */
