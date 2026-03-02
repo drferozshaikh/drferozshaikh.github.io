@@ -106,7 +106,7 @@ top:100%;
 left:0;
 background:white;
 min-width:260px;
-max-height:70vh;
+max-height:60vh;
 overflow-y:auto;
 overflow-x:hidden;
 -webkit-overflow-scrolling:touch;
@@ -115,9 +115,6 @@ border-radius:10px;
 padding:8px 0;
 z-index:999;
 text-align:left;
-opacity:0;
-transform:translateY(6px);
-transition:all .25s ease;
 }
 
 .dropdown-menu.show{
@@ -333,7 +330,11 @@ display:flex;
 }
 
 .main-nav li{
-margin:8px 0;
+margin:4px 0;
+}
+.main-nav a{
+padding:6px 4px;
+font-size:16px;
 }
 
 .dropdown-menu{
