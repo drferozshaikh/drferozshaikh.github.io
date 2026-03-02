@@ -17,10 +17,3 @@ menu.classList.remove("show");
 });
 
 });
-<script>
-
-function toggleMenu(){
-document.querySelector(".main-nav").classList.toggle("active");
-}
-
-</script>
