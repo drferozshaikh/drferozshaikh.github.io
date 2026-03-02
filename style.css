@@ -79,6 +79,20 @@ padding:10px 0;
 z-index:999;
 text-align:left;
 }
+/* Scrollbar styling */
+
+.dropdown-menu::-webkit-scrollbar{
+width:6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb{
+background:#c6d3df;
+border-radius:6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover{
+background:#9fb6cc;
+}
 
 .dropdown-menu li{
 list-style:none;
