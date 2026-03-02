@@ -127,7 +127,22 @@ background:#f2f6fa;
 display:block;
 }
 
+/* =========================
+   DROPDOWN ARROW INDICATOR
+========================= */
 
+#guidanceBtn::after{
+content:" ▾";
+font-size:12px;
+margin-left:4px;
+transition:transform .2s ease;
+}
+
+/* rotate arrow when hovering */
+
+.dropdown:hover #guidanceBtn::after{
+transform:rotate(180deg);
+}
 /* =========================
    BREADCRUMB
 ========================= */
