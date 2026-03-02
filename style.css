@@ -374,3 +374,19 @@ h2{
 margin-top:40px;
 color:#0a3d62;
 }
+@media (max-width:768px){
+
+.main-nav{
+flex-wrap:wrap;
+gap:8px;
+}
+
+.main-nav li{
+margin:4px 8px;
+}
+
+nav{
+padding:10px 6px;
+}
+
+}
