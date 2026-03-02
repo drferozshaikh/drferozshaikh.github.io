@@ -12,12 +12,37 @@ letter-spacing:.2px;
 /* HEADER */
 
 header{
-background:linear-gradient(135deg,#0a3d62,#134e7a);
+background:#0f4a6d;
 color:white;
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
 }
 
+header div{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:28px;
+flex-wrap:wrap;
+text-align:left;
+}
+
+@media (max-width:768px){
+
+header div{
+flex-direction:column;
+text-align:center;
+}
+
+header img{
+width:220px;
+}
+.main-content{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+}
 h1{margin:0;font-weight:700}
 
 h2{
