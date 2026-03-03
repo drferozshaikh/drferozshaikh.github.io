@@ -261,6 +261,45 @@ border-color:#134e7a;
 outline:none;
 box-shadow:0 0 0 2px rgba(19,78,122,0.1);
 }
+/* =========================
+   FORM VISUAL IMPROVEMENT
+========================= */
+
+form label{
+font-weight:600;
+display:block;
+margin-top:12px;
+color:#0a3d62;
+}
+
+form h3{
+margin-top:25px;
+border-bottom:2px solid #eef2f6;
+padding-bottom:6px;
+color:#0a3d62;
+}
+
+form small{
+color:#666;
+display:block;
+margin-top:6px;
+}
+
+form input[type="checkbox"]{
+margin-right:6px;
+}
+
+form input[type="file"]{
+margin-top:8px;
+}
+
+form{
+background:#ffffff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
+margin-top:20px;
+}
 
 /* =========================
    FOOTER
