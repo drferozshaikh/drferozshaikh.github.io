@@ -368,6 +368,7 @@ if(total <= 2){
 resultBox.classList.add("lowRisk");
 
 resultBox.innerHTML =
+"<h2>PEME Risk Assessment Result</h2>";
 "<div class='riskBadge lowBadge'>LOW RISK EXPOSURE</div>" +
 "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
 
@@ -378,6 +379,7 @@ else if(total <= 5){
 resultBox.classList.add("moderateRisk");
 
 resultBox.innerHTML =
+"<h2>PEME Risk Assessment Result</h2>";
 "<div class='riskBadge moderateBadge'>MODERATE RISK EXPOSURE</div>" +
 "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
 
@@ -388,6 +390,7 @@ else {
 resultBox.classList.add("highRisk");
 
 resultBox.innerHTML =
+"<h2>PEME Risk Assessment Result</h2>";
 "<div class='riskBadge highBadge'>ELEVATED RISK EXPOSURE</div>" +
 "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
 
