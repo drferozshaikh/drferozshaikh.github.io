@@ -17,6 +17,61 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 
+<style>
+
+/* Result spacing */
+
+#resultBox{
+margin-top:30px;
+transition:all .3s ease;
+}
+
+/* Risk result colours */
+
+.lowRisk{
+background:#e8f7ec;
+border-left:6px solid #2e9e49;
+}
+
+.moderateRisk{
+background:#fff3e6;
+border-left:6px solid #f4a261;
+}
+
+.highRisk{
+background:#fdeaea;
+border-left:6px solid #e63946;
+}
+
+/* Risk badge */
+
+.riskBadge{
+font-weight:700;
+padding:10px 14px;
+border-radius:6px;
+display:inline-block;
+margin-bottom:12px;
+font-size:15px;
+letter-spacing:0.3px;
+}
+
+.lowBadge{
+background:#2e9e49;
+color:white;
+}
+
+.moderateBadge{
+background:#f4a261;
+color:white;
+}
+
+.highBadge{
+background:#e63946;
+color:white;
+}
+
+</style>
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -25,6 +80,8 @@
  "url": "https://drferozshaikh.github.io/",
  "logo": "https://drferozshaikh.github.io/logo.png"
 }
+</script>
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -44,9 +101,7 @@
  }
 }
 </script>
-</script>
 
-</head>
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -79,12 +134,16 @@
  ]
 }
 </script>
+
+</head>
+
 <body>
 
 <header>
 <h1>PEME Risk Self-Assessment Tool</h1>
 <p>Educational Risk Awareness Before Booking Seafarer Medical</p>
 </header>
+
 <nav>
 
 <div class="nav-inner">
@@ -148,6 +207,10 @@ It does NOT determine fitness certification.
 For regulatory reference see  
 <a href="guidelines.html"><strong>Maritime Medical Guidelines</strong></a>
 </div>
+
+<h2>Risk Awareness Questions</h2>
+
+<form id="riskForm">
 
 <h2>Basic Self-Checks Before Booking PEME</h2>
 
@@ -255,12 +318,14 @@ Many candidates prefer to review these basic parameters before travelling for me
 
 
 <a class="btn" onclick="calculateScore()">Evaluate My PEME Risk</a>
+
 <p style="margin-top:12px;font-size:14px;">
 Unsure how to interpret your results?  
 <a class="btn" href="index.html#contact">
 Review Your Eligibility Before Booking PEME
 </a>
 </p>
+
 </form>
 
 <div id="resultBox"></div>
@@ -300,92 +365,42 @@ return;
 
 if(total <= 2){
 
-resultBox.innerHTML = "Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
+resultBox.classList.add("lowRisk");
+
+resultBox.innerHTML =
+"<div class='riskBadge lowBadge'>LOW RISK EXPOSURE</div>" +
+"Low Risk Exposure: No major risk indicator/s identified based on your selections. Routine PEME may be appropriate, though no medical outcome can be guaranteed.";
 
 }
+
 else if(total <= 5){
 
-resultBox.innerHTML = "Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
+resultBox.classList.add("moderateRisk");
+
+resultBox.innerHTML =
+"<div class='riskBadge moderateBadge'>MODERATE RISK EXPOSURE</div>" +
+"Moderate Risk Exposure: Certain parameter/s may require stability or clarification. Reviewing your reports before booking PEME may reduce the chance of temporary deferral.";
 
 }
+
 else {
 
-resultBox.innerHTML = "Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
+resultBox.classList.add("highRisk");
+
+resultBox.innerHTML =
+"<div class='riskBadge highBadge'>ELEVATED RISK EXPOSURE</div>" +
+"Elevated Risk Exposure: Multiple operational risk indicators identified. Structured professional interpretation may help you decide whether to proceed, defer or optimise parameters before medical booking.";
 
 }
 
 resultBox.innerHTML += "<br><br><small>This tool provides risk awareness only and does not determine fitness status.</small>";
 
+resultBox.scrollIntoView({behavior:"smooth"});
+
 }
 
 </script>
-<section style="max-width:900px;margin:auto;padding:20px">
 
-<h2>Related Seafarer Medical Guidance</h2>
-
-<div class="card">
-<a href="seafarer-medical-test-list.html">
-Complete Seafarer Medical Test List
-</a>
-</div>
-
-<div class="card">
-<a href="temporary-unfit-seafarer-medical.html">
-Temporary Unfit in Seafarer Medical – Meaning & Re-medical
-</a>
-</div>
-
-<div class="card">
-<a href="colour-vision-seafarer-medical.html">
-Colour Vision Rules for Ship Medical
-</a>
-</div>
-
-<div class="card">
-<a href="eyesight-seafarer-medical.html">
-Eyesight & Spectacle Power in Seafarer Medical
-</a>
-</div>
-
-<div class="card">
-<a href="bp-seafarer-medical.html">
-High Blood Pressure in Seafarer Medical
-</a>
-</div>
-
-<div class="card">
-<a href="diabetes-seafarer-medical.html">
-Diabetes & Borderline Sugar in Ship Medical
-</a>
-</div>
-
-<div class="card">
-<a href="liver-test-seafarer-medical.html">
-High Liver Enzymes & Fatty Liver in PEME
-</a>
-</div>
-
-</section>
-<section style="max-width:900px;margin:auto;padding:20px">
-
-<h2>Common Questions About Ship Medical Risk</h2>
-
-<details>
-<summary>Does this tool determine whether I will pass my ship medical?</summary>
-<p>No. This tool provides educational awareness only. Final certification depends on the examining authority and applicable maritime regulations.</p>
-</details>
-
-<details>
-<summary>Why do candidates become temporarily unfit during PEME?</summary>
-<p>Temporary unfit often occurs due to unstable blood pressure, abnormal liver tests, uncontrolled sugar levels or recent surgery recovery.</p>
-</details>
-
-<details>
-<summary>Should I correct abnormal reports before booking PEME?</summary>
-<p>In many cases correcting abnormal parameters beforehand can prevent unnecessary travel and repeat examinations.</p>
-</details>
-
-</section>
 <footer>
 
 <p><strong>Professional Disclaimer:</strong> Independent educational opinion based on provided documents only. Not a diagnosis, prescription, treatment, or statutory fitness certificate.</p>
