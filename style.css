@@ -410,4 +410,23 @@ margin-bottom:15px;
 color:#0a3d62;
 font-size:22px;
 }
+/* Result appearance animation */
 
+#resultBox{
+margin-top:30px;
+animation:fadeResult .5s ease;
+}
+
+@keyframes fadeResult{
+
+0%{
+opacity:0;
+transform:translateY(10px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
