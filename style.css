@@ -379,7 +379,7 @@ justify-content:space-between;
 }
 
 .main-nav{
-display:none;
+display:flex;
 flex-direction:column;
 background:white;
 position:absolute;
@@ -387,12 +387,12 @@ top:60px;
 left:0;
 right:0;
 padding:10px 0;
-max-height:70vh;
-overflow-y:auto;
+max-height:0;
+overflow:hidden;
+transition:max-height .35s ease;
 }
-
 .main-nav.active{
-display:flex;
+max-height:70vh;
 }
 
 .main-nav li{
