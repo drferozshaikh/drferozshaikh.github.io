@@ -11,6 +11,7 @@ if(toggle){
 toggle.addEventListener("click", function(e){
 e.stopPropagation();
 nav.classList.toggle("active");
+toggle.classList.toggle("active");   // <-- added for hamburger → X
 });
 }
 
@@ -40,6 +41,7 @@ menu.classList.remove("show");
 
 if(nav && !nav.contains(e.target) && !toggle.contains(e.target)){
 nav.classList.remove("active");
+toggle.classList.remove("active");   // <-- ensures X returns to hamburger
 }
 
 });
