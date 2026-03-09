@@ -428,5 +428,41 @@ transform:translateY(10px);
 opacity:1;
 transform:translateY(0);
 }
+   
 
+}
+/* =========================
+   HAMBURGER TO X ANIMATION
+   (NEW ADDITION)
+========================= */
+
+.menu-toggle{
+width:30px;
+height:22px;
+position:relative;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.menu-toggle span{
+display:block;
+height:3px;
+width:100%;
+background:#0a3d62;
+border-radius:2px;
+transition:all .3s ease;
+}
+
+/* Transform hamburger into X */
+
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
 }
