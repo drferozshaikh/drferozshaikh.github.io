@@ -377,9 +377,8 @@ display:block;
 .nav-inner{
 justify-content:space-between;
 }
-
 .main-nav{
-display:flex;
+display:none;
 flex-direction:column;
 background:white;
 position:absolute;
@@ -387,12 +386,11 @@ top:60px;
 left:0;
 right:0;
 padding:10px 0;
-max-height:0;
-overflow:hidden;
-transition:max-height .35s ease;
+max-height:70vh;
+overflow-y:auto;
 }
 .main-nav.active{
-max-height:70vh;
+display:flex;
 }
 
 .main-nav li{
