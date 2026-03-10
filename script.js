@@ -1,5 +1,3 @@
-This is my js script file. Can you make he changes for that hamburger into X
-
 document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.querySelector(".menu-toggle");
@@ -12,7 +10,12 @@ const menu = document.querySelector(".dropdown-menu");
 if(toggle){
 toggle.addEventListener("click", function(e){
 e.stopPropagation();
+
 nav.classList.toggle("active");
+
+/* THIS LINE makes hamburger turn into X */
+toggle.classList.toggle("active");
+
 });
 }
 
@@ -28,20 +31,23 @@ menu.classList.toggle("show");
 
 /* clicking inside dropdown should NOT close it */
 
+if(menu){
 menu.addEventListener("click", function(e){
 e.stopPropagation();
 });
+}
 
 /* close when clicking outside */
 
 document.addEventListener("click", function(e){
 
-if(!btn.contains(e.target) && !menu.contains(e.target)){
+if(btn && menu && !btn.contains(e.target) && !menu.contains(e.target)){
 menu.classList.remove("show");
 }
 
-if(nav && !nav.contains(e.target) && !toggle.contains(e.target)){
+if(nav && toggle && !nav.contains(e.target) && !toggle.contains(e.target)){
 nav.classList.remove("active");
+toggle.classList.remove("active"); /* also reset hamburger */
 }
 
 });
