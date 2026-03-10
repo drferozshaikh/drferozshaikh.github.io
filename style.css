@@ -120,12 +120,16 @@ top:100%;
 left:0;
 background:white;
 min-width:260px;
-max-height:60vh;
+max-height:320px;
 overflow-y:auto;
 box-shadow:0 10px 30px rgba(0,0,0,0.12);
 border-radius:10px;
 padding:8px 0;
 z-index:999;
+}
+
+.dropdown-menu.show{
+display:block;
 }
 
 .dropdown-menu.show{
@@ -262,10 +266,15 @@ font-size:16px;
 }
 /* mobile dropdown */
 
+@media (max-width:768px){
+
 .dropdown-menu{
 position:relative;
-box-shadow:none;
-border-radius:0;
+max-height:250px;
+overflow-y:auto;
+}
+
+}
 
 /* make dropdown scrollable */
 max-height:280px;
