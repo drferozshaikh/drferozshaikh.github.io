@@ -451,16 +451,26 @@ border-radius:2px;
 transition:all .3s ease;
 }
 
-/* Transform hamburger into X */
+<script>
+function toggleMenu(){
+  const menu = document.querySelector(".main-nav");
+  const toggle = document.querySelector(".menu-toggle");
 
-.menu-toggle.active span:nth-child(1){
-transform:rotate(45deg) translate(5px,5px);
+  menu.classList.toggle("active");
+  toggle.classList.toggle("active");
 }
 
-.menu-toggle.active span:nth-child(2){
-opacity:0;
-}
+/* Guidance dropdown */
 
-.menu-toggle.active span:nth-child(3){
-transform:rotate(-45deg) translate(6px,-6px);
-}
+document.addEventListener("DOMContentLoaded", function(){
+
+  const btn = document.getElementById("guidanceBtn");
+  const dropdown = document.querySelector(".dropdown-menu");
+
+  btn.addEventListener("click", function(e){
+    e.preventDefault();   // stops page jumping to top
+    dropdown.classList.toggle("show");
+  });
+
+});
+</script>
