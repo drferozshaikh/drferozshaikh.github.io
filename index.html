@@ -31,12 +31,17 @@
 <a class="btn" href="#contact">Request Case Review</a>  
 </div>  
 </div>  
-</header>  
+</header>
+  
 <nav>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  
-<ul class="main-nav">
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<ul class="main-nav" id="mainNav">
 
 <li><a href="/index.html#about">About</a></li>
 <li><a href="/index.html#who">Who It’s For</a></li>
@@ -47,7 +52,7 @@
 
 <a href="#" id="guidanceBtn">Guidance</a>
 
-<ul class="dropdown-menu">
+<ul class="dropdown-menu" id="guidanceMenu">
 
 <li><a href="/index.html#problems">Common Problems</a></li>
 <li><a href="/index.html#prepeme">Before Booking PEME</a></li>
@@ -73,8 +78,6 @@
 <li><a href="/index.html#contact">Contact</a></li>
 
 </ul>
-
-</div>
 
 </nav>
 
@@ -284,11 +287,6 @@ Payment reference in reply email helps faster processing.</div>
 <p><strong>Use Limitation:</strong> This service does not replace medical examination or emergency care.</p>  
 <p>© 2026 Maritime Medical Review — Professional advisory content protected.</p>  
 </footer>  
-<script>
-function toggleMenu() {
-  const menu = document.querySelector(".main-nav");
-  menu.classList.toggle("active");
-}
-</script>
+
 </body>  
 </html>
