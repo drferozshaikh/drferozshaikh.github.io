@@ -79,7 +79,11 @@ min-width:260px;
 
 <div class="nav-inner">
 
-<div class="menu-toggle">☰</div>
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
 
 <ul class="main-nav">
 
@@ -303,28 +307,6 @@ Review Your Eligibility Before Booking PEME
 <p>© 2026 Maritime Medical Review — Professional advisory content protected.</p>
 
 </footer>
-<script>
-function toggleMenu(){
-  const menu = document.querySelector(".main-nav");
-  const toggle = document.querySelector(".menu-toggle");
 
-  menu.classList.toggle("active");
-  toggle.classList.toggle("active");
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-
-  const btn = document.getElementById("guidanceBtn");
-  const dropdown = document.querySelector(".dropdown-menu");
-
-  if(btn){
-    btn.addEventListener("click", function(e){
-      e.preventDefault();
-      dropdown.classList.toggle("show");
-    });
-  }
-
-});
-</script>
 </body>
 </html>
