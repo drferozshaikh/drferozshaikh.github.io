@@ -47,11 +47,16 @@ margin-top:10px;
 nav{
 background:white;
 padding:14px 10px;
-text-align:center;
 box-shadow:0 2px 10px rgba(0,0,0,0.06);
 position:sticky;
 top:0;
 z-index:1000;
+}
+
+.nav-inner{
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .menu-toggle{
@@ -99,34 +104,29 @@ font-size:12px;
 margin-left:4px;
 }
 
+.dropdown{
+position:relative;
+}
 
 .dropdown-menu{
 display:none;
 position:absolute;
 top:100%;
 left:0;
-
 background:white;
 min-width:260px;
 max-height:60vh;
-
 overflow-y:auto;
-overflow-x:hidden;
-
 box-shadow:0 10px 30px rgba(0,0,0,0.12);
 border-radius:10px;
-
 padding:8px 0;
 z-index:999;
-text-align:left;
 }
+
 .dropdown-menu.show{
 display:block;
 }
 
-.dropdown{
-position:relative;
-}
 .dropdown-menu li{
 list-style:none;
 width:100%;
@@ -183,11 +183,11 @@ margin-bottom:20px;
 
 .card{
 background:white;
-padding:22px 22px;
+padding:22px;
 border-radius:14px;
 margin:16px 0;
 box-shadow:0 8px 22px rgba(0,0,0,0.06);
-transition:all .25s ease;
+transition:.25s;
 border:1px solid #eef1f5;
 }
 
@@ -195,24 +195,6 @@ border:1px solid #eef1f5;
 transform:translateY(-6px);
 box-shadow:0 16px 36px rgba(0,0,0,0.12);
 background:#f8fbff;
-}
-
-/* =========================
-   HIGHLIGHT
-========================= */
-
-.highlight{
-background:#eef4f8;
-padding:20px;
-border-left:5px solid #6b8aa6;
-border-radius:10px;
-margin:20px 0;
-transition:.25s;
-}
-
-.highlight:hover{
-background:#e3edf5;
-transform:translateY(-3px);
 }
 
 /* =========================
@@ -237,96 +219,6 @@ transform:translateY(-2px);
 box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* =========================
-   FORM
-========================= */
-
-form input[type="text"],
-form textarea,
-form select{
-width:100%;
-padding:12px;
-border:1px solid #cfd8e3;
-border-radius:8px;
-font-family:inherit;
-margin-top:6px;
-margin-bottom:14px;
-transition:.2s;
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus{
-border-color:#134e7a;
-outline:none;
-box-shadow:0 0 0 2px rgba(19,78,122,0.1);
-}
-/* =========================
-   FORM VISUAL IMPROVEMENT
-========================= */
-
-form label{
-font-weight:600;
-display:block;
-margin-top:12px;
-color:#0a3d62;
-}
-
-form h3{
-margin-top:25px;
-border-bottom:2px solid #eef2f6;
-padding-bottom:6px;
-color:#0a3d62;
-}
-
-form small{
-color:#666;
-display:block;
-margin-top:6px;
-}
-
-form input[type="checkbox"]{
-margin-right:6px;
-}
-
-form input[type="file"]{
-margin-top:8px;
-}
-
-form{
-background:#ffffff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
-margin-top:20px;
-}
-/* Form section headings */
-
-form h3{
-margin-top:28px;
-margin-bottom:12px;
-color:#0a3d62;
-font-size:18px;
-border-bottom:2px solid #e8edf3;
-padding-bottom:6px;
-}
-
-/* Checkbox spacing */
-
-form input[type="checkbox"]{
-margin-right:6px;
-margin-bottom:6px;
-}
-
-/* Improve mobile readability */
-
-form{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 24px rgba(0,0,0,0.05);
-margin-top:20px;
-}
 /* =========================
    FOOTER
 ========================= */
@@ -357,26 +249,16 @@ align-items:center;
 }
 
 .menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-}
-
-.nav-inner{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-@media (max-width:768px){
-
-.menu-toggle{
 display:block;
 }
 
 .nav-inner{
 justify-content:space-between;
+width:100%;
 }
+
+/* mobile menu */
+
 .main-nav{
 display:none;
 flex-direction:column;
@@ -388,7 +270,9 @@ right:0;
 padding:10px 0;
 max-height:70vh;
 overflow-y:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
+
 .main-nav.active{
 display:flex;
 }
@@ -396,42 +280,25 @@ display:flex;
 .main-nav li{
 margin:4px 0;
 }
+
 .main-nav a{
-padding:6px 4px;
+padding:10px 16px;
 font-size:16px;
 }
-/* Risk result heading */
 
-#resultBox h2{
-margin-top:0;
-margin-bottom:15px;
-color:#0a3d62;
-font-size:22px;
-}
-/* Result appearance animation */
+/* mobile dropdown */
 
-#resultBox{
-margin-top:30px;
-animation:fadeResult .5s ease;
+.dropdown-menu{
+position:relative;
+box-shadow:none;
+border-radius:0;
+max-height:none;
 }
 
-@keyframes fadeResult{
-
-0%{
-opacity:0;
-transform:translateY(10px);
 }
 
-100%{
-opacity:1;
-transform:translateY(0);
-}
-   
-
-}
 /* =========================
-   HAMBURGER TO X ANIMATION
-   (NEW ADDITION)
+   HAMBURGER ANIMATION
 ========================= */
 
 .menu-toggle{
@@ -451,26 +318,14 @@ border-radius:2px;
 transition:all .3s ease;
 }
 
-<script>
-function toggleMenu(){
-  const menu = document.querySelector(".main-nav");
-  const toggle = document.querySelector(".menu-toggle");
-
-  menu.classList.toggle("active");
-  toggle.classList.toggle("active");
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
 }
 
-/* Guidance dropdown */
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
 
-document.addEventListener("DOMContentLoaded", function(){
-
-  const btn = document.getElementById("guidanceBtn");
-  const dropdown = document.querySelector(".dropdown-menu");
-
-  btn.addEventListener("click", function(e){
-    e.preventDefault();   // stops page jumping to top
-    dropdown.classList.toggle("show");
-  });
-
-});
-</script>
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
