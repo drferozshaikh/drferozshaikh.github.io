@@ -53,17 +53,22 @@ top:0;
 z-index:1000;
 }
 
-.nav-inner{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
 .menu-toggle{
 display:none;
-font-size:26px;
+width:30px;
+height:22px;
 cursor:pointer;
-color:#0a3d62;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.menu-toggle span{
+display:block;
+height:3px;
+width:100%;
+background:#0a3d62;
+border-radius:2px;
+transition:all .3s ease;
 }
 
 .main-nav{
@@ -136,27 +141,6 @@ width:100%;
 display:block;
 padding:10px 16px;
 text-align:left;
-}
-
-/* =========================
-   BREADCRUMB
-========================= */
-
-.breadcrumb{
-max-width:1000px;
-margin:auto;
-padding:12px 20px;
-font-size:14px;
-color:#666;
-}
-
-.breadcrumb a{
-color:#0a3d62;
-text-decoration:none;
-}
-
-.breadcrumb a:hover{
-text-decoration:underline;
 }
 
 /* =========================
@@ -242,33 +226,24 @@ header{
 padding:60px 20px;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+/* hamburger */
 
 .menu-toggle{
-display:block;
+display:flex;
 }
 
-.nav-inner{
-justify-content:space-between;
-width:100%;
-}
-
-/* mobile menu */
+/* mobile nav */
 
 .main-nav{
 display:none;
 flex-direction:column;
 background:white;
 position:absolute;
-top:60px;
+top:65px;
 left:0;
 right:0;
 padding:10px 0;
-max-height:70vh;
+max-height:75vh;
 overflow-y:auto;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
@@ -282,7 +257,7 @@ margin:4px 0;
 }
 
 .main-nav a{
-padding:10px 16px;
+padding:12px 18px;
 font-size:16px;
 }
 
@@ -300,23 +275,6 @@ max-height:none;
 /* =========================
    HAMBURGER ANIMATION
 ========================= */
-
-.menu-toggle{
-width:30px;
-height:22px;
-position:relative;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.menu-toggle span{
-display:block;
-height:3px;
-width:100%;
-background:#0a3d62;
-border-radius:2px;
-transition:all .3s ease;
-}
 
 .menu-toggle.active span:nth-child(1){
 transform:rotate(45deg) translate(5px,5px);
