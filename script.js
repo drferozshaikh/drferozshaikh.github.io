@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
-const btn = document.getElementById("guidanceBtn");
-const menu = document.getElementById("guidanceMenu");
 
-/* mobile menu */
+/* MOBILE MENU */
 
 if(toggle){
 toggle.addEventListener("click", function(e){
@@ -15,34 +13,34 @@ toggle.classList.toggle("active");
 });
 }
 
-/* dropdown */
+/* DROPDOWN (works even if multiple exist) */
 
-if(btn){
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(function(drop){
+
+const btn = drop.querySelector("a");
+const menu = drop.querySelector(".dropdown-menu");
+
 btn.addEventListener("click", function(e){
 e.preventDefault();
 e.stopPropagation();
-
-if(menu){
 menu.classList.toggle("show");
-}
 });
-}
 
-/* stop closing when clicking inside dropdown */
-
-if(menu){
 menu.addEventListener("click", function(e){
 e.stopPropagation();
 });
-}
 
-/* close menus when clicking outside */
+});
+
+/* CLOSE MENUS WHEN CLICKING OUTSIDE */
 
 document.addEventListener("click", function(){
 
-if(menu){
+document.querySelectorAll(".dropdown-menu").forEach(function(menu){
 menu.classList.remove("show");
-}
+});
 
 if(nav){
 nav.classList.remove("active");
