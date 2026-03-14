@@ -272,7 +272,6 @@ overflow-y:auto;
 }
 
 }
-
 /* make dropdown scrollable */
 max-height:280px;
 overflow-y:auto;
@@ -280,17 +279,17 @@ overflow-y:auto;
 /* smoother scrolling on mobile */
 -webkit-overflow-scrolling:touch;
 }
+
+}
 .dropdown-menu li{
 border-bottom:1px solid #eef1f5;
 }
-}
-
 /* =========================
    HAMBURGER ANIMATION
 ========================= */
 
 .menu-toggle.active span:nth-child(1){
-transform:rotate(-45deg) translate(-6px,6px);
+transform:rotate(45deg) translate(5px,5px);
 }
 
 .menu-toggle.active span:nth-child(2){
