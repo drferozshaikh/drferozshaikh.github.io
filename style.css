@@ -267,9 +267,17 @@ font-size:16px;
 position:relative;
 box-shadow:none;
 border-radius:0;
-max-height:none;
-}
 
+/* make dropdown scrollable */
+max-height:280px;
+overflow-y:auto;
+
+/* smoother scrolling on mobile */
+-webkit-overflow-scrolling:touch;
+}
+.dropdown-menu li{
+border-bottom:1px solid #eef1f5;
+}
 }
 
 /* =========================
