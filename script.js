@@ -17,11 +17,14 @@ toggle.classList.toggle("active");
 
 /* dropdown */
 
-if(btn && menu){
+if(btn){
 btn.addEventListener("click", function(e){
 e.preventDefault();
 e.stopPropagation();
+
+if(menu){
 menu.classList.toggle("show");
+}
 });
 }
 
@@ -50,18 +53,5 @@ toggle.classList.remove("active");
 }
 
 });
-
-/* =========================
-   TEXTAREA CHARACTER COUNTER
-========================= */
-
-const textarea = document.getElementById("caseDescription");
-const counter = document.getElementById("charCount");
-
-textarea.addEventListener("input", function() {
-    counter.textContent = textarea.value.length;
-});
-
-}
 
 });
