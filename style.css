@@ -429,3 +429,69 @@ transform:translateY(0);
 }
 
 }
+@media (max-width:768px){
+
+section{
+padding:40px 18px;
+}
+
+.breadcrumb{
+padding:10px 16px;
+}
+
+form{
+padding:20px;
+}
+
+}
+/* =========================
+   BREADCRUMB IMPROVEMENT
+========================= */
+
+.breadcrumb{
+max-width:1000px;
+margin:20px auto 30px auto;
+padding:12px 20px;
+font-size:14px;
+color:#666;
+}
+/* =========================
+   TEXT SPACING FIX
+========================= */
+
+section p{
+margin-bottom:16px;
+}
+
+section ul{
+margin-bottom:18px;
+}
+/* =========================
+   TEXTAREA IMPROVEMENT
+========================= */
+
+form textarea{
+min-height:140px;
+resize:vertical;
+}
+.char-counter{
+font-size:12px;
+color:#777;
+margin-top:-8px;
+margin-bottom:12px;
+}
+/* =========================
+   CARD SECTION SPACING
+========================= */
+
+.card + .card{
+margin-top:20px;
+}
+/* =========================
+   FORM SECTION SPACING
+========================= */
+
+form h3{
+margin-top:30px;
+margin-bottom:10px;
+}
