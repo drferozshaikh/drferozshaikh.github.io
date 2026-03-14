@@ -53,3 +53,9 @@ toggle.classList.remove("active");
 });
 
 });
+const textarea = document.getElementById("caseDescription");
+const counter = document.getElementById("charCount");
+
+textarea.addEventListener("input", function() {
+    counter.textContent = textarea.value.length;
+});
