@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL STYLES
+GLOBAL STYLES
 ========================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -19,7 +19,7 @@ scroll-behavior:smooth;
 }
 
 /* =========================
-   HEADER
+HEADER
 ========================= */
 
 header{
@@ -41,7 +41,7 @@ margin-top:10px;
 }
 
 /* =========================
-   NAVBAR
+NAVBAR
 ========================= */
 
 nav{
@@ -90,7 +90,7 @@ color:#134e7a;
 }
 
 /* =========================
-   DROPDOWN
+DROPDOWN
 ========================= */
 
 #guidanceBtn::after{
@@ -98,7 +98,6 @@ content:" ▾";
 font-size:12px;
 margin-left:4px;
 }
-
 
 .dropdown-menu{
 display:none;
@@ -139,7 +138,7 @@ text-align:left;
 }
 
 /* =========================
-   BREADCRUMB
+BREADCRUMB
 ========================= */
 
 .breadcrumb{
@@ -160,7 +159,7 @@ text-decoration:underline;
 }
 
 /* =========================
-   SECTIONS
+SECTIONS
 ========================= */
 
 section{
@@ -178,7 +177,7 @@ margin-bottom:20px;
 }
 
 /* =========================
-   CARDS
+CARDS
 ========================= */
 
 .card{
@@ -198,7 +197,7 @@ background:#f8fbff;
 }
 
 /* =========================
-   HIGHLIGHT
+HIGHLIGHT
 ========================= */
 
 .highlight{
@@ -216,7 +215,7 @@ transform:translateY(-3px);
 }
 
 /* =========================
-   BUTTONS
+BUTTONS
 ========================= */
 
 .btn{
@@ -238,7 +237,7 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
 /* =========================
-   FORM
+FORM
 ========================= */
 
 form input[type="text"],
@@ -262,7 +261,7 @@ outline:none;
 box-shadow:0 0 0 2px rgba(19,78,122,0.1);
 }
 /* =========================
-   FORM VISUAL IMPROVEMENT
+FORM VISUAL IMPROVEMENT
 ========================= */
 
 form label{
@@ -328,7 +327,7 @@ box-shadow:0 8px 24px rgba(0,0,0,0.05);
 margin-top:20px;
 }
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
 
 footer{
@@ -341,7 +340,7 @@ font-size:14px;
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+MOBILE RESPONSIVE
 ========================= */
 
 @media (max-width:768px){
@@ -429,23 +428,4 @@ opacity:1;
 transform:translateY(0);
 }
 
-}
-.fitness-section{
-    max-width:900px;
-    margin:auto;
-}
-
-.info-card{
-    background:#f8fafc;
-    padding:20px;
-    border-radius:10px;
-    margin-top:15px;
-    border-left:4px solid #2b6cb0;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    transition:all 0.3s ease;
-}
-
-.info-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 6px 14px rgba(0,0,0,0.12);
 }
