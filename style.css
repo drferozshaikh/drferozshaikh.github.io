@@ -174,13 +174,7 @@ box-shadow:0 8px 22px rgba(0,0,0,0.06);
 transition:.25s;
 border:1px solid #eef1f5;
 }
-.card-section{
-    background:#f8fafc;
-    padding:20px;
-    border-radius:10px;
-    border-left:4px solid #2563eb;
-    margin-top:25px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+
 }
 .card:hover{
 transform:translateY(-6px);
@@ -329,3 +323,10 @@ textarea:focus{
     color:#6b7280;
     margin-top:5px;
 }
+.card-section{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:10px;
+    border-left:4px solid #2563eb;
+    margin-top:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
