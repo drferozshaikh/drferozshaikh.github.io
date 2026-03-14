@@ -1,46 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-const guidanceBtn = document.getElementById("guidanceBtn");
-const guidanceMenu = document.getElementById("guidanceMenu");
-
-menuToggle.addEventListener("click", function () {
-    mainNav.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-});
-
-guidanceBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    guidanceMenu.classList.toggle("show");
-});
-
-});
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".main-nav");
+const btn = document.getElementById("guidanceBtn");
+const menu = document.querySelector(".dropdown-menu");
 
 /* mobile menu */
 
 if(toggle){
 toggle.addEventListener("click", function(e){
 e.stopPropagation();
+
 nav.classList.toggle("active");
+
+/* THIS LINE makes hamburger turn into X */
 toggle.classList.toggle("active");
+
 });
 }
 
-/* dropdown */
+/* dropdown toggle */
 
 if(btn){
 btn.addEventListener("click", function(e){
 e.preventDefault();
 e.stopPropagation();
-
-if(menu){
 menu.classList.toggle("show");
-}
 });
 }
 
-/* stop closing when clicking inside dropdown */
+/* clicking inside dropdown should NOT close it */
 
 if(menu){
 menu.addEventListener("click", function(e){
@@ -48,20 +37,17 @@ e.stopPropagation();
 });
 }
 
-/* close menus when clicking outside */
+/* close when clicking outside */
 
-document.addEventListener("click", function(){
+document.addEventListener("click", function(e){
 
-if(menu){
+if(btn && menu && !btn.contains(e.target) && !menu.contains(e.target)){
 menu.classList.remove("show");
 }
 
-if(nav){
+if(nav && toggle && !nav.contains(e.target) && !toggle.contains(e.target)){
 nav.classList.remove("active");
-}
-
-if(toggle){
-toggle.classList.remove("active");
+toggle.classList.remove("active"); /* also reset hamburger */
 }
 
 });
