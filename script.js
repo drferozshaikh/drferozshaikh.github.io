@@ -58,10 +58,8 @@ toggle.classList.remove("active");
 const textarea = document.getElementById("caseDescription");
 const counter = document.getElementById("charCount");
 
-if(textarea && counter){
-
-textarea.addEventListener("input", function(){
-counter.textContent = textarea.value.length;
+textarea.addEventListener("input", function() {
+    counter.textContent = textarea.value.length;
 });
 
 }
