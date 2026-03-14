@@ -1,9 +1,21 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".main-nav");
-const btn = document.getElementById("guidanceBtn");
-const menu = document.getElementById("guidanceMenu");
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+const guidanceBtn = document.getElementById("guidanceBtn");
+const guidanceMenu = document.getElementById("guidanceMenu");
+
+menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+});
+
+guidanceBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    guidanceMenu.classList.toggle("show");
+});
+
+});
 
 /* mobile menu */
 
