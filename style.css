@@ -99,23 +99,27 @@ font-size:12px;
 margin-left:4px;
 }
 
+
 .dropdown-menu{
 display:none;
 position:absolute;
 top:100%;
 left:0;
+
 background:white;
 min-width:260px;
 max-height:60vh;
+
 overflow-y:auto;
 overflow-x:hidden;
+
 box-shadow:0 10px 30px rgba(0,0,0,0.12);
 border-radius:10px;
+
 padding:8px 0;
 z-index:999;
 text-align:left;
 }
-
 .dropdown-menu.show{
 display:block;
 }
@@ -123,7 +127,6 @@ display:block;
 .dropdown{
 position:relative;
 }
-
 .dropdown-menu li{
 list-style:none;
 width:100%;
@@ -141,7 +144,7 @@ text-align:left;
 
 .breadcrumb{
 max-width:1000px;
-margin:20px auto 30px auto;
+margin:auto;
 padding:12px 20px;
 font-size:14px;
 color:#666;
@@ -174,14 +177,6 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-section p{
-margin-bottom:16px;
-}
-
-section ul{
-margin-bottom:18px;
-}
-
 /* =========================
    CARDS
 ========================= */
@@ -200,10 +195,6 @@ border:1px solid #eef1f5;
 transform:translateY(-6px);
 box-shadow:0 16px 36px rgba(0,0,0,0.12);
 background:#f8fbff;
-}
-
-.card + .card{
-margin-top:20px;
 }
 
 /* =========================
@@ -250,14 +241,6 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
    FORM
 ========================= */
 
-form{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 24px rgba(0,0,0,0.05);
-margin-top:20px;
-}
-
 form input[type="text"],
 form textarea,
 form select{
@@ -271,11 +254,6 @@ margin-bottom:14px;
 transition:.2s;
 }
 
-form textarea{
-min-height:140px;
-resize:vertical;
-}
-
 form input:focus,
 form textarea:focus,
 form select:focus{
@@ -283,7 +261,6 @@ border-color:#134e7a;
 outline:none;
 box-shadow:0 0 0 2px rgba(19,78,122,0.1);
 }
-
 /* =========================
    FORM VISUAL IMPROVEMENT
 ========================= */
@@ -296,12 +273,10 @@ color:#0a3d62;
 }
 
 form h3{
-margin-top:30px;
-margin-bottom:10px;
-color:#0a3d62;
-font-size:18px;
-border-bottom:2px solid #e8edf3;
+margin-top:25px;
+border-bottom:2px solid #eef2f6;
 padding-bottom:6px;
+color:#0a3d62;
 }
 
 form small{
@@ -312,13 +287,46 @@ margin-top:6px;
 
 form input[type="checkbox"]{
 margin-right:6px;
-margin-bottom:6px;
 }
 
 form input[type="file"]{
 margin-top:8px;
 }
 
+form{
+background:#ffffff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
+margin-top:20px;
+}
+/* Form section headings */
+
+form h3{
+margin-top:28px;
+margin-bottom:12px;
+color:#0a3d62;
+font-size:18px;
+border-bottom:2px solid #e8edf3;
+padding-bottom:6px;
+}
+
+/* Checkbox spacing */
+
+form input[type="checkbox"]{
+margin-right:6px;
+margin-bottom:6px;
+}
+
+/* Improve mobile readability */
+
+form{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 24px rgba(0,0,0,0.05);
+margin-top:20px;
+}
 /* =========================
    FOOTER
 ========================= */
@@ -349,15 +357,25 @@ align-items:center;
 }
 
 .menu-toggle{
-display:block;
+display:none;
 font-size:26px;
 cursor:pointer;
 }
 
 .nav-inner{
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
+}
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-inner{
+justify-content:space-between;
 }
 
 .main-nav{
@@ -380,24 +398,10 @@ display:flex;
 .main-nav li{
 margin:4px 0;
 }
-
 .main-nav a{
 padding:6px 4px;
 font-size:16px;
 }
-
-section{
-padding:40px 18px;
-}
-
-.breadcrumb{
-padding:10px 16px;
-}
-
-form{
-padding:20px;
-}
-
 /* Risk result heading */
 
 #resultBox h2{
@@ -406,8 +410,7 @@ margin-bottom:15px;
 color:#0a3d62;
 font-size:22px;
 }
-
-/* Result animation */
+/* Result appearance animation */
 
 #resultBox{
 margin-top:30px;
@@ -427,5 +430,22 @@ transform:translateY(0);
 }
 
 }
+.fitness-section{
+    max-width:900px;
+    margin:auto;
+}
 
+.info-card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:10px;
+    margin-top:15px;
+    border-left:4px solid #2b6cb0;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    transition:all 0.3s ease;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.12);
 }
