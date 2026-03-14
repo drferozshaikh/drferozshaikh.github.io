@@ -47,7 +47,6 @@ margin-top:10px;
 nav{
 background:white;
 padding:14px 10px;
-text-align:center;
 box-shadow:0 2px 10px rgba(0,0,0,0.06);
 position:sticky;
 top:0;
@@ -56,9 +55,20 @@ z-index:1000;
 
 .menu-toggle{
 display:none;
-font-size:26px;
+width:30px;
+height:22px;
 cursor:pointer;
-color:#0a3d62;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.menu-toggle span{
+display:block;
+height:3px;
+width:100%;
+background:#0a3d62;
+border-radius:2px;
+transition:all .3s ease;
 }
 
 .main-nav{
@@ -99,6 +109,10 @@ font-size:12px;
 margin-left:4px;
 }
 
+.dropdown{
+position:relative;
+}
+
 .dropdown-menu{
 display:none;
 position:absolute;
@@ -108,20 +122,14 @@ background:white;
 min-width:260px;
 max-height:60vh;
 overflow-y:auto;
-overflow-x:hidden;
 box-shadow:0 10px 30px rgba(0,0,0,0.12);
 border-radius:10px;
 padding:8px 0;
 z-index:999;
-text-align:left;
 }
 
 .dropdown-menu.show{
 display:block;
-}
-
-.dropdown{
-position:relative;
 }
 
 .dropdown-menu li{
@@ -133,27 +141,6 @@ width:100%;
 display:block;
 padding:10px 16px;
 text-align:left;
-}
-
-/* =========================
-   BREADCRUMB
-========================= */
-
-.breadcrumb{
-max-width:1000px;
-margin:20px auto 30px auto;
-padding:12px 20px;
-font-size:14px;
-color:#666;
-}
-
-.breadcrumb a{
-color:#0a3d62;
-text-decoration:none;
-}
-
-.breadcrumb a:hover{
-text-decoration:underline;
 }
 
 /* =========================
@@ -174,25 +161,17 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-section p{
-margin-bottom:16px;
-}
-
-section ul{
-margin-bottom:18px;
-}
-
 /* =========================
    CARDS
 ========================= */
 
 .card{
 background:white;
-padding:22px 22px;
+padding:22px;
 border-radius:14px;
 margin:16px 0;
 box-shadow:0 8px 22px rgba(0,0,0,0.06);
-transition:all .25s ease;
+transition:.25s;
 border:1px solid #eef1f5;
 }
 
@@ -200,28 +179,6 @@ border:1px solid #eef1f5;
 transform:translateY(-6px);
 box-shadow:0 16px 36px rgba(0,0,0,0.12);
 background:#f8fbff;
-}
-
-.card + .card{
-margin-top:20px;
-}
-
-/* =========================
-   HIGHLIGHT
-========================= */
-
-.highlight{
-background:#eef4f8;
-padding:20px;
-border-left:5px solid #6b8aa6;
-border-radius:10px;
-margin:20px 0;
-transition:.25s;
-}
-
-.highlight:hover{
-background:#e3edf5;
-transform:translateY(-3px);
 }
 
 /* =========================
@@ -247,79 +204,6 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
 /* =========================
-   FORM
-========================= */
-
-form{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 24px rgba(0,0,0,0.05);
-margin-top:20px;
-}
-
-form input[type="text"],
-form textarea,
-form select{
-width:100%;
-padding:12px;
-border:1px solid #cfd8e3;
-border-radius:8px;
-font-family:inherit;
-margin-top:6px;
-margin-bottom:14px;
-transition:.2s;
-}
-
-form textarea{
-min-height:140px;
-resize:vertical;
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus{
-border-color:#134e7a;
-outline:none;
-box-shadow:0 0 0 2px rgba(19,78,122,0.1);
-}
-
-/* =========================
-   FORM VISUAL IMPROVEMENT
-========================= */
-
-form label{
-font-weight:600;
-display:block;
-margin-top:12px;
-color:#0a3d62;
-}
-
-form h3{
-margin-top:30px;
-margin-bottom:10px;
-color:#0a3d62;
-font-size:18px;
-border-bottom:2px solid #e8edf3;
-padding-bottom:6px;
-}
-
-form small{
-color:#666;
-display:block;
-margin-top:6px;
-}
-
-form input[type="checkbox"]{
-margin-right:6px;
-margin-bottom:6px;
-}
-
-form input[type="file"]{
-margin-top:8px;
-}
-
-/* =========================
    FOOTER
 ========================= */
 
@@ -342,35 +226,26 @@ header{
 padding:60px 20px;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+/* hamburger */
 
 .menu-toggle{
-display:block;
-font-size:26px;
-cursor:pointer;
+display:flex;
 }
 
-.nav-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+/* mobile nav */
 
 .main-nav{
 display:none;
 flex-direction:column;
 background:white;
 position:absolute;
-top:60px;
+top:65px;
 left:0;
 right:0;
 padding:10px 0;
-max-height:70vh;
+max-height:75vh;
 overflow-y:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .main-nav.active{
@@ -382,48 +257,33 @@ margin:4px 0;
 }
 
 .main-nav a{
-padding:6px 4px;
+padding:12px 18px;
 font-size:16px;
 }
 
-section{
-padding:40px 18px;
+/* mobile dropdown */
+
+.dropdown-menu{
+position:relative;
+box-shadow:none;
+border-radius:0;
+max-height:none;
 }
 
-.breadcrumb{
-padding:10px 16px;
 }
 
-form{
-padding:20px;
+/* =========================
+   HAMBURGER ANIMATION
+========================= */
+
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
 }
 
-/* Risk result heading */
-
-#resultBox h2{
-margin-top:0;
-margin-bottom:15px;
-color:#0a3d62;
-font-size:22px;
-}
-
-/* Result animation */
-
-#resultBox{
-margin-top:30px;
-animation:fadeResult .5s ease;
-}
-
-@keyframes fadeResult{
-
-0%{
+.menu-toggle.active span:nth-child(2){
 opacity:0;
-transform:translateY(10px);
 }
 
-100%{
-opacity:1;
-transform:translateY(0);
-}
-
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
 }
