@@ -290,7 +290,7 @@ border-bottom:1px solid #eef1f5;
 ========================= */
 
 .menu-toggle.active span:nth-child(1){
-transform:rotate(45deg) translate(-6px,6px);
+transform:rotate(-45deg) translate(-6px,6px);
 }
 
 .menu-toggle.active span:nth-child(2){
