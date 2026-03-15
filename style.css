@@ -109,12 +109,12 @@ color:#134e7a;
 
 #guidanceBtn::after{
 content:" ▾";
-font-size:16px;
-margin-left:6px;
+font-size:12px;
+margin-left:4px;
 }
 
 .dropdown{
-position:center;
+position:relative;
 }
 
 .dropdown-menu{
@@ -271,7 +271,7 @@ font-size:16px;
 @media (max-width:768px){
 
 .dropdown-menu{
-position:relative;
+position:center;
 max-height:250px;
 overflow-y:auto;
 }
@@ -327,10 +327,3 @@ textarea:focus{
     color:#6b7280;
     margin-top:5px;
 }
-.card-section{
-    background:#f8fafc;
-    padding:20px;
-    border-radius:10px;
-    border-left:4px solid #2563eb;
-    margin-top:25px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.05);
