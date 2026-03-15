@@ -271,9 +271,9 @@ font-size:16px;
 @media (max-width:768px){
 
 .dropdown-menu{
-position:center;
+position:relative;
 max-height:250px;
-overflow-y:auto;
+overflow-y:center;
 }
 
 }
