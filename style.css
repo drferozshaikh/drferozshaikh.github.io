@@ -109,17 +109,17 @@ color:#134e7a;
 
 #guidanceBtn::after{
 content:" ▾";
-font-size:12px;
-margin-left:4px;
+font-size:16px;
+margin-left:6px;
 }
 
 .dropdown{
-position:relative;
+position:center;
 }
 
 .dropdown-menu{
 display:none;
-position:relative;
+position:absolute;
 top:100%;
 left:0;
 background:white;
