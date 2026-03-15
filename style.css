@@ -17,7 +17,11 @@ background:#f4f6f9;
 letter-spacing:.2px;
 scroll-behavior:smooth;
 }
-
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
 /* =========================
    HEADER
 ========================= */
