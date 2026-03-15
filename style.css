@@ -169,21 +169,18 @@ margin-bottom:20px;
    CARDS
 ========================= */
 
-.card{
-background:white;
-padding:22px;
-border-radius:14px;
-margin:16px 0;
-box-shadow:0 8px 22px rgba(0,0,0,0.06);
-transition:.25s;
-border:1px solid #eef1f5;
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
-}
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 16px 36px rgba(0,0,0,0.12);
-background:#f8fbff;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* =========================
