@@ -470,3 +470,36 @@ section {
         font-size: 14px;
     }
 }
+/* =========================
+   FINAL OVERRIDE (FIX BIG TEXT + GAPS)
+========================= */
+
+/* Fix large headings inside cards */
+.card h2 {
+    font-size: 16px !important;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Reduce section spacing */
+section {
+    padding: 10px 12px !important;
+}
+
+/* Reduce card size */
+.card {
+    padding: 12px 14px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Reduce inner spacing */
+.card-content {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.card-content div {
+    padding: 8px 10px;
+    margin-bottom: 6px;
+}
