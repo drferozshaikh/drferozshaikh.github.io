@@ -59,3 +59,23 @@ const counter = document.getElementById("charCount");
 textarea.addEventListener("input", function() {
     counter.textContent = textarea.value.length;
 });
+function checkFitness(){
+    const age = document.getElementById("age").value;
+    const bmi = document.getElementById("bmi").value;
+    const illness = document.getElementById("illness").value;
+    const result = document.getElementById("result");
+
+    if(!age || !bmi){
+        result.textContent = "Please fill all fields";
+        result.style.color = "red";
+        return;
+    }
+
+    if(age > 50 || bmi > 30 || illness === "yes"){
+        result.textContent = "You may face issues in medical examination. Consult a doctor.";
+        result.style.color = "orange";
+    } else {
+        result.textContent = "You are likely fit for seafarer medical (basic check).";
+        result.style.color = "green";
+    }
+}
