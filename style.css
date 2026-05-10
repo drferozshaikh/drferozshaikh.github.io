@@ -1046,3 +1046,16 @@ line-height:1.5;
 }
 
 }
+/* =========================
+   DROPDOWN ARROW ROTATION
+========================= */
+
+.guidance-btn .dropdown-arrow{
+display:inline-block;
+margin-left:5px;
+transition:transform .25s ease;
+}
+
+.guidance-btn.active .dropdown-arrow{
+transform:rotate(180deg);
+}
