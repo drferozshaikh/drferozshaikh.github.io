@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         toggle.addEventListener("click", function (e) {
 
+            e.preventDefault();
             e.stopPropagation();
 
             nav.classList.toggle("active");
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dropdowns.forEach(function (drop) {
 
-        // VERY IMPORTANT FIX
         const btn = drop.querySelector(".guidance-btn");
         const menu = drop.querySelector(".dropdown-menu");
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             e.stopPropagation();
 
-            // Close all other dropdowns
+            // Close other dropdowns
             document.querySelectorAll(".dropdown-menu").forEach(function (otherMenu) {
 
                 if (otherMenu !== menu) {
@@ -52,13 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             });
 
+            // Toggle current dropdown
             menu.classList.toggle("show");
 
-btn.classList.toggle("active");
+            // Rotate arrow
+            btn.classList.toggle("active");
 
         });
 
-        // Prevent closing when clicking inside menu
+        // Prevent dropdown clicks from closing menu
 
         menu.addEventListener("click", function (e) {
 
@@ -69,12 +71,10 @@ btn.classList.toggle("active");
     });
 
     // =========================
-    // CLOSE MENUS ON OUTSIDE CLICK
+    // CLOSE ONLY DROPDOWNS ON OUTSIDE CLICK
     // =========================
 
     document.addEventListener("click", function () {
-
-        // Close dropdowns
 
         document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
 
@@ -82,52 +82,41 @@ btn.classList.toggle("active");
 
         });
 
-        // Close mobile nav
+        document.querySelectorAll(".guidance-btn").forEach(function (btn) {
 
-        if (nav) {
+            btn.classList.remove("active");
 
-            nav.classList.remove("active");
-
-        }
-
-        // Reset hamburger
-
-        if (toggle) {
-
-            toggle.classList.remove("active");
-
-        }
+        });
 
     });
 
-// =========================
-// CLOSE MOBILE MENU AFTER NORMAL LINK CLICK
-// =========================
+    // =========================
+    // CLOSE MOBILE MENU AFTER NORMAL LINK CLICK
+    // =========================
 
-const navLinks = document.querySelectorAll(".main-nav a");
+    const navLinks = document.querySelectorAll(".main-nav a");
 
-navLinks.forEach(function (link) {
+    navLinks.forEach(function (link) {
 
-    link.addEventListener("click", function () {
+        link.addEventListener("click", function () {
 
-        // IMPORTANT:
-        // Do NOT close menu for dropdown button
+            // Ignore dropdown button
 
-        if (link.classList.contains("guidance-btn")) {
-            return;
-        }
+            if (link.classList.contains("guidance-btn")) {
+                return;
+            }
 
-        if (nav) {
-            nav.classList.remove("active");
-        }
+            // Close menu after normal navigation
 
-        if (toggle) {
-            toggle.classList.remove("active");
-        }
+            if (nav) {
+                nav.classList.remove("active");
+            }
 
-    });
+            if (toggle) {
+                toggle.classList.remove("active");
+            }
 
-});
+        });
 
     });
 
@@ -140,15 +129,11 @@ navLinks.forEach(function (link) {
 
     if (textarea && counter) {
 
-        // Initial value
-
         counter.textContent = textarea.value.length;
 
         textarea.addEventListener("input", function () {
 
             counter.textContent = textarea.value.length;
-
-            // Warning color
 
             if (textarea.value.length > 450) {
 
