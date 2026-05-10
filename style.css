@@ -930,3 +930,80 @@ display:inline-block;
 .guidance-btn.active .dropdown-arrow{
 transform:rotate(180deg);
 }
+/* =========================
+   FINAL CHECKBOX ALIGNMENT FIX
+========================= */
+
+/* Medical concern card */
+
+#contact .card{
+display:block;
+}
+
+/* Checkbox labels inside medical concerns */
+
+#contact .card label{
+display:flex;
+align-items:center;
+gap:10px;
+
+padding:10px 0;
+
+margin-bottom:0;
+
+font-weight:400;
+line-height:1.5;
+
+cursor:pointer;
+}
+
+/* Checkbox styling */
+
+#contact .card input[type="checkbox"]{
+flex-shrink:0;
+transform:scale(1.05);
+margin:0;
+}
+
+/* Remove giant spacing */
+
+#contact .card br{
+display:none;
+}
+
+/* Better checkbox spacing */
+
+#contact .card label + label{
+border-top:1px solid rgba(0,0,0,0.04);
+}
+
+/* =========================
+   PROCESS CARD HEIGHT FIX
+========================= */
+
+.process-grid{
+align-items:stretch;
+}
+
+.process-card{
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+min-height:230px;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.process-card{
+min-height:auto;
+}
+
+#contact .card label{
+padding:9px 0;
+font-size:15px;
+}
+
+}
