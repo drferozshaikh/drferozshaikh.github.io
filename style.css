@@ -584,4 +584,111 @@ padding:28px 16px;
 
 }
 ```
+/* =========================
+   CONTACT FORM FINAL FIX
+========================= */
 
+/* Better textarea sizing */
+
+textarea{
+width:100%;
+max-width:760px;
+min-height:180px;
+padding:16px;
+font-size:15px;
+line-height:1.7;
+border-radius:12px;
+border:1px solid #d6dce5;
+background:#ffffff;
+resize:vertical;
+margin-top:10px;
+}
+
+/* Character counter spacing */
+
+.char-counter{
+margin-top:8px;
+margin-bottom:24px;
+font-size:13px;
+color:#6b7280;
+}
+
+/* Supporting reports card */
+
+#contact .card{
+padding:24px;
+margin-top:12px;
+margin-bottom:22px;
+}
+
+/* Better form spacing */
+
+#contact form h3{
+margin-top:28px;
+margin-bottom:14px;
+font-size:1.3rem;
+color:#0a3d62;
+}
+
+#contact label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+}
+
+/* Checkbox section fix */
+
+.consent-box{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-top:24px;
+padding:16px 18px;
+background:#f8fafc;
+border-radius:12px;
+border:1px solid rgba(0,0,0,0.05);
+max-width:850px;
+}
+
+.consent-box input[type="checkbox"]{
+width:18px;
+height:18px;
+margin-top:4px;
+flex-shrink:0;
+}
+
+.consent-box span{
+line-height:1.8;
+font-size:15px;
+}
+
+/* Better submit button spacing */
+
+#contact .btn{
+margin-top:12px;
+}
+
+/* Mobile fixes */
+
+@media (max-width:768px){
+
+textarea{
+min-height:160px;
+padding:14px;
+}
+
+.consent-box{
+padding:14px;
+gap:10px;
+}
+
+.consent-box span{
+font-size:14px;
+line-height:1.7;
+}
+
+#contact .card{
+padding:18px;
+}
+
+}
