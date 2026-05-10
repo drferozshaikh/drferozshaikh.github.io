@@ -1,4 +1,3 @@
-```css
 /* =========================
    GOOGLE FONT
 ========================= */
@@ -365,6 +364,8 @@ text-decoration:none;
 font-weight:600;
 transition:all .25s ease;
 margin-top:10px;
+border:none;
+cursor:pointer;
 }
 
 .btn:hover{
@@ -374,14 +375,20 @@ box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* =========================
-   FORMS
+   FORMS (SAFE VERSION)
 ========================= */
 
 form{
 margin-top:20px;
 }
 
-input,
+/* Text Inputs Only */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
 select,
 textarea{
 width:100%;
@@ -396,12 +403,46 @@ font-family:inherit;
 background:white;
 }
 
+/* Textarea */
+
 textarea{
 min-height:140px;
 resize:vertical;
 }
 
-input:focus,
+/* Checkboxes */
+
+input[type="checkbox"]{
+width:auto;
+max-width:none;
+padding:0;
+margin-right:8px;
+margin-top:0;
+margin-bottom:0;
+vertical-align:middle;
+cursor:pointer;
+}
+
+/* Radio Buttons */
+
+input[type="radio"]{
+width:auto;
+max-width:none;
+padding:0;
+margin-right:8px;
+margin-top:0;
+margin-bottom:0;
+vertical-align:middle;
+cursor:pointer;
+}
+
+/* Focus States */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
 select:focus,
 textarea:focus{
 outline:none;
@@ -409,11 +450,13 @@ border-color:#2563eb;
 box-shadow:0 0 0 3px rgba(37,99,235,0.12);
 }
 
+/* Character Counter */
+
 .char-counter{
 font-size:13px;
 color:#6b7280;
-margin-top:-12px;
-margin-bottom:15px;
+margin-top:-10px;
+margin-bottom:16px;
 }
 
 /* =========================
@@ -463,6 +506,95 @@ padding:35px 20px;
 margin-top:40px;
 font-size:14px;
 line-height:1.8;
+}
+
+/* =========================
+   CONTACT FORM FIXES
+========================= */
+
+#contact textarea{
+width:100%;
+max-width:760px;
+min-height:170px;
+padding:16px;
+font-size:15px;
+line-height:1.7;
+border-radius:12px;
+border:1px solid #d6dce5;
+background:#ffffff;
+resize:vertical;
+margin-top:10px;
+}
+
+#contact .char-counter{
+margin-top:6px;
+margin-bottom:22px;
+font-size:13px;
+color:#6b7280;
+}
+
+#contact .card{
+padding:22px;
+margin-top:14px;
+margin-bottom:20px;
+}
+
+#contact form h3{
+margin-top:28px;
+margin-bottom:14px;
+font-size:1.2rem;
+color:#0a3d62;
+}
+
+#contact .consent-box{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-top:22px;
+padding:16px;
+background:#f8fafc;
+border-radius:12px;
+border:1px solid rgba(0,0,0,0.05);
+max-width:850px;
+}
+
+#contact .consent-box input[type="checkbox"]{
+margin-top:5px;
+transform:scale(1.1);
+}
+
+#contact .consent-box span{
+line-height:1.8;
+font-size:15px;
+}
+
+/* =========================
+   RISK TOOL FIXES
+========================= */
+
+.risk-card,
+.risk-section,
+.assessment-card{
+overflow-x:auto;
+}
+
+.risk-card label,
+.assessment-card label{
+display:inline-flex;
+align-items:center;
+gap:8px;
+line-height:1.6;
+}
+
+.risk-card input[type="checkbox"],
+.assessment-card input[type="checkbox"]{
+flex-shrink:0;
+}
+
+.risk-card table,
+.assessment-card table{
+width:100%;
+border-collapse:collapse;
 }
 
 /* =========================
@@ -526,8 +658,9 @@ font-size:15px;
 .dropdown-menu{
 position:relative;
 min-width:100%;
-max-height:250px;
+max-height:280px;
 overflow-y:auto;
+-webkit-overflow-scrolling:touch;
 box-shadow:none;
 border-radius:0;
 }
@@ -568,12 +701,40 @@ font-size:1.8rem;
 padding:18px;
 }
 
-/* Form */
+/* Forms */
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
 select,
 textarea{
 font-size:16px;
+}
+
+/* Contact */
+
+#contact textarea{
+min-height:150px;
+padding:14px;
+}
+
+#contact .consent-box{
+padding:14px;
+gap:10px;
+}
+
+#contact .consent-box span{
+font-size:14px;
+line-height:1.7;
+}
+
+/* Risk Tool */
+
+.risk-card,
+.assessment-card{
+overflow-x:auto;
 }
 
 /* Footer */
@@ -583,112 +744,8 @@ padding:28px 16px;
 }
 
 }
-```
-/* =========================
-   CONTACT FORM FINAL FIX
-========================= */
-
-/* Better textarea sizing */
-
-textarea{
-width:100%;
-max-width:760px;
-min-height:180px;
-padding:16px;
-font-size:15px;
-line-height:1.7;
-border-radius:12px;
-border:1px solid #d6dce5;
-background:#ffffff;
-resize:vertical;
-margin-top:10px;
-}
-
-/* Character counter spacing */
-
-.char-counter{
-margin-top:8px;
-margin-bottom:24px;
-font-size:13px;
-color:#6b7280;
-}
-
-/* Supporting reports card */
-
-#contact .card{
-padding:24px;
-margin-top:12px;
-margin-bottom:22px;
-}
-
-/* Better form spacing */
-
-#contact form h3{
-margin-top:28px;
-margin-bottom:14px;
-font-size:1.3rem;
-color:#0a3d62;
-}
-
-#contact label{
-display:block;
-margin-bottom:8px;
-font-weight:500;
-}
-
-/* Checkbox section fix */
-
-.consent-box{
-display:flex;
-align-items:flex-start;
-gap:12px;
-margin-top:24px;
-padding:16px 18px;
-background:#f8fafc;
-border-radius:12px;
-border:1px solid rgba(0,0,0,0.05);
-max-width:850px;
-}
-
-.consent-box input[type="checkbox"]{
-width:18px;
-height:18px;
-margin-top:4px;
-flex-shrink:0;
-}
-
-.consent-box span{
-line-height:1.8;
-font-size:15px;
-}
-
-/* Better submit button spacing */
-
-#contact .btn{
-margin-top:12px;
-}
-
-/* Mobile fixes */
-
-@media (max-width:768px){
-
-textarea{
-min-height:160px;
-padding:14px;
-}
-
-.consent-box{
-padding:14px;
-gap:10px;
-}
-
-.consent-box span{
+#contact .consent-box span{
 font-size:14px;
-line-height:1.7;
-}
-
-#contact .card{
-padding:18px;
 }
 
 }
