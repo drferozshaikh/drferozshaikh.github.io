@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdowns.forEach(function (drop) {
 
         // VERY IMPORTANT FIX
-        const btn = drop.querySelector("#guidanceBtn");
+        cconst btn = drop.querySelector(".guidance-btn");
         const menu = drop.querySelector(".dropdown-menu");
 
         if (!btn || !menu) return;
