@@ -1,4 +1,3 @@
-```javascript id="n0ph5i"
 // =========================
 // DOM READY
 // =========================
@@ -33,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dropdowns.forEach(function (drop) {
 
-        const btn = drop.querySelector("a");
+        // VERY IMPORTANT FIX
+        const btn = drop.querySelector("#guidanceBtn");
         const menu = drop.querySelector(".dropdown-menu");
 
         if (!btn || !menu) return;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             e.stopPropagation();
 
-            // Close other dropdowns first
+            // Close all other dropdowns
             document.querySelectorAll(".dropdown-menu").forEach(function (otherMenu) {
 
                 if (otherMenu !== menu) {
@@ -56,8 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
+        // Prevent closing when clicking inside menu
+
         menu.addEventListener("click", function (e) {
+
             e.stopPropagation();
+
         });
 
     });
@@ -69,18 +73,27 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function () {
 
         // Close dropdowns
+
         document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+
             menu.classList.remove("show");
+
         });
 
         // Close mobile nav
+
         if (nav) {
+
             nav.classList.remove("active");
+
         }
 
         // Reset hamburger
+
         if (toggle) {
+
             toggle.classList.remove("active");
+
         }
 
     });
@@ -96,11 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function () {
 
             if (nav) {
+
                 nav.classList.remove("active");
+
             }
 
             if (toggle) {
+
                 toggle.classList.remove("active");
+
             }
 
         });
@@ -116,18 +133,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (textarea && counter) {
 
-        // Initial count
+        // Initial value
+
         counter.textContent = textarea.value.length;
 
         textarea.addEventListener("input", function () {
 
             counter.textContent = textarea.value.length;
 
-            // Warning color near limit
+            // Warning color
+
             if (textarea.value.length > 450) {
+
                 counter.style.color = "#dc2626";
+
             } else {
+
                 counter.style.color = "#6b7280";
+
             }
 
         });
@@ -135,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // =========================
-    // SMOOTH SCROLL FOR INTERNAL LINKS
+    // SMOOTH SCROLL
     // =========================
 
     const internalLinks = document.querySelectorAll('a[href^="#"]');
@@ -168,5 +191,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-```
-
