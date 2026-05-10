@@ -842,3 +842,77 @@ padding-left:0;
 }
 
 }
+/* =========================
+   FINAL FORM ALIGNMENT FIX
+========================= */
+
+/* Contact form labels */
+
+#contact form label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+line-height:1.5;
+}
+
+/* Inputs stack vertically */
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form input[type="number"],
+#contact form input[type="date"],
+#contact form input[type="tel"],
+#contact form select,
+#contact form textarea{
+display:block;
+width:100%;
+max-width:760px;
+}
+
+/* Better spacing between fields */
+
+#contact form input,
+#contact form select,
+#contact form textarea{
+margin-bottom:22px;
+}
+
+/* Checkbox labels stay inline */
+
+#contact form input[type="checkbox"]{
+display:inline-block;
+width:auto;
+margin-right:8px;
+}
+
+/* Checkbox rows */
+
+#contact .card label{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:12px;
+font-weight:400;
+}
+
+/* Prevent text floating */
+
+#contact form{
+overflow:hidden;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form input[type="number"],
+#contact form input[type="date"],
+#contact form input[type="tel"],
+#contact form select,
+#contact form textarea{
+max-width:100%;
+}
+
+}
