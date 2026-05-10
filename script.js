@@ -54,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             menu.classList.toggle("show");
 
+btn.classList.toggle("active");
+
         });
 
         // Prevent closing when clicking inside menu
