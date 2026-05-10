@@ -916,3 +916,19 @@ max-width:100%;
 }
 
 }
+/* =========================
+   DROPDOWN ARROW
+========================= */
+
+.dropdown-arrow{
+font-size:12px;
+margin-left:5px;
+transition:transform .25s ease;
+display:inline-block;
+}
+
+/* Rotate arrow when open */
+
+.dropdown-menu.show ~ .guidance-btn .dropdown-arrow{
+transform:rotate(180deg);
+}
