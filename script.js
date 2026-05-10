@@ -100,29 +100,34 @@ btn.classList.toggle("active");
 
     });
 
-    // =========================
-    // CLOSE MOBILE MENU AFTER LINK CLICK
-    // =========================
+// =========================
+// CLOSE MOBILE MENU AFTER NORMAL LINK CLICK
+// =========================
 
-    const navLinks = document.querySelectorAll(".main-nav a");
+const navLinks = document.querySelectorAll(".main-nav a");
 
-    navLinks.forEach(function (link) {
+navLinks.forEach(function (link) {
 
-        link.addEventListener("click", function () {
+    link.addEventListener("click", function () {
 
-            if (nav) {
+        // IMPORTANT:
+        // Do NOT close menu for dropdown button
 
-                nav.classList.remove("active");
+        if (link.classList.contains("guidance-btn")) {
+            return;
+        }
 
-            }
+        if (nav) {
+            nav.classList.remove("active");
+        }
 
-            if (toggle) {
+        if (toggle) {
+            toggle.classList.remove("active");
+        }
 
-                toggle.classList.remove("active");
+    });
 
-            }
-
-        });
+});
 
     });
 
