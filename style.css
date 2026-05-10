@@ -603,7 +603,9 @@ border-collapse:collapse;
 
 @media (max-width:768px){
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 
 header{
 padding:70px 18px 60px;
@@ -618,25 +620,36 @@ header p{
 font-size:15px;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR
+========================= */
 
 .menu-toggle{
 display:flex;
+z-index:1101;
 }
 
 .main-nav{
 display:none;
 flex-direction:column;
 align-items:flex-start;
+
 background:white;
+
 position:absolute;
-top:65px;
+
+top:72px;
 left:0;
 right:0;
+
 padding:10px 0;
-max-height:75vh;
+
+max-height:80vh;
 overflow-y:auto;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+z-index:1100;
 }
 
 .main-nav.active{
@@ -653,19 +666,80 @@ width:100%;
 font-size:15px;
 }
 
-/* Dropdown */
+/* =========================
+   DROPDOWN
+========================= */
 
-.dropdown-menu{
-position:relative;
-min-width:100%;
-max-height:280px;
-overflow-y:auto;
--webkit-overflow-scrolling:touch;
-box-shadow:none;
-border-radius:0;
+.dropdown{
+width:100%;
 }
 
-/* Sections */
+.dropdown-menu{
+display:none;
+
+position:relative;
+
+top:auto;
+left:auto;
+right:auto;
+
+width:100%;
+min-width:100%;
+
+margin-top:4px;
+
+background:#f8fafc;
+
+border-radius:0;
+
+padding:0;
+
+box-shadow:none;
+
+border-top:1px solid rgba(0,0,0,0.05);
+
+max-height:280px;
+overflow-y:auto;
+
+-webkit-overflow-scrolling:touch;
+}
+
+.dropdown-menu.show{
+display:block;
+}
+
+.dropdown-menu li{
+width:100%;
+border-bottom:1px solid rgba(0,0,0,0.04);
+}
+
+.dropdown-menu a{
+padding:12px 22px;
+font-size:14px;
+line-height:1.5;
+}
+
+/* =========================
+   DROPDOWN ARROW
+========================= */
+
+.guidance-btn{
+display:flex !important;
+justify-content:space-between;
+align-items:center;
+}
+
+.guidance-btn .dropdown-arrow{
+transition:transform .25s ease;
+}
+
+.guidance-btn.active .dropdown-arrow{
+transform:rotate(180deg);
+}
+
+/* =========================
+   SECTIONS
+========================= */
 
 section{
 padding:22px 14px;
@@ -675,7 +749,9 @@ section h2{
 font-size:1.6rem;
 }
 
-/* Cards */
+/* =========================
+   CARDS
+========================= */
 
 .card{
 padding:16px;
@@ -685,7 +761,18 @@ padding:16px;
 font-size:17px;
 }
 
-/* Pricing */
+/* =========================
+   PROCESS
+========================= */
+
+.process-card{
+padding:18px;
+min-height:auto;
+}
+
+/* =========================
+   PRICING
+========================= */
 
 .pricing-card{
 padding:22px 18px;
@@ -695,13 +782,9 @@ padding:22px 18px;
 font-size:1.8rem;
 }
 
-/* Process */
-
-.process-card{
-padding:18px;
-}
-
-/* Forms */
+/* =========================
+   FORMS
+========================= */
 
 input[type="text"],
 input[type="email"],
@@ -711,9 +794,12 @@ input[type="tel"],
 select,
 textarea{
 font-size:16px;
+max-width:100%;
 }
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 
 #contact textarea{
 min-height:150px;
@@ -730,102 +816,14 @@ font-size:14px;
 line-height:1.7;
 }
 
-/* Risk Tool */
-
-.risk-card,
-.assessment-card{
-overflow-x:auto;
+#contact .card label{
+padding:9px 0;
+font-size:15px;
 }
 
-/* Footer */
-
-footer{
-padding:28px 16px;
-}
-
-}
-#contact .consent-box span{
-font-size:14px;
-}
-
-}
 /* =========================
-   PEME RISK TOOL FINAL FIX
+   RISK TOOL
 ========================= */
-
-/* Main risk card */
-
-.risk-card{
-background:#ffffff;
-padding:22px;
-border-radius:16px;
-margin-bottom:22px;
-border:1px solid rgba(0,0,0,0.05);
-box-shadow:0 2px 8px rgba(0,0,0,0.04);
-}
-
-/* Risk rows */
-
-.risk-row{
-display:grid;
-grid-template-columns:
-minmax(240px,1fr)
-80px
-minmax(260px,1.2fr);
-
-align-items:center;
-
-gap:20px;
-
-padding:12px 0;
-
-border-bottom:1px solid #eef2f7;
-}
-
-.risk-row:last-child{
-border-bottom:none;
-}
-
-/* Left text */
-
-.risk-left{
-font-size:15px;
-line-height:1.6;
-}
-
-/* Checkbox center */
-
-.risk-check{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-/* Right text */
-
-.risk-right{
-font-size:15px;
-line-height:1.6;
-}
-
-/* Checkbox styling */
-
-.risk-check input[type="checkbox"]{
-transform:scale(1.15);
-cursor:pointer;
-}
-
-/* Section titles */
-
-.risk-card h3{
-margin-bottom:18px;
-color:#0a3d62;
-font-size:1.2rem;
-}
-
-/* Mobile */
-
-@media (max-width:768px){
 
 .risk-row{
 grid-template-columns:1fr;
@@ -841,221 +839,13 @@ justify-content:flex-start;
 padding-left:0;
 }
 
-}
 /* =========================
-   FINAL FORM ALIGNMENT FIX
+   FOOTER
 ========================= */
 
-/* Contact form labels */
-
-#contact form label{
-display:block;
-margin-bottom:8px;
-font-weight:500;
-line-height:1.5;
-}
-
-/* Inputs stack vertically */
-
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form input[type="number"],
-#contact form input[type="date"],
-#contact form input[type="tel"],
-#contact form select,
-#contact form textarea{
-display:block;
-width:100%;
-max-width:760px;
-}
-
-/* Better spacing between fields */
-
-#contact form input,
-#contact form select,
-#contact form textarea{
-margin-bottom:22px;
-}
-
-/* Checkbox labels stay inline */
-
-#contact form input[type="checkbox"]{
-display:inline-block;
-width:auto;
-margin-right:8px;
-}
-
-/* Checkbox rows */
-
-#contact .card label{
-display:flex;
-align-items:center;
-gap:8px;
-margin-bottom:12px;
-font-weight:400;
-}
-
-/* Prevent text floating */
-
-#contact form{
-overflow:hidden;
-}
-
-/* Mobile */
-
-@media (max-width:768px){
-
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form input[type="number"],
-#contact form input[type="date"],
-#contact form input[type="tel"],
-#contact form select,
-#contact form textarea{
-max-width:100%;
+footer{
+padding:28px 16px;
 }
 
 }
-/* Dropdown arrow */
 
-.guidance-btn .dropdown-arrow{
-font-size:12px;
-margin-left:5px;
-transition:transform .25s ease;
-display:inline-block;
-}
-
-/* Rotate */
-
-.guidance-btn.active .dropdown-arrow{
-transform:rotate(180deg);
-}
-/* =========================
-   FINAL CHECKBOX ALIGNMENT FIX
-========================= */
-
-/* Medical concern card */
-
-#contact .card{
-display:block;
-}
-
-/* Checkbox labels inside medical concerns */
-
-#contact .card label{
-display:flex;
-align-items:center;
-gap:10px;
-
-padding:10px 0;
-
-margin-bottom:0;
-
-font-weight:400;
-line-height:1.5;
-
-cursor:pointer;
-}
-
-/* Checkbox styling */
-
-#contact .card input[type="checkbox"]{
-flex-shrink:0;
-transform:scale(1.05);
-margin:0;
-}
-
-/* Remove giant spacing */
-
-#contact .card br{
-display:none;
-}
-
-/* Better checkbox spacing */
-
-#contact .card label + label{
-border-top:1px solid rgba(0,0,0,0.04);
-}
-
-/* =========================
-   PROCESS CARD HEIGHT FIX
-========================= */
-
-.process-grid{
-align-items:stretch;
-}
-
-.process-card{
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-min-height:230px;
-}
-
-/* Mobile */
-
-@media (max-width:768px){
-
-.process-card{
-min-height:auto;
-}
-
-#contact .card label{
-padding:9px 0;
-font-size:15px;
-}
-
-}/* =========================
-   MOBILE DROPDOWN FIX
-========================= */
-
-@media (max-width:768px){
-
-.dropdown{
-width:100%;
-}
-
-.dropdown-menu{
-position:relative;
-left:0;
-right:auto;
-width:100%;
-min-width:100%;
-margin-top:6px;
-
-background:#f8fafc;
-
-border-radius:10px;
-
-padding:6px 0;
-
-box-shadow:none;
-
-border:1px solid rgba(0,0,0,0.05);
-}
-
-.dropdown-menu li{
-width:100%;
-}
-
-.dropdown-menu a{
-padding:12px 18px;
-font-size:14px;
-line-height:1.5;
-}
-
-}
-/* =========================
-   DROPDOWN ARROW ROTATION
-========================= */
-
-.guidance-btn .dropdown-arrow{
-display:inline-block;
-margin-left:5px;
-transition:transform .25s ease;
-}
-
-.guidance-btn.active .dropdown-arrow{
-transform:rotate(180deg);
-}
